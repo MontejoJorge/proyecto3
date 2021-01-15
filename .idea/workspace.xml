@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164faaa1-7f56-4f15-8253-e102ba8479ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/ts/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ts/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ts/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ts/login.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +51,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../proyecto2" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\2GDAW10\Desktop\proyecto3\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2GDAW10\Desktop\proyecto3" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,6 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610617915605</updated>
       <workItem from="1610617917076" duration="554000" />
+      <workItem from="1610696742884" duration="1205000" />
+      <workItem from="1610698123494" duration="4877000" />
     </task>
     <servers />
   </component>
@@ -83,15 +92,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="299" y="312" key="FileChooserDialogImpl" timestamp="1610618440001">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="299" y="312" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1610618440001" />
-    <state x="20" y="202" key="SettingsEditor" timestamp="1610618146549">
+    <state x="627" y="280" key="SettingsEditor" timestamp="1610698202470">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="20" y="202" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1610618146549" />
+    <state x="627" y="280" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1610698202470" />
+    <state x="1199" y="248" key="search.everywhere.popup" timestamp="1610696768730">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="1199" y="248" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1610696768730" />
   </component>
 </project>
