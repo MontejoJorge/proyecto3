@@ -15,5 +15,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          cd /var/www/deploy-sh/
+          cd /home/deploy/deploy-sh/
           sh proyect3.sh
