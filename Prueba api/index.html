@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba</title>
+</head>
+<body>
+<div style="display: flex;justify-content: center;">
+    <input type="search" id="direccion" placeholder="A donde vamos?" style="width: 400px;height: 30px;"/>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+<script>
+    var places = require('places.js');
+    var placesAutocomplete = places({
+        appId: 'plPUIUV501P5',
+        apiKey: 'ea1cc93d19cf99e02229b283e42369b9',
+        container: document.querySelector('#direccion')
+    });
+
+</script>
+
+</html>
