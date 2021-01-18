@@ -34,7 +34,11 @@ $color-primary-4: #36013A;
 a.small{
   color: $color-primary-3;
 }
-#mapid { height: 306px; }
+#mapid { height: 500px; }
+
+.no_padding{
+  padding: 0;
+}
 
 [data-theme="dark"] {
   body{

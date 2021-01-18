@@ -34,7 +34,11 @@ a.small {
 }
 
 #mapid {
-  height: 306px;
+  height: 500px;
+}
+
+.no_padding {
+  padding: 0;
 }
 
 [data-theme=dark] body {
