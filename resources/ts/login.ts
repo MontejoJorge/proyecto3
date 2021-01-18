@@ -53,20 +53,52 @@ function validarContraseña(contraseña, contraseña2):boolean{
             return true;
         }
     } else {
-        throw "La contraseña debe contener 8 caracteres, una mayuscula, una minuscula, un numero y un caracter especial (@#$%&?¿!¡._-)";
+        throw "La contraseña debe contener 8 o más caracteres, una mayuscula, una minuscula, un numero y un caracter especial (@#$%&?¿!¡._-)";
     }
 }
-
+function validarNoBlanco(texto:string):boolean {
+    if(/^\s+|\s+$/.test(texto)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//Registrarse
 function validarForm():boolean {
     try {
-        //signUp
-        //llamamos a los metodos que validan los campos
-        validarDNI($("#dni").val());
-        validarContraseña($("#password").eq(1).val(),$("#password2").val());
-        validarNombre($("#nombre").val());
-        validarApellido($("#apellido").val());
-        validarEmail($("#email").val());
+        let nombre: string = $("#nombre").val().toString();
+        let apellido: string = $("#apellido").val().toString();
+        let dni: string = $("#dni").val().toString();
+        let email: string = $("#email").val().toString();
 
+        //llamamos a los metodos que validan los campos
+        validarDNI(dni);
+        //Comprobamos que no este vacio el nombre ni el apellido
+        if (nombre == "" && apellido == "") {
+            throw "El nombre y apellido no pueden estar vacios";
+        } else if (validarNoBlanco(nombre) && validarNoBlanco(apellido)) {
+            throw "El nombre y apellido no pueden contener espacios"
+        }
+        if (nombre == "") {
+            throw "El nombre no puede estar vacio";
+        } else if (validarNoBlanco(nombre)) {
+            throw "El nombre no puede tener espacios en blanco"
+        } else {
+            validarNombre(nombre);
+        }
+
+        if (apellido == "") {
+            throw "El apellido no puede estar vacio";
+        }else if (validarNoBlanco(apellido)){
+            throw "El apellido no puede tener espacios en blanco"
+
+        }else{
+            validarApellido(apellido);
+        }
+        validarEmail(email);
+        validarContraseña($("#password").eq(0).val(),$("#password2").val());
+        alert("Usuario registrado correctamente");
+        window.location.href="login.html";
         return true;
     }catch (error){
         alert(error);
