@@ -67,8 +67,8 @@ function validarForm() {
     try {
         //signUp
         //llamamos a los metodos que validan los campos
-        validarDNI($(".dni").val());
-        validarContraseña($(".password").eq(1).val(), $("#password2").val());
+        validarDNI($("#dni").val());
+        validarContraseña($("#password").eq(1).val(), $("#password2").val());
         validarNombre($("#nombre").val());
         validarApellido($("#apellido").val());
         validarEmail($("#email").val());
