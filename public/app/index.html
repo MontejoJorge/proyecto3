@@ -11,7 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/personalizado.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
 </head>
 
 <body id="page-top">
@@ -342,19 +349,47 @@
                                         <canvas id="myPieChart"></canvas>
                                     </div>
                                     <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
+                                        <span class="mr-2 ">
+                                            <i class="fas fa-circle text-primary verde"></i> Aceptadas
                                         </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
+                                        <span class="mr-2 ">
+                                            <i class="fas fa-circle text-success rojo"></i> Denegadas
+                                        </span><br>
+                                        <span class="mr-2 ">
+                                            <i class="fas fa-circle text-info naranja"></i> En espera
                                         </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
+                                        <span class="mr-2 ">
+                                            <i class="fas fa-circle text-info gris"></i> Creadas
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
+
+
+
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Solicitudes</h6>
+
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="pt-4 pb-2">
+                                        <div id="mapid"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -369,6 +404,7 @@
                     </div>
 
                 </div>
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -423,7 +459,10 @@
 
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
-
+    <!-- Dark Mode-->
+    <script src="node_modules/dark-mode-switch/dark-mode-switch.min.js"></script>
+    <!-- Mapa -->
+    <script src="js/mapa.js"></script>
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>

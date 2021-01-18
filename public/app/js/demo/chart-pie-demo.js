@@ -7,11 +7,11 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social","Pendiente"],
+    labels: ["Aceptado", "Rechazado", "En espera","Creada"],
     datasets: [{
       data: [50, 30, 15, 5],
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc','#00FFFF'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf','#00FFFF'],
+      backgroundColor: ['#55e705', '#c81c1c', '#ffb800','#696969'],
+      hoverBackgroundColor: ['#297304', '#751212', '#8d6700','#393939'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
