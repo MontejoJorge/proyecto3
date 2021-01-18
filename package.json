@@ -37,7 +37,8 @@
         "dark-mode-switch": "^1.0.0",
         "datatables.net-bs4": "1.10.22",
         "jquery": "3.5.1",
-        "jquery.easing": "^1.4.1"
+        "jquery.easing": "^1.4.1",
+        "leaflet": "^1.7.1"
     },
     "devDependencies": {
         "browser-sync": "2.26.13",

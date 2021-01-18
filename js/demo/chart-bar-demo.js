@@ -35,9 +35,9 @@ var myBarChart = new Chart(ctx, {
     labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
     datasets: [{
       label: "Revenue",
-      backgroundColor: "#1cc88a",
-      hoverBackgroundColor: "#2e59d9",
-      borderColor: "#4e73df",
+      backgroundColor: "#86448B",
+      hoverBackgroundColor: "#510F56",
+      borderColor: "#510F56",
       data: [35,33,34,35,36,37,32,21,12,3,12,15],
     }],
   },
@@ -61,7 +61,7 @@ var myBarChart = new Chart(ctx, {
           drawBorder: false
         },
         ticks: {
-          maxTicksLimit: 6
+          maxTicksLimit: 12
         },
         maxBarThickness: 25,
       }],
