@@ -39,6 +39,27 @@ a.small{
 .no_padding{
   padding: 0;
 }
+#desc{
+  height: 200px;
+  margin-bottom:25px ;
+  border-radius:25px ;
+}
+.page-link{
+  color: black;
+}
+.page-link:hover{
+  color: $color-primary-1;
+}
+.previous:hover{
+  color: $color-primary-1;
+}
+.page-item.active .page-link {
+
+  color: #fff;
+  background-color: $color-primary-1;
+  border-color: $color-primary-1;
+}
+
 
 [data-theme="dark"] {
   body{
@@ -135,23 +156,68 @@ a.small{
   .leaflet-popup-tip{
     background-color: #222222;
   }
-  .wrap-contact100{
-    background-color: black;
+
+  .ap-dataset-places{
+    background-color: black!important;
   }
-  .contact100-form-title{
+  .ap-cursor{
+    background-color: $color-primary-3;
+  }
+  .user input, textarea{
+    background-color: #373737;
+  }
+
+  #desc:focus{
+    background-color: #373737;
+  }
+  select {
+    background-color:#373737 ;
+  }select:focus {
+     background-color:#373737 ;
+  color: whitesmoke;
+   }
+  option{
+    background-color:#373737;
+  }
+  option:hover{
+    background-color: #4f4f4f;
+  }
+  input{
+    background-color: #373737;
+  }
+  input:focus{
+    background-color: #373737;
     color: whitesmoke;
-  }
-  .input100{
-    color: black;
 
   }
-  .input100::placeholder{
-    color: black;
+  .paginate_button a{
+   color: whitesmoke;
+   background-color: #373737;
+ }
+  .page-item.active .page-link {
+
+    color: #fff;
+    background-color: $color-primary-3;
+    border-color: $color-primary-3;
   }
-  .js-select2{
-    color: black;
+  .page-link{
+    color: whitesmoke;
+    background-color: #373737;
   }
-  .js-select2 option{
-    color: black;
+  .previous a{
+    color: whitesmoke!important;
+    background-color: #373737!important;
   }
+  .next a{
+    color: whitesmoke!important;
+    background-color: #373737!important;
+  }
+
+  .page-link:hover{
+    background-color: $color-primary-2;
+  }
+  .previous{
+    background-color: $color-primary-2;
+  }
+
 }

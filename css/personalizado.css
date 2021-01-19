@@ -41,6 +41,30 @@ a.small {
   padding: 0;
 }
 
+#desc {
+  height: 200px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+}
+
+.page-link {
+  color: black;
+}
+
+.page-link:hover {
+  color: #A36DA7;
+}
+
+.previous:hover {
+  color: #A36DA7;
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #A36DA7;
+  border-color: #A36DA7;
+}
+
 [data-theme=dark] body {
   color: whitesmoke;
 }
@@ -128,23 +152,64 @@ a.small {
 [data-theme=dark] .leaflet-popup-tip {
   background-color: #222222;
 }
-[data-theme=dark] .wrap-contact100 {
-  background-color: black;
+[data-theme=dark] .ap-dataset-places {
+  background-color: black !important;
 }
-[data-theme=dark] .contact100-form-title {
+[data-theme=dark] .ap-cursor {
+  background-color: #510F56;
+}
+[data-theme=dark] .user input, [data-theme=dark] textarea {
+  background-color: #373737;
+}
+[data-theme=dark] #desc:focus {
+  background-color: #373737;
+}
+[data-theme=dark] select {
+  background-color: #373737;
+}
+[data-theme=dark] select:focus {
+  background-color: #373737;
   color: whitesmoke;
 }
-[data-theme=dark] .input100 {
-  color: black;
+[data-theme=dark] option {
+  background-color: #373737;
 }
-[data-theme=dark] .input100::placeholder {
-  color: black;
+[data-theme=dark] option:hover {
+  background-color: #4f4f4f;
 }
-[data-theme=dark] .js-select2 {
-  color: black;
+[data-theme=dark] input {
+  background-color: #373737;
 }
-[data-theme=dark] .js-select2 option {
-  color: black;
+[data-theme=dark] input:focus {
+  background-color: #373737;
+  color: whitesmoke;
+}
+[data-theme=dark] .paginate_button a {
+  color: whitesmoke;
+  background-color: #373737;
+}
+[data-theme=dark] .page-item.active .page-link {
+  color: #fff;
+  background-color: #510F56;
+  border-color: #510F56;
+}
+[data-theme=dark] .page-link {
+  color: whitesmoke;
+  background-color: #373737;
+}
+[data-theme=dark] .previous a {
+  color: whitesmoke !important;
+  background-color: #373737 !important;
+}
+[data-theme=dark] .next a {
+  color: whitesmoke !important;
+  background-color: #373737 !important;
+}
+[data-theme=dark] .page-link:hover {
+  background-color: #86448B;
+}
+[data-theme=dark] .previous {
+  background-color: #86448B;
 }
 
 /*# sourceMappingURL=personalizado.css.map */

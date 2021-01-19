@@ -2,22 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/address.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/blank.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sb-admin-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sb-admin-2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/util.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/Montserrat-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/montserrat/OFL.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sb-admin-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sb-admin-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/personalizado.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/animate/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/animsition/css/animsition.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/animsition/css/animsition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/animsition/js/animsition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/animsition/js/animsition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bootstrap/js/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/countdowntime/countdowntime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/daterangepicker/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/daterangepicker/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/daterangepicker/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/daterangepicker/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/jquery/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/noui/nouislider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/noui/nouislider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/noui/nouislider.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/noui/nouislider.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/select2/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/select2/select2.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +179,7 @@
       <workItem from="1610621682706" duration="1671000" />
       <workItem from="1610954694669" duration="9528000" />
       <workItem from="1610968793960" duration="5740000" />
-      <workItem from="1611041716137" duration="5590000" />
+      <workItem from="1611041716137" duration="14485000" />
     </task>
     <servers />
   </component>
@@ -146,9 +243,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="979" height="354" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1611042420016" />
-    <state x="180" y="247" key="search.everywhere.popup" timestamp="1611042408180">
+    <state x="181" y="247" key="search.everywhere.popup" timestamp="1611057409958">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="180" y="247" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1611042408180" />
+    <state x="181" y="247" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1611057409958" />
   </component>
 </project>
