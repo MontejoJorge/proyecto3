@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name("home");
 
-Auth::routes();
+Route::get('user/', 'RequestorController@create')->name("requestor.create");
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('user/', 'RequestorController@store')->name("requestor.store");

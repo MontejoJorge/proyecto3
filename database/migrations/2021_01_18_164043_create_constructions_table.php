@@ -18,8 +18,8 @@ class CreateConstructionsTable extends Migration
             $table->foreignId("requestor_id")->constrained("requestors");
             $table->foreignId("building_id")->constrained("building_types");
             $table->foreignId("construction_id")->constrained("construction_types");
-            $table->foreignId("worker_id")->constrained("workers");
-            $table->foreignId("comment_id")->constrained("comments");
+            $table->foreignId("worker_id")->nullable()->constrained("workers");
+            $table->foreignId("comment_id")->nullable()->constrained("comments");
             $table->timestamps();
         });
     }
