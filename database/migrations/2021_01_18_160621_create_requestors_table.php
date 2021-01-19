@@ -15,18 +15,18 @@ class CreateRequestorsTable extends Migration
     {
         Schema::create('requestors', function (Blueprint $table) {
             $table->id();
-            $table->string("email");
+            $table->string("email")->unique();
             $table->string("password");
             $table->integer("phone");
             $table->string("name");
             $table->string("surname");
-            $table->string("dni");
+            $table->string("dni")->unique();
             $table->date("birthdate");
             $table->string("place_of_birth");
             $table->integer("postal_code");
             $table->string("street_name");
-            $table->integer("number");
-            $table->integer("floor");
+            $table->string("number");
+            $table->string("floor");
             $table->string("door");
             $table->string("city");
             $table->timestamps();

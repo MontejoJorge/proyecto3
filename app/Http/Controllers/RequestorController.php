@@ -24,7 +24,7 @@ class RequestorController extends Controller
      */
     public function create()
     {
-        return view("create");
+        return view("auth.register");
     }
 
     /**
@@ -35,7 +35,25 @@ class RequestorController extends Controller
      */
     public function store(Request $request)
     {
-        Requestor::create(request()->all());
+        $fields = request()->validate([
+        "email" => "required",
+        "password" => "required",
+        "phone" => "required",
+        "name" => "required",
+        "surname" => "required",
+        "dni" => "required",
+        "birthdate" => "required",
+        "place_of_birth" => "required",
+        "postal_code" => "required",
+        "street_name" => "required",
+        "number" => "required",
+        "floor" => "required",
+        "door" => "required",
+        "city" => "required",
+        ]); 
+
+        Requestor::create($fields);
+
         return redirect()->route("home");
     }
 

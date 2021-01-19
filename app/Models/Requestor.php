@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Requestor extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class Requestor extends Authenticatable
 {
     protected $guarded = [];
     use HasFactory;
