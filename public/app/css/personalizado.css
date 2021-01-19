@@ -5,9 +5,9 @@
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #A36DA7;
-  border-color: #A36DA7;
+  color: #fff !important;
+  background-color: #A36DA7 !important;
+  border-color: #A36DA7 !important;
 }
 
 .btn-primary:hover {
@@ -34,7 +34,47 @@ a.small {
 }
 
 #mapid {
-  height: 306px;
+  height: 500px;
+}
+
+.no_padding {
+  padding: 0;
+}
+
+#desc {
+  height: 200px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+}
+
+.page-link {
+  color: black;
+}
+
+.page-link:hover {
+  color: #A36DA7;
+}
+
+.previous:hover {
+  color: #A36DA7;
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #A36DA7;
+  border-color: #A36DA7;
+}
+
+.error:before {
+  text-shadow: 1px 0 #A36DA7 !important;
+  color: #FFFFFF !important;
+  background: #A36DA7 !important;
+}
+
+.error:after {
+  text-shadow: 1px 0 #A36DA7 !important;
+  color: #FFFFFF !important;
+  background: #A36DA7 !important;
 }
 
 [data-theme=dark] body {
@@ -123,6 +163,75 @@ a.small {
 }
 [data-theme=dark] .leaflet-popup-tip {
   background-color: #222222;
+}
+[data-theme=dark] .ap-dataset-places {
+  background-color: black !important;
+}
+[data-theme=dark] .ap-cursor {
+  background-color: #510F56;
+}
+[data-theme=dark] .user input, [data-theme=dark] textarea {
+  background-color: #373737;
+}
+[data-theme=dark] #desc:focus {
+  background-color: #373737;
+}
+[data-theme=dark] select {
+  background-color: #373737;
+}
+[data-theme=dark] select:focus {
+  background-color: #373737;
+  color: whitesmoke;
+}
+[data-theme=dark] option {
+  background-color: #373737;
+}
+[data-theme=dark] option:hover {
+  background-color: #4f4f4f;
+}
+[data-theme=dark] input {
+  background-color: #373737;
+}
+[data-theme=dark] input:focus {
+  background-color: #373737;
+  color: whitesmoke;
+}
+[data-theme=dark] .paginate_button a {
+  color: whitesmoke;
+  background-color: #373737;
+}
+[data-theme=dark] .page-item.active .page-link {
+  color: #fff;
+  background-color: #510F56;
+  border-color: #510F56;
+}
+[data-theme=dark] .page-link {
+  color: whitesmoke;
+  background-color: #373737;
+}
+[data-theme=dark] .previous a {
+  color: whitesmoke !important;
+  background-color: #373737 !important;
+}
+[data-theme=dark] .next a {
+  color: whitesmoke !important;
+  background-color: #373737 !important;
+}
+[data-theme=dark] .page-link:hover {
+  background-color: #86448B;
+}
+[data-theme=dark] .previous {
+  background-color: #86448B;
+}
+[data-theme=dark] .error:before {
+  text-shadow: 1px 0 #6C2571 !important;
+  color: #FFFFFF !important;
+  background: #510F56 !important;
+}
+[data-theme=dark] .error:after {
+  text-shadow: 1px 0 #6C2571 !important;
+  color: #FFFFFF !important;
+  background: #510F56 !important;
 }
 
 /*# sourceMappingURL=personalizado.css.map */

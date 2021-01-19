@@ -10,9 +10,9 @@ $color-primary-4: #36013A;
   background-size: cover;
 }
 .btn-primary {
-  color: #fff;
-  background-color: $color-primary-1;
-  border-color:$color-primary-1;
+  color: #fff!important;
+  background-color: $color-primary-1!important;
+  border-color:$color-primary-1!important;
 }
 .btn-primary:hover {
   color: #fff;
@@ -34,7 +34,46 @@ $color-primary-4: #36013A;
 a.small{
   color: $color-primary-3;
 }
-#mapid { height: 306px; }
+#mapid { height: 500px; }
+
+.no_padding{
+  padding: 0;
+}
+#desc{
+  height: 200px;
+  margin-bottom:25px ;
+  border-radius:25px ;
+}
+.page-link{
+  color: black;
+}
+.page-link:hover{
+  color: $color-primary-1;
+}
+.previous:hover{
+  color: $color-primary-1;
+}
+.page-item.active .page-link {
+
+  color: #fff;
+  background-color: $color-primary-1;
+  border-color: $color-primary-1;
+}
+.error:before {
+
+  text-shadow: 1px 0 $color-primary-1!important;
+
+  color: #FFFFFF!important;
+  background: $color-primary-1!important;
+
+}.error:after {
+
+   text-shadow: 1px 0 $color-primary-1!important;
+
+   color: #FFFFFF!important;
+   background: $color-primary-1!important;
+
+ }
 
 [data-theme="dark"] {
   body{
@@ -131,4 +170,83 @@ a.small{
   .leaflet-popup-tip{
     background-color: #222222;
   }
+
+  .ap-dataset-places{
+    background-color: black!important;
+  }
+  .ap-cursor{
+    background-color: $color-primary-3;
+  }
+  .user input, textarea{
+    background-color: #373737;
+  }
+
+  #desc:focus{
+    background-color: #373737;
+  }
+  select {
+    background-color:#373737 ;
+  }select:focus {
+     background-color:#373737 ;
+  color: whitesmoke;
+   }
+  option{
+    background-color:#373737;
+  }
+  option:hover{
+    background-color: #4f4f4f;
+  }
+  input{
+    background-color: #373737;
+  }
+  input:focus{
+    background-color: #373737;
+    color: whitesmoke;
+
+  }
+  .paginate_button a{
+   color: whitesmoke;
+   background-color: #373737;
+ }
+  .page-item.active .page-link {
+
+    color: #fff;
+    background-color: $color-primary-3;
+    border-color: $color-primary-3;
+  }
+  .page-link{
+    color: whitesmoke;
+    background-color: #373737;
+  }
+  .previous a{
+    color: whitesmoke!important;
+    background-color: #373737!important;
+  }
+  .next a{
+    color: whitesmoke!important;
+    background-color: #373737!important;
+  }
+
+  .page-link:hover{
+    background-color: $color-primary-2;
+  }
+  .previous{
+    background-color: $color-primary-2;
+  }
+  .error:before {
+
+    text-shadow: 1px 0 $color-primary-0!important;
+
+    color: #FFFFFF!important;
+    background: $color-primary-3!important;
+
+  }.error:after {
+
+     text-shadow: 1px 0 $color-primary-0!important;
+
+     color: #FFFFFF!important;
+     background: $color-primary-3!important;
+
+   }
+
 }

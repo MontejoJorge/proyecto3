@@ -25,7 +25,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon ">
-                <i class="fas fa-city"></i>
+                <img src="img/logo%20blanco.png" width="75%">
             </div>
             <div class="sidebar-brand-text mx-3">Vitoria <sup>Gasteiz</sup></div>
         </a>
@@ -36,8 +36,8 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <i class="fas fa-exclamation"></i>
+                <span>Inicio</span></a>
         </li>
 
         <!-- Divider -->
@@ -244,11 +244,75 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Formulario de nueva obra</h1>
 
                 </div>
                 <!-- /.container-fluid -->
+            <form class="user  p-3">
+                <div class="form-group ">
+                    <input type="search" class="form-control form-control-user" id="form-address"
+                           placeholder="Direccion...">
+                </div>
+                <!-- DATOS SACADOS AUTOMATICAMENTE -->
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="form-address2"
+                               placeholder="Provincia" disabled>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user" id="form-city"
+                               placeholder="Ciudad" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="form-zip"
+                               placeholder="Codigo Postal" disabled>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user" id="nombre" placeholder="Name" disabled>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="num"
+                               placeholder="Numero">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-user" id="piso"
+                               placeholder="Piso">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="mano"
+                               placeholder="Mano">
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
 
+                </div>
+
+
+                </div>
+
+                    <div class="form-group row">
+
+                        <div class="col-sm-12 mb-3 mb-sm-0">
+                    <textarea class="form-control form-control-user" id="desc"
+                              placeholder="Descripcion"></textarea>
+                        </div>
+
+
+
+
+                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                    Enviar obra
+                </a>
+                <hr>
+
+
+            </form>
             </div>
             <!-- End of Main Content -->
 
@@ -299,6 +363,9 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+    <script src="js/address.js"></script>
+
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
