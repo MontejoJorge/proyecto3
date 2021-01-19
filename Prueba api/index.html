@@ -6,18 +6,32 @@
 </head>
 <body>
 <div style="display: flex;justify-content: center;">
-    <input type="search" id="direccion" placeholder="A donde vamos?" style="width: 400px;height: 30px;"/>
+    <input type="search" id="address" class="form-control" placeholder="Direccion" />
+
 </div>
+<br><br>
+<p>Seleccionado: <strong id="address-value">ningunosss</strong></p>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
 <script>
-    var places = require('places.js');
-    var placesAutocomplete = places({
-        appId: 'plPUIUV501P5',
-        apiKey: 'ea1cc93d19cf99e02229b283e42369b9',
-        container: document.querySelector('#direccion')
-    });
+    (function() {
+        var placesAutocomplete = places({
+            appId: 'plPUIUV501P5',
+            apiKey: 'bbd770a0fe2bccfa28dd0ad5d64acc85',
+            container: document.querySelector('#address')
+        });
 
+        var $address = document.querySelector('#address-value')
+        placesAutocomplete.on('change', function(e) {
+            $address.textContent = e.suggestion.value
+        });
+
+        placesAutocomplete.on('clear', function() {
+            $address.textContent = 'none';
+        });
+
+    })();
 </script>
 
 </html>

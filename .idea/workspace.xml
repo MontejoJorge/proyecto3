@@ -20,10 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164faaa1-7f56-4f15-8253-e102ba8479ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2021_10_51__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2021_10_51__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/ts/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ts/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/autocompleteDataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/autocompleteDataset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/babel-css.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/babel-css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/places.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/places.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/places.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/places.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesAutocompleteDataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesAutocompleteDataset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesAutocompleteDataset.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesAutocompleteDataset.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesInstantsearchWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesInstantsearchWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesInstantsearchWidget.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/dist/cdn/placesInstantsearchWidget.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/instantsearchWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/instantsearchWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/configure/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/configure/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/createAutocompleteDataset.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/createAutocompleteDataset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/createAutocompleteSource.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/createAutocompleteSource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/createReverseGeocodingSource.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/createReverseGeocodingSource.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/defaultTemplates.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/defaultTemplates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/errors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/findCountryCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/findCountryCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/findType.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/findType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/formatDropdownValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/formatDropdownValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/formatHit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/formatHit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/formatInputValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/formatInputValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/instantsearch/widget.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/instantsearch/widget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/navigatorLanguage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/navigatorLanguage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/places.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/places.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/version.js" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/src/version.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prueba api/node_modules/places.js/typings.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Prueba api/node_modules/places.js/typings.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +61,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,6 +74,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../proyecto2" />
@@ -71,7 +100,8 @@
       <workItem from="1610696742884" duration="1205000" />
       <workItem from="1610698123494" duration="4877000" />
       <workItem from="1610704329995" duration="367000" />
-      <workItem from="1610954814443" duration="4963000" />
+      <workItem from="1610954814443" duration="5813000" />
+      <workItem from="1611041967523" duration="2891000" />
     </task>
     <servers />
   </component>

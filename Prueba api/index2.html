@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/billing" class="form" >
+    <div class="form-group">
+        <label for="form-address">Direccion*</label>
+        <input type="search" class="form-control" id="form-address" placeholder="Where do you live?" />
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="form-address2">Provincia</label>
+        <input type="text" class="form-control" id="form-address2" placeholder="Street number and name" disabled/>
+    </div>
+    <div class="form-group">
+        <label for="form-city">Ciudad</label>
+        <input type="text" class="form-control" id="form-city" placeholder="City" disabled>
+    </div>
+    <div class="form-group">
+        <label for="form-zip">C.P.</label>
+        <input type="text" class="form-control" id="form-zip" placeholder="ZIP code" disabled>
+    </div>
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Name" disabled>
+    </div>
+    <div class="form-group">
+        <label for="lat">Latitud</label>
+        <input type="text" class="form-control" id="lat" placeholder="Latitud" disabled>
+    </div>
+    <div class="form-group">
+        <label for="lng">Latitud</label>
+        <input type="text" class="form-control" id="lng" placeholder="Longitud" disabled>
+    </div>
+</form>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+<script>
+    (function() {
+        var placesAutocomplete = places({
+            appId: 'plPUIUV501P5',
+            apiKey: 'bbd770a0fe2bccfa28dd0ad5d64acc85',
+            container: document.querySelector('#form-address'),
+            templates: {
+                value: function(suggestion) {
+                    return suggestion.name;
+                }
+            }
+        }).configure({
+            type: 'address'
+        });
+        placesAutocomplete.on('change', function resultSelected(e) {
+            document.querySelector('#form-address2').value = e.suggestion.administrative || '';
+            document.querySelector('#form-city').value = e.suggestion.city || '';
+            document.querySelector('#form-zip').value = e.suggestion.postcode || '';
+            document.querySelector('#nombre').value = e.suggestion.name || '';
+            document.querySelector('#lat').value = e.suggestion.latlng.lat || '';
+            document.querySelector('#lng').value = e.suggestion.latlng.lng || '';
+
+
+
+        });
+    })();
+</script>
+
+</html>
