@@ -5,9 +5,9 @@
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #A36DA7;
-  border-color: #A36DA7;
+  color: #fff !important;
+  background-color: #A36DA7 !important;
+  border-color: #A36DA7 !important;
 }
 
 .btn-primary:hover {
@@ -127,6 +127,24 @@ a.small {
 }
 [data-theme=dark] .leaflet-popup-tip {
   background-color: #222222;
+}
+[data-theme=dark] .wrap-contact100 {
+  background-color: black;
+}
+[data-theme=dark] .contact100-form-title {
+  color: whitesmoke;
+}
+[data-theme=dark] .input100 {
+  color: black;
+}
+[data-theme=dark] .input100::placeholder {
+  color: black;
+}
+[data-theme=dark] .js-select2 {
+  color: black;
+}
+[data-theme=dark] .js-select2 option {
+  color: black;
 }
 
 /*# sourceMappingURL=personalizado.css.map */

@@ -10,9 +10,9 @@ $color-primary-4: #36013A;
   background-size: cover;
 }
 .btn-primary {
-  color: #fff;
-  background-color: $color-primary-1;
-  border-color:$color-primary-1;
+  color: #fff!important;
+  background-color: $color-primary-1!important;
+  border-color:$color-primary-1!important;
 }
 .btn-primary:hover {
   color: #fff;
@@ -134,5 +134,24 @@ a.small{
   }
   .leaflet-popup-tip{
     background-color: #222222;
+  }
+  .wrap-contact100{
+    background-color: black;
+  }
+  .contact100-form-title{
+    color: whitesmoke;
+  }
+  .input100{
+    color: black;
+
+  }
+  .input100::placeholder{
+    color: black;
+  }
+  .js-select2{
+    color: black;
+  }
+  .js-select2 option{
+    color: black;
   }
 }
