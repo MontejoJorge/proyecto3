@@ -17,7 +17,7 @@ class CreateRequestorsTable extends Migration
             $table->id();
             $table->string("email")->unique();
             $table->string("password");
-            $table->integer("phone");
+            $table->bigInteger("phone");
             $table->string("name");
             $table->string("surname");
             $table->string("dni")->unique();
