@@ -16,10 +16,10 @@ class CreateWorkersTable extends Migration
         Schema::create('workers', function (Blueprint $table) {
             $table->id();
             $table->string("password");
-            $table->integer("phone")->nullable();
+            $table->integer("phone")->nullable()->unique();
             $table->string("name");
             $table->string("surname");
-            $table->string("dni");
+            $table->string("dni")->unique();
             $table->timestamps();
         });
     }
