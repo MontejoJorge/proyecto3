@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('post.worker.register') }}">
                         @csrf
+                        <input type="text" name="email" placeholder="email" value="{{ old("email") }}"><br>
                         <input type="password" name="password" placeholder="password" value="{{ old("password") }}"><br>
                         <input type="password" placeholder="Repeat the password" value="{{ old("") }}"><br>
                         <input type="number" name="phone" placeholder="phone" value="{{ old("number") }}"><br>

@@ -14,6 +14,7 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//TODO https://pusher.com/tutorials/multiple-authentication-guards-laravel
 
 Route::view('/','welcome');
 
@@ -29,7 +30,7 @@ Auth::routes();
 Route::get('register/admin', 'Auth\_WorkerRegisterController@register');
 Route::post('register/admin', 'Auth\_WorkerRegisterController@store')->name("post.worker.register");
 
-Route::get('login/admin', 'Auth\_WorkerLoginController@login')->name('Workerlogin');
+Route::get('login/admin', 'Auth\_WorkerLoginController@login')->name('workerlogin');
 Route::post('login/admin', 'Auth\_WorkerLoginController@authenticate');
-Route::get('logout/admin', 'Auth\_WorkerLoginController@logout')->name('Workerlogout');
+Route::get('logout/admin', 'Auth\_WorkerLoginController@logout')->name('workerlogout');
 

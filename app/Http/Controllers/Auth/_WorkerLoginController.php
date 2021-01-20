@@ -1,5 +1,47 @@
 <?php
 
+// namespace App\Http\Controllers\Auth;
+
+// use App\Http\Controllers\Controller;
+// use App\Providers\RouteServiceProvider;
+// use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
+// class _WorkerLoginController extends Controller
+// {
+//     /*
+//     |--------------------------------------------------------------------------
+//     | Login Controller
+//     |--------------------------------------------------------------------------
+//     |
+//     | This controller handles authenticating users for the application and
+//     | redirecting them to your home screen. The controller uses a trait
+//     | to conveniently provide its functionality to your applications.
+//     |
+//     */
+
+//     use AuthenticatesUsers;
+
+//     /**
+//      * Where to redirect users after login.
+//      *
+//      * @var string
+//      */
+//     protected $redirectTo = '/';
+
+
+//     /**
+//      * Create a new controller instance.
+//      *
+//      * @return void
+//      */
+//     public function __construct()
+//     {
+//         $this->middleware('guest')->except('logout');
+//     }
+
+// }
+
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -19,17 +61,17 @@ class _WorkerLoginController extends Controller
     public function authenticate(Request $request)
     {
         $request->validate([
-            'email' => 'required|string|email',
+            'id' => 'required',
             'password' => 'required|string',
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('id', 'password');
 
         if (Auth::attempt($credentials)) {
             return redirect()->intended('home');
         }
 
-        return redirect('login')->with('error', 'Oppes! You have entered invalid credentials');
+        return redirect('workerlogin')->with('error', 'Oppes! You have entered invalid credentials');
     }
 
     public function logout() {
@@ -42,5 +84,9 @@ class _WorkerLoginController extends Controller
     {
 
       return view('home');
+    }
+    public function username()
+    {
+        return 'id';
     }
 }

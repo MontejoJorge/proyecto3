@@ -24,6 +24,7 @@ class _WorkerRegisterController extends Controller
 
       Worker::create([
           'name' => $request->name,
+          'email' => $request->email,
           'password' => Hash::make($request->password),
           'surname' => $request->surname,
           'dni' => $request->dni,
