@@ -29,6 +29,7 @@ class CreateRequestorsTable extends Migration
             $table->string("floor");
             $table->string("door");
             $table->string("city");
+            $table->rememberToken();
             $table->timestamps();
     });
     }
