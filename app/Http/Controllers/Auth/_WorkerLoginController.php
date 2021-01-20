@@ -70,6 +70,8 @@ class _WorkerLoginController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect()->intended('home');
         }
+        //TODO
+        //$attempt=Auth::guard('investor')->attempt($request->only('username','password'), $request->remember);
 
         return redirect('workerlogin')->with('error', 'Oppes! You have entered invalid credentials');
     }
