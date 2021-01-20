@@ -66,13 +66,13 @@ return [
     */
 
     'providers' => [
-        'workers' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Worker::class,
-        ],
+        // 'workers' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\Models\Worker::class,
+        // ],
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Worker::class,
         ],
     ],
 
