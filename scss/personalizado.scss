@@ -68,6 +68,22 @@ a.small{
 #seleccion{
   padding-bottom: 15px;
 }
+.error:before {
+
+  text-shadow: 1px 0 $color-primary-1!important;
+
+  color: #FFFFFF!important;
+  background: $color-primary-1!important;
+
+}.error:after {
+
+   text-shadow: 1px 0 $color-primary-1!important;
+
+   color: #FFFFFF!important;
+   background: $color-primary-1!important;
+
+ }
+
 [data-theme="dark"] {
   body{
     color: whitesmoke;
@@ -227,4 +243,19 @@ a.small{
     background-color: $color-primary-2;
   }
 
+  .error:before {
+
+    text-shadow: 1px 0 $color-primary-0!important;
+
+    color: #FFFFFF!important;
+    background: $color-primary-3!important;
+
+  }.error:after {
+
+     text-shadow: 1px 0 $color-primary-0!important;
+
+     color: #FFFFFF!important;
+     background: $color-primary-3!important;
+
+   }
 }
