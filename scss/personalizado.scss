@@ -59,8 +59,15 @@ a.small{
   background-color: $color-primary-1;
   border-color: $color-primary-1;
 }
+.form-select{
+  border-radius: 25px;
+  height: 50px;
 
 
+}
+#seleccion{
+  padding-bottom: 15px;
+}
 [data-theme="dark"] {
   body{
     color: whitesmoke;
