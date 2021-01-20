@@ -14,14 +14,10 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/','welcome');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get("/k", function () {
-    return view("k");
-})->middleware("auth")->name("k");
+Route::view("k","k")->middleware("auth")->name("k");
