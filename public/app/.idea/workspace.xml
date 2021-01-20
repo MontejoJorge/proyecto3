@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2021_10_51__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2021_10_51__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/ts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/ts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/ts/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../resources/ts/login.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,9 +16,10 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1n3Qqyapl9bhggdzW4WhOw832f3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,6 +58,7 @@
       <workItem from="1610616490394" duration="2584000" />
       <workItem from="1610621682706" duration="1671000" />
       <workItem from="1610954694669" duration="731000" />
+      <workItem from="1611135876546" duration="565000" />
     </task>
     <servers />
   </component>

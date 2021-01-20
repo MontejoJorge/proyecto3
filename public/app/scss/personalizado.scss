@@ -75,6 +75,9 @@ a.small{
 
  }
 
+ option:hover{
+background: $color-primary-2;
+ }
 [data-theme="dark"] {
   body{
     color: whitesmoke;
