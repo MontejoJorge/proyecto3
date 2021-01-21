@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'solicitante',
         'passwords' => 'users',
     ],
 
@@ -36,9 +36,9 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'solicitante' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'solicitantes',
         ],
 
         'api' => [
@@ -70,7 +70,7 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'solicitantes' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
@@ -101,8 +101,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'solicitantes' => [
+            'provider' => 'solicitantes',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
