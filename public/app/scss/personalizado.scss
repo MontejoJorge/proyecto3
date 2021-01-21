@@ -59,6 +59,13 @@ a.small{
   background-color: $color-primary-1;
   border-color: $color-primary-1;
 }
+.selector{
+    padding: 0!important;
+    height: 50px!important;
+    padding-left: 12px!important;
+}
+
+
 .error:before {
 
   text-shadow: 1px 0 $color-primary-1!important;
@@ -116,6 +123,7 @@ background: $color-primary-2;
   #content{
     background-color: #212121;
   }
+
 
   .bg-gradient-primary {
     background-color: $color-primary-4;

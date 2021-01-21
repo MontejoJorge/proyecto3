@@ -65,6 +65,12 @@ a.small {
   border-color: #A36DA7;
 }
 
+.selector {
+  padding: 0 !important;
+  height: 50px !important;
+  padding-left: 12px !important;
+}
+
 .error:before {
   text-shadow: 1px 0 #A36DA7 !important;
   color: #FFFFFF !important;

@@ -1,33 +1,120 @@
 $(document).ready(function () {
-    $("#registrar").click(function () {
-        validarForm();
+    $("#dni")
+        .focusout(function () {
+        var dni = $("#dni").val().toString();
+        validarDNI(dni);
+    });
+    $("#email")
+        .focusout(function () {
+        var email = $("#email").val().toString();
+        validarEmail(email);
+    });
+    $("#nombre")
+        .focusout(function () {
+        var nombre = $("#nombre").val().toString();
+        if (nombre == "") {
+            $("#nombre").css("border-color", "red");
+        }
+        else if (validarNoBlanco(nombre)) {
+            $("#nombre").css("border-color", "red");
+        }
+        else {
+            validarNombre(nombre);
+        }
+    });
+    $("#apellido")
+        .focusout(function () {
+        var apellido = $("#apellido").val().toString();
+        if (apellido == "") {
+            $("#apellido").css("border-color", "red");
+        }
+        else if (validarNoBlanco(apellido)) {
+            $("#apellido").css("border-color", "red");
+        }
+        else {
+            validarApellido(apellido);
+        }
+    });
+    $("#password, #password2")
+        .focusout(function () {
+        var password = $("#password").val().toString();
+        var password2 = $("#password2").val().toString();
+        if (password == "" && password2 == "") {
+            $("#password").css("border-color", "red");
+            $("#password2").css("border-color", "red");
+        }
+        else if (validarNoBlanco(password) && validarNoBlanco(password2)) {
+            $("#password").css("border-color", "red");
+            $("#password2").css("border-color", "red");
+        }
+        else {
+            validarContraseña($("#password").eq(0).val(), $("#password2").val());
+        }
+    });
+    $("#form-address")
+        .focusout(function () {
+        var direccion = $("#form-address").val().toString();
+        if (direccion == "") {
+            $("#form-address").css("border-color", "red");
+        }
+        else {
+            $("#form-address").css("border-color", "green");
+        }
+    });
+    $("#portal")
+        .focusout(function () {
+        var portal = $("#portal").val().toString();
+        validarPortal(portal);
+    });
+    $("#piso")
+        .focusout(function () {
+        var piso = $("#piso").val().toString();
+        validarPiso(piso);
+    });
+    $("#mano")
+        .focusout(function () {
+        var mano = $("#mano").val().toString();
+        if (mano == null) {
+            $("#mano").css("border-color", "red");
+        }
+        else {
+            $("#mano").css("border-color", "green");
+        }
+    });
+    $("#ntel")
+        .focusout(function () {
+        var tlf = $("#ntel").val().toString();
+        validarTlf(tlf);
     });
 });
 // Validaciones
 function validarNombre(nombre) {
     var regex = new RegExp("^(([a-zA-Z ])?[a-zA-Z]*){1,3}$");
     if (!regex.test(nombre)) {
-        throw "El nombre tiene un formato incorrecto";
+        $("#nombre").css("border-color", "red");
     }
     else {
+        $("#nombre").css("border-color", "green");
         return true;
     }
 }
 function validarApellido(apellido) {
     var regex = new RegExp("^(([a-zA-Z ])?[a-zA-Z]*){1,4}$");
     if (!regex.test(apellido)) {
-        throw "El apellido tiene un formato incorrecto";
+        $("#apellido").css("border-color", "red");
     }
     else {
+        $("#apellido").css("border-color", "green");
         return true;
     }
 }
 function validarEmail(email) {
     var regex = new RegExp("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
     if (!regex.test(email)) {
-        throw "El email tiene un formato incorrecto";
+        $("#email").css("border-color", "red");
     }
     else {
+        $("#email").css("border-color", "green");
         return true;
     }
 }
@@ -37,15 +124,16 @@ function validarDNI(dni) {
     var charIndex = parseInt(dni.substr(0, 8)) % 23;
     var letra = dni.toString().toUpperCase().substr(-1);
     if (dni.length != 9) {
-        throw "El dni tiene que tener 9 valores";
+        $("#dni").css("border-color", "red");
     }
     else if (!regex.test(dni)) {
-        throw "El dni tiene un formato incorrecto";
+        $("#dni").css("border-color", "red");
     }
     else if (letrasValidas.charAt(charIndex) != letra) {
-        throw "La dni introducido no es valido";
+        $("#dni").css("border-color", "red");
     }
     else {
+        $("#dni").css("border-color", "green");
         return true;
     }
 }
@@ -53,40 +141,48 @@ function validarContraseña(contraseña, contraseña2) {
     var regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&?¿!¡._-]).{8,64}$");
     if (regex.test(contraseña)) {
         if (contraseña != contraseña2) {
+            $("#password").css("border-color", "red");
+            $("#password2").css("border-color", "red");
             throw "Las contraseñas no coinciden";
         }
         else {
+            $("#password").css("border-color", "green");
+            $("#password2").css("border-color", "green");
             return true;
         }
     }
     else {
         throw "La contraseña debe contener 8 o más caracteres, una mayuscula, una minuscula, un numero y un caracter especial (@#$%&?¿!¡._-)";
+        $("#password").css("border-color", "red");
     }
 }
 function validarPortal(texto) {
     var regex = new RegExp("^(([0-9]){1,2}[a-zA-Z]?)$");
     if (!regex.test(texto)) {
-        throw "Introduce el portal correctamente";
+        $("#portal").css("border-color", "red");
     }
     else {
+        $("#portal").css("border-color", "green");
         return true;
     }
 }
 function validarPiso(texto) {
     var regex = new RegExp("^([0-9]){1,3}$");
     if (!regex.test(texto)) {
-        throw "Introduce el piso correctamente";
+        $("#piso").css("border-color", "red");
     }
     else {
+        $("#piso").css("border-color", "green");
         return true;
     }
 }
 function validarTlf(tlf) {
     var regex = new RegExp("^((6|7|8|9)[-]*([0-9][-]*){8})$");
     if (!regex.test(String(tlf))) {
-        throw "Introduce el tlf correctamente Ej:688234567";
+        $("#ntel").css("border-color", "red");
     }
     else {
+        $("#ntel").css("border-color", "green");
         return true;
     }
 }
@@ -110,94 +206,14 @@ function validarForm() {
         var password2 = $("#password2").val().toString();
         var portal = $("#portal").val().toString();
         var piso = $("#piso").val().toString();
-        var direccion = $("#form-address").val().toString();
-        var fecha_nac = $("#fecha_nac").val().toString();
-        // @ts-ignore
-        var provincia = $('select[name ="provincia"]').val();
-        // @ts-ignore
-        var mano = $('select[name ="mano"]').val();
-        // @ts-ignore
-        var tlf = $("#ntel").val();
         //llamamos a los metodos que validan los campos
         validarDNI(dni);
         validarEmail(email);
-        //Comprobamos que no este vacio el nombre ni el apellido y que no tienen ambos espacios en blanco
-        if (nombre == "" && apellido == "") {
-            throw "El nombre y apellido no pueden estar vacios";
-        }
-        else if (validarNoBlanco(nombre) && validarNoBlanco(apellido)) {
-            throw "El nombre y apellido no pueden contener espacios";
-        }
-        //Validamos el nombre comprobando antes que no tiene espacios en blanco
-        if (nombre == "") {
-            throw "El nombre no puede estar vacio";
-        }
-        else if (validarNoBlanco(nombre)) {
-            throw "El nombre no puede tener espacios en blanco";
-        }
-        else {
-            validarNombre(nombre);
-        }
-        //Validamos el apellido comprobando antes que no tiene espacios en blanco
-        if (apellido == "") {
-            throw "El apellido no puede estar vacio";
-        }
-        else if (validarNoBlanco(apellido)) {
-            throw "El apellido no puede tener espacios en blanco";
-        }
-        else {
-            validarApellido(apellido);
-        }
-        //Validar para que no nos pongan la contraseña en blanco o con espacios
-        if (password1 == "" && password2 == "") {
-            throw "La contraseña no puede estar vacia";
-        }
-        else if (validarNoBlanco(password1) && validarNoBlanco(password2)) {
-            throw "La contraseña no puede tener espacios en blanco";
-        }
-        else {
-            validarContraseña($("#password").eq(0).val(), $("#password2").val());
-        }
-        //Validamos para que tengan que seleccionar una obligatoriamente
-        if (provincia == null) {
-            throw "Seleccione su provincia de nacimiento";
-        }
-        //Validamos la fecha para que no la dejen vacia
-        if (fecha_nac == "") {
-            throw "Seleccione su fecha de nacimiento";
-        }
-        //Validamos la direccion para que no este vacio
-        if (direccion == "") {
-            throw "Rellene el campo direccion";
-        }
-        //Validamos el portal para que no este vacio ni mal introducido
-        if (portal == "") {
-            throw "El portal no puede estar vacio";
-        }
-        else if (validarNoBlanco(portal)) {
-            throw "El portal no puede tener espacios en blanco";
-        }
-        else {
-            validarPortal(portal);
-        }
-        //Validamos el piso para que no este vacio ni mal introducido
-        if (piso == "") {
-            throw "El piso no puede estar vacio";
-        }
-        else if (validarNoBlanco(piso)) {
-            throw "El piso no puede tener espacios en blanco";
-        }
-        else {
-            validarPiso(piso);
-        }
-        //Validamos para que tengan que seleccionar una obligatoriamente
-        if (mano == null) {
-            throw "Seleccione la mano de su piso";
-        }
-        //Validamos el numero de telefono
-        validarTlf(tlf);
-        alert("Usuario registrado correctamente");
-        window.location.href = "login.html";
+        validarNombre(nombre);
+        validarApellido(apellido);
+        validarContraseña(password1, password2);
+        validarPortal(portal);
+        validarPiso(piso);
         return true;
     }
     catch (error) {
