@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    @if(Auth::guard('web')->check())
+                        Eres un usuario!
+                    @elseif(Auth::guard('trabajador')->check())
+                        Eres un trabajador
+                    @endif
                 </div>
             </div>
         </div>
