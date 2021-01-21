@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,23 +12,11 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//TODO https://pusher.com/tutorials/multiple-authentication-guards-laravel
 
-Route::view('/','welcome');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::view("k","k")->middleware("auth")->name("k");
-
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
-//Rutas trabajadores
-Route::get('register/admin', 'Auth\_WorkerRegisterController@register');
-Route::post('register/admin', 'Auth\_WorkerRegisterController@store')->name("post.worker.register");
-
-Route::get('login/admin', 'Auth\_WorkerLoginController@login')->name('workerlogin');
-Route::post('login/admin', 'Auth\_WorkerLoginController@authenticate');
-Route::get('logout/admin', 'Auth\_WorkerLoginController@logout')->name('workerlogout');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
