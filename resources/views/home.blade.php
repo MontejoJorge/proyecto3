@@ -15,9 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    @if(Auth::guard('web')->check())
+                    @if(Auth::guard('solicitante')->check())
                         Eres un usuario!
-                        {{ Auth::guard('web')->user()->dni }}
+                        {{-- {{ Auth::guard('solicitante')->user()->email }} --}}
                     @elseif(Auth::guard('trabajador')->check())
                         Eres un trabajador
                     @endif
