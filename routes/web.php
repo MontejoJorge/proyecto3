@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/k', function () {
+    return "hola";
+})->middleware('auth:trabajador');
 
 Auth::routes();
 
