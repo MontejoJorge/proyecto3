@@ -17,6 +17,7 @@
                     {{ __('You are logged in!') }}
                     @if(Auth::guard('web')->check())
                         Eres un usuario!
+                        {{ Auth::guard('web')->user()->dni }}
                     @elseif(Auth::guard('trabajador')->check())
                         Eres un trabajador
                     @endif
