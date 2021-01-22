@@ -28,6 +28,11 @@ Route::get("/home/register","Auth\Trabajador\RegisterController@showRegisterForm
 
 Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
 
+Route::get("/home/tipoEdificios", "TipoEdificioController@index");
+
+Route::get("/home/tipoEdificios/crear", "TipoEdificioController@create");
+Route::post("/home/tipoEdificios/crear", "TipoEdificioController@store")->name("tipoEdificio.store");
+
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 //     Route::get("/register","Auth\Trabajador\RegisterController@showRegisterForm")
