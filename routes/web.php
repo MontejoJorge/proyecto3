@@ -28,13 +28,15 @@ Route::get("/home/register","Auth\Trabajador\RegisterController@showRegisterForm
 
 Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
 
-Route::get("/home/tipoEdificios", "TipoEdificioController@index");
+Route::get("/home/tipos-edificios", "TipoEdificioController@index");
 
-Route::get("/home/tipo-edificios/crear", "TipoEdificioController@create")->name("tipoEdificio.crear");
-Route::post("/home/tipo-edificios/crear", "TipoEdificioController@store")->name("tipoEdificio.store");
+Route::get("/home/tipos-edificios/crear", "TipoEdificioController@create")->name("tipoEdificio.crear");
+Route::post("/home/tipos-edificios/crear", "TipoEdificioController@store")->name("tipoEdificio.store");
 
-Route::get("/home/tipo-obra/crear", "TipoObraController@create")->name("tipoObra.crear");
-Route::post("/home/tipo-obra/crear", "TipoObraController@store")->name("tipoObra.store");
+Route::get("/home/tipos-obras", "TipoObraController@index");
+
+Route::get("/home/tipos-obras/crear", "TipoObraController@create")->name("tipoObra.crear");
+Route::post("/home/tipos-obras/crear", "TipoObraController@store")->name("tipoObra.store");
 
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
