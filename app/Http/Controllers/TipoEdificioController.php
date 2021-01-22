@@ -37,13 +37,11 @@ class TipoEdificioController extends Controller
     public function store(Request $request)
     {
         $this->validator($request->all())->validate();
-
         
         TipoEdificio::create ([
             "name" => $request->tipoEdificio
         ]);
-
-        return redirect(route("tipoEdificio.crear"));
+        return back()->with("status", "Tipo de obra creada");
     }
 
     /**

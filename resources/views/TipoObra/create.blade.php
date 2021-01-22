@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container">
+        @if (session("status"))
+            <p>{{ session("status") }}</p>
+        @endif
         <Form method="POST" action="{{ route("tipoObra.crear") }}">
             @csrf
             <label for="">Tipo Obra</label>

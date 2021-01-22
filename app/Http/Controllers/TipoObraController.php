@@ -42,7 +42,7 @@ class TipoObraController extends Controller
             "name" => $request->tipoObra
         ]);
 
-        return redirect(route("tipoObra.crear"));
+        return back()->with("status", "Tipo de obra creada");
     }
 
     /**
