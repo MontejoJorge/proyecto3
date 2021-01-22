@@ -23,6 +23,15 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get("/home/register","Auth\Trabajador\RegisterController@showRegisterForm")
+    ->middleware("auth", "role:coordinador")
     ->name("register.trabajadores");
 
 Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
+
+
+// Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+//     Route::get("/register","Auth\Trabajador\RegisterController@showRegisterForm")
+//     ->middleware("auth", "role:coordinador")
+//     ->name("register.trabajadores");
+//     Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
+// });
