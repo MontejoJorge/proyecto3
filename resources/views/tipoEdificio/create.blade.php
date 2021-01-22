@@ -9,5 +9,10 @@
             <input type="submit" value="Crear">
         </Form>
     </div>
+    @if ($errors->any())
+        @foreach ($errors->all() as $e)
+            {{ $e }}
+        @endforeach
+    @endif
 
 @endsection

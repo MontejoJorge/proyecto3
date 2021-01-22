@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TipoEdificio;
+use Illuminate\Support\Facades\Validator;
 
 class TipoEdificioController extends Controller
 {
@@ -35,9 +36,13 @@ class TipoEdificioController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validator($request->all())->validate();
+
         TipoEdificio::create ([
             "name" => $request->tipoEdificio
         ]);
+
+        return redirect(route("tipoEdificio.crear"));
     }
 
     /**
@@ -83,5 +88,11 @@ class TipoEdificioController extends Controller
     public function destroy($id)
     {
         //
+    }
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255', 'unique:tipo_edificios'],
+        ]);
     }
 }

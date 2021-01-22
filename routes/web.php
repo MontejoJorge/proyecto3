@@ -30,7 +30,7 @@ Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegis
 
 Route::get("/home/tipoEdificios", "TipoEdificioController@index");
 
-Route::get("/home/tipoEdificios/crear", "TipoEdificioController@create");
+Route::get("/home/tipoEdificios/crear", "TipoEdificioController@create")->name("tipoEdificio.crear");
 Route::post("/home/tipoEdificios/crear", "TipoEdificioController@store")->name("tipoEdificio.store");
 
 
