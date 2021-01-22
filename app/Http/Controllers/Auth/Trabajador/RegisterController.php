@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Auth\Trabajador;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Providers\RouteServiceProvider;
-use App\Models\Trabajador;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Trabajador;
 
 class RegisterController extends Controller
 {
@@ -31,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = "/home";
 
     /**
      * Create a new controller instance.
@@ -40,11 +41,27 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     public function showRegisterForm(){
         return view("trabajadores.register");
+    }
+
+    public function TrabajadorRegister(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+
+        if ($response = $this->registered($request, $user)) {
+            return $response;
+        }
+
+        return $request->wantsJson()
+                    ? new JsonResponse([], 201)
+                    : redirect($this->redirectPath());
     }
 
     /**
@@ -57,7 +74,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:trabajadores'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
@@ -73,10 +90,11 @@ class RegisterController extends Controller
         return Trabajador::create([
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'phone' => $data['phone'],
             'name' => $data['name'],
+            'phone' => $data["phone"],
             'surname' => $data['surname'],
             'dni' => $data['dni'],
+            'role' => $data["role"]
         ]);
     }
 }

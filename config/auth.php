@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'solicitante',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
 
@@ -36,19 +36,16 @@ return [
     */
 
     'guards' => [
-        'solicitante' => [
+        'web' => [
             'driver' => 'session',
-            'provider' => 'solicitantes',
+            'provider' => 'users',
         ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
         ],
-        'trabajador' => [
-            'driver' => 'session',
-            'provider' => 'trabajadores',
-        ]
     ],
 
     /*
@@ -69,14 +66,10 @@ return [
     */
 
     'providers' => [
-        'solicitantes' => [
+        'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-        'trabajadores' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Trabajador::class,
-        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -100,16 +93,11 @@ return [
     */
 
     'passwords' => [
-        'solicitantes' => [
-            'provider' => 'solicitantes',
+        'users' => [
+            'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
-        ],
-        'trabajadores' => [
-            'provider' => 'trabajadores',
-            'table' => 'password_resets',
-            'expire' => 60,
         ],
     ],
 
