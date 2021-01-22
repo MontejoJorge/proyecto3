@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TipoEdificio;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class TipoEdificioController extends Controller
@@ -15,9 +16,9 @@ class TipoEdificioController extends Controller
      */
     public function index()
     {
-        //$tipoEdificios = \DB::table("tipo_edificios");
+        $tiposEdificios = DB::table("tipos_edificios")->get();
 
-        return view("tipoEdificio.index");
+        return view("tipoEdificio.index", compact("tiposEdificios"));
     }
 
     /**
