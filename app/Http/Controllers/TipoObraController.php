@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TipoObra;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class TipoObraController extends Controller
@@ -15,7 +16,9 @@ class TipoObraController extends Controller
      */
     public function index()
     {
-        return view("tipoObra.index");
+        $tiposObras = DB::table("tipos_obras")->get();
+
+        return view("tipoObra.index",compact("tiposObras"));
     }
 
     /**
