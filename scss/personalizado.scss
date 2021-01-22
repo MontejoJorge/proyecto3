@@ -91,6 +91,10 @@ a.small{
   background-image: url("https://c1.wallpaperflare.com/preview/268/493/288/vitoria-gasteiz-basque-country-euskadi-alava-architecture.jpg")!important;
   background-size: cover;
 }
+.ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
+
+  border-radius: 10px;
+}
 
 [data-theme="dark"] {
   body{
@@ -270,4 +274,18 @@ a.small{
   .modal-content{
   background-color: #373737;
   }
+
+  #editor{
+    border: 1px white solid;
+    border-radius: 10px;
+  }
+  .ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
+  background-color: #e3e3e3;
+    color: whitesmoke!important;
+    border-radius: 10px;
+  }
+
+
+
+
 }

@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/boton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prueba.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/boton.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/personalizado.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -29,9 +45,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pruebaAjax" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,7 +94,7 @@
       <workItem from="1611132353629" duration="2137000" />
       <workItem from="1611144444156" duration="2915000" />
       <workItem from="1611214349395" duration="626000" />
-      <workItem from="1611308196727" duration="751000" />
+      <workItem from="1611308196727" duration="9034000" />
     </task>
     <servers />
   </component>
@@ -92,10 +110,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="185" y="335" key="EditFileWatcherDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1611132387301" />
-    <state x="299" y="312" key="FileChooserDialogImpl" timestamp="1611215369285">
+    <state x="299" y="312" key="FileChooserDialogImpl" timestamp="1611309129428">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="299" y="312" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1611215369285" />
+    <state x="299" y="312" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1611309129428" />
     <state width="979" height="354" key="GridCell.Tab.0.bottom" timestamp="1611042420016">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -148,6 +166,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="20" y="202" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1611132380649" />
+    <state x="171" y="262" key="run.anything.popup" timestamp="1611313825475">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="171" y="262" key="run.anything.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1611313825475" />
     <state x="181" y="247" key="search.everywhere.popup" timestamp="1611057409958">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

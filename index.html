@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/personalizado.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/24.0.0/decoupled-document/ckeditor.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -19,6 +20,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
+    <link rel="stylesheet" href="css/boton.css">
     <link rel="icon" type="image/png" href="img/logo%20degradado.png">
 </head>
 
@@ -152,6 +154,9 @@
 
             <!-- Main Content -->
             <div id="content">
+                <div class="center menu">
+                    <div id="myMenu"></div>
+                </div>
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -448,7 +453,14 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
         </div>
+
     </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -467,6 +479,7 @@
     <!-- Mapa -->
     <script src="js/mapa.js"></script>
     <!-- Page level custom scripts -->
+    <script src="js/boton.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>

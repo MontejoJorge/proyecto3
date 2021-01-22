@@ -95,6 +95,10 @@ a.small {
   background-size: cover;
 }
 
+.ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
+  border-radius: 10px;
+}
+
 [data-theme=dark] body {
   color: whitesmoke;
 }
@@ -298,6 +302,17 @@ a.small {
 
 [data-theme=dark] .modal-content {
   background-color: #373737;
+}
+
+[data-theme=dark] #editor {
+  border: 1px white solid;
+  border-radius: 10px;
+}
+
+[data-theme=dark] .ck-rounded-corners .ck.ck-toolbar, [data-theme=dark] .ck.ck-toolbar.ck-rounded-corners {
+  background-color: #e3e3e3;
+  color: whitesmoke !important;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=personalizado.css.map */
