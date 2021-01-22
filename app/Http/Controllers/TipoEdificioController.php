@@ -15,7 +15,9 @@ class TipoEdificioController extends Controller
      */
     public function index()
     {
-        //
+        //$tipoEdificios = \DB::table("tipo_edificios");
+
+        return view("tipoEdificio.index");
     }
 
     /**
@@ -91,7 +93,7 @@ class TipoEdificioController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'tipoEdificio' => ['required', 'string', 'max:255', 'unique:tipo_edificios,name'],
+            'tipoEdificio' => ['required', 'string', 'max:255', 'unique:tipos_edificios,name'],
         ]);
     }
 }

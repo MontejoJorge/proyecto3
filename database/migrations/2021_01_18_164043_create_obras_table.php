@@ -16,8 +16,8 @@ class CreateObrasTable extends Migration
         Schema::create('obras', function (Blueprint $table) {
             $table->id();
             $table->foreignId("requestor_id")->constrained("users");
-            $table->foreignId("building_id")->constrained("tipo_edificios");
-            $table->foreignId("construction_id")->constrained("tipo_obras");
+            $table->foreignId("building_id")->constrained("tipos_edificios");
+            $table->foreignId("construction_id")->constrained("tipos_obras");
             $table->foreignId("worker_id")->nullable()->constrained("users");
             $table->timestamps();
         });

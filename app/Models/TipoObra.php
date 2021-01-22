@@ -12,4 +12,6 @@ class TipoObra extends Model
     protected $fillable = [
         "name"
     ];
+
+    protected $table = "tipos_obras";
 }

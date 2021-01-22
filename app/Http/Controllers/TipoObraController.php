@@ -93,7 +93,7 @@ class TipoObraController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'tipoObra' => ['required', 'string', 'max:255', 'unique:tipo_obras,name'],
+            'tipoObra' => ['required', 'string', 'max:255', 'unique:tipos_obras,name'],
         ]);
     }
 }
