@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sb-admin-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sb-admin-2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/sb-admin-2.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/sb-admin-2.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/undraw_posting_photo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/undraw_profile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/undraw_profile_1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/undraw_profile_2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/undraw_profile_3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/undraw_rocket.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/personalizado.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +74,9 @@
       <workItem from="1611132006891" duration="247000" />
       <workItem from="1611132260700" duration="82000" />
       <workItem from="1611132353629" duration="2137000" />
-      <workItem from="1611144444156" duration="2451000" />
+      <workItem from="1611144444156" duration="2915000" />
+      <workItem from="1611214349395" duration="626000" />
+      <workItem from="1611308196727" duration="751000" />
     </task>
     <servers />
   </component>
@@ -107,10 +92,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="185" y="335" key="EditFileWatcherDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1611132387301" />
-    <state x="299" y="312" key="FileChooserDialogImpl" timestamp="1611139597807">
+    <state x="299" y="312" key="FileChooserDialogImpl" timestamp="1611215369285">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="299" y="312" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1611139597807" />
+    <state x="299" y="312" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1611215369285" />
     <state width="979" height="354" key="GridCell.Tab.0.bottom" timestamp="1611042420016">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
