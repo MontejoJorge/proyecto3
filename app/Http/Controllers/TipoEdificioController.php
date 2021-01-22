@@ -38,6 +38,7 @@ class TipoEdificioController extends Controller
     {
         $this->validator($request->all())->validate();
 
+        
         TipoEdificio::create ([
             "name" => $request->tipoEdificio
         ]);
@@ -92,7 +93,7 @@ class TipoEdificioController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255', 'unique:tipo_edificios'],
+            'tipoEdificio' => ['required', 'string', 'max:255', 'unique:tipo_edificios,name'],
         ]);
     }
 }
