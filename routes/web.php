@@ -20,28 +20,36 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Grupo home
+Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
 
-Route::get("/home/register","Auth\Trabajador\RegisterController@showRegisterForm")
-    ->middleware("auth", "role:coordinador")
-    ->name("register.trabajadores");
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
+    //Solo para cordinadores
+    Route::middleware("role:coordinador")->group(function (){
+        //Registro de trabajadores
+        Route::get("/register","Auth\Trabajador\RegisterController@showRegisterForm")
+        ->name("register.trabajadores");
 
-Route::get("/home/tipos-edificios", "TipoEdificioController@index");
+        Route::post("/register","Auth\Trabajador\RegisterController@TrabajadorRegister")
+        ->middleware("auth", "role:coordinador");
 
-Route::get("/home/tipos-edificios/crear", "TipoEdificioController@create")->name("tipoEdificio.crear");
-Route::post("/home/tipos-edificios/crear", "TipoEdificioController@store")->name("tipoEdificio.store");
+        //Tipos de edificios
+        Route::group(['prefix' => 'tipos-edificios'], function () {
+            Route::get("/", "TipoEdificioController@index");
+            //Crear
+            Route::get("/crear", "TipoEdificioController@create")->name("tipoEdificio.crear");
+            Route::post("/crear", "TipoEdificioController@store")->name("tipoEdificio.store");
+        });
 
-Route::get("/home/tipos-obras", "TipoObraController@index");
+        //Tipos de obras
+        Route::group(['prefix' => 'tipos-obras'], function () {
+            Route::get("/", "TipoObraController@index");
+            //Crear
+            Route::get("/crear", "TipoObraController@create")->name("tipoObra.crear");
+            Route::post("/crear", "TipoObraController@store")->name("tipoObra.store");
+        });
+    });
 
-Route::get("/home/tipos-obras/crear", "TipoObraController@create")->name("tipoObra.crear");
-Route::post("/home/tipos-obras/crear", "TipoObraController@store")->name("tipoObra.store");
 
-
-// Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-//     Route::get("/register","Auth\Trabajador\RegisterController@showRegisterForm")
-//     ->middleware("auth", "role:coordinador")
-//     ->name("register.trabajadores");
-//     Route::post("/home/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
-// });
+});
