@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\TipoEdificio;
 
 class CreateTiposEdificiosTable extends Migration
 {
@@ -18,6 +19,10 @@ class CreateTiposEdificiosTable extends Migration
             $table->string("name");
             $table->timestamps();
         });
+
+        TipoEdificio::create([
+            "name" => "Restaurante",
+        ]);
     }
 
     /**

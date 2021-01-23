@@ -3,6 +3,7 @@ tipo_construcciones<?php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\TipoObra;
 
 class CreateTiposObrasTable extends Migration
 {
@@ -18,6 +19,10 @@ class CreateTiposObrasTable extends Migration
             $table->string("name");
             $table->timestamps();
         });
+
+        TipoObra::create([
+            "name" => "Demolicion",
+        ]);
     }
 
     /**
