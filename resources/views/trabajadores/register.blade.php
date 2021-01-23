@@ -13,7 +13,6 @@
                         <input type="text" name="email" placeholder="email" value="{{ old("email") }}"><br>
                         <input type="password" name="password" placeholder="password"><br>
                         <input type="password" name="password_confirmation" placeholder="Repeat the password"><br>
-                        <input type="number" name="phone" placeholder="phone" value="{{ old("number") }}"><br>
                         <input type="text" name="name" placeholder="name" value="{{ old("name") }}"><br>
                         <input type="text" name="surname" placeholder="surname" value="{{ old("surname") }}"><br>
                         <input type="text" name="dni" placeholder="dni" value="{{ old("dni") }}"><br>

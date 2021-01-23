@@ -50,7 +50,6 @@ class CreateUsersTable extends Migration
             Trabajador::create([
                 'email' => "admin@admin.com",
                 'password' => Hash::make("Jm12345"),
-                'phone' => "626307478",
                 'name' => "Admin",
                 'surname' => "Admin",
                 'dni' => "Admin",
