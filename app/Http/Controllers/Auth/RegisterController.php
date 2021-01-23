@@ -64,6 +64,7 @@ class RegisterController extends Controller
             'floor' => ['required', 'max:255'],
             'door' => ['required', 'max:255'],
             'city' => ['required', 'max:255'],
+            'province' => ['required', 'max:255'],
         ]);
     }
 
@@ -90,6 +91,7 @@ class RegisterController extends Controller
             'floor' => $data['floor'],
             'door' => $data['door'],
             'city' => $data['city'],
+            'province' => $data["province"],
         ]);
     }
 }

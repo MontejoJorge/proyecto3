@@ -25,6 +25,7 @@
                         <input type="text" name="floor" placeholder="floor" value="{{ old("floor") }}"><br>
                         <input type="text" name="door" placeholder="door" value="{{ old("door") }}"><br>
                         <input type="text" name="city" placeholder="city" value="{{ old("city") }}"><br>
+                        <input type="text" name="province" placeholder="province" value="{{ old("province") }}"><br>
 
                     @if ($errors->any())
                         @foreach ($errors->all() as $e)

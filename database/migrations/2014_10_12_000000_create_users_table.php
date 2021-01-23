@@ -41,6 +41,9 @@ class CreateUsersTable extends Migration
             $table->string("floor")->nullable();
             $table->string("door")->nullable();
             $table->string("city")->nullable();
+            $table->string("province")->nullable();
+
+            //Otros //TODO AÑADIR PROVINCIA A LOS MODELOS Y FORMULARIOS
             $table->rememberToken();
             $table->timestamps();
 
@@ -71,6 +74,7 @@ class CreateUsersTable extends Migration
                 'floor' => "3",
                 'door' => "D",
                 'city' => "Miranda",
+                'province' => "Burgos"
             ]);
     }
 
