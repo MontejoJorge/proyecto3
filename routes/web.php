@@ -25,14 +25,18 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
 
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+    Route::group(['prefix' => 'obra'], function () {
+        Route::get("/crear","ObraController@create")->name("obra.crear");
+        Route::post("/crear","ObraController@store")->name("obra.store");
+    });
+
     //Solo para cordinadores
     Route::middleware("role:coordinador")->group(function (){
         //Registro de trabajadores
         Route::get("/register","Auth\Trabajador\RegisterController@showRegisterForm")
         ->name("register.trabajadores");
 
-        Route::post("/register","Auth\Trabajador\RegisterController@TrabajadorRegister")
-        ->middleware("auth", "role:coordinador");
+        Route::post("/register","Auth\Trabajador\RegisterController@TrabajadorRegister");
 
         //Tipos de edificios
         Route::group(['prefix' => 'tipos-edificios'], function () {
