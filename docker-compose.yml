@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: proyecto3db
+    ports:
+      - "3306:3306"
