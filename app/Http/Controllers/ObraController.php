@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Obra;
+use App\Models\User;
 
 class ObraController extends Controller
 {
@@ -16,7 +17,10 @@ class ObraController extends Controller
      */
     public function index()
     {
-        //
+        //$obras = DB::table('obras')->get();
+        $obras = Obra::all();
+
+        return view("obra.index", compact("obras"));
     }
 
     /**

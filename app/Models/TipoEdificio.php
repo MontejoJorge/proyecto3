@@ -14,4 +14,8 @@ class TipoEdificio extends Model
     ];
 
     protected $table = "tipos_edificios";
+
+    public function obra(){
+        return $this->hasMany(Obra::class, "building_type");
+    }
 }

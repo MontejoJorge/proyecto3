@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Obra;
 
 class CreateObrasTable extends Migration
 {
@@ -39,6 +40,21 @@ class CreateObrasTable extends Migration
             $table->longText("blueprint")->nullable();
             $table->timestamps();
         });
+
+        Obra::create([
+            "requestor_id" => 2,
+            "building_type" => 1,
+            "construction_type" => 1,
+            "worker_id" => 1,
+            "street_name" => "Calle la fundicion",
+            "number" => "2",
+            "floor" => "3",
+            "door" => "D",
+            "postal_code" => "09200",
+            "city" => "Miranda",
+            "province" => "Burgos",
+            "description" => "Quiero hace una terraza nueva",
+        ]);
     }
 
     /**

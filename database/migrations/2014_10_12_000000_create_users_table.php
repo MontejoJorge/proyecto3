@@ -43,7 +43,7 @@ class CreateUsersTable extends Migration
             $table->string("city")->nullable();
             $table->string("province")->nullable();
 
-            //Otros //TODO AÑADIR PROVINCIA A LOS MODELOS Y FORMULARIOS
+            //Otros
             $table->rememberToken();
             $table->timestamps();
 
