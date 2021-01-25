@@ -12,25 +12,25 @@
                     <form method="POST" action="{{ route('obra.store') }}">
                         @csrf
                         @empty($tiposObras)
+                        <a href="{{ route("tipoObra.crear") }}">No hay tipos de obras, crear</a>
+                        @else 
                         <select name="tipoObra">
                             @foreach ($tiposObras as $i)
                                 <option value="{{ $i->id }}">{{ $i->name }}</option>
                             @endforeach
                         </select>
-                        @else 
-                            <a href="{{ route("tipoObra.crear") }}">No hay tipos de obras, crear</a>
                         @endempty
                                 <br>
 
 
                         @empty($tiposEdificios)
+                        <a href="{{ route("tipoEdificio.crear") }}">No hay tipos de edificio, crear</a>
+                        @else 
                         <select name="tipoEdificio">
                             @foreach ($tiposEdificios as $i)
                             <option value="{{ $i->id }}">{{ $i->name }}</option>
                             @endforeach
                         </select>  
-                        @else 
-                            <a href="{{ route("tipoEdificio.crear") }}">No hay tipos de edificio, crear</a>
                         @endempty
                         
 
