@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/boton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prueba.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/boton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obra.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/boton.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/boton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/boton.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/boton.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/boton.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/boton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prueba.html" beforeDir="false" afterPath="$PROJECT_DIR$/prueba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/boton.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/boton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/boton.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/boton.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/boton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/boton.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/personalizado.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/tables.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2gdaw05\Desktop\proyecto3\js" />
       <recent name="C:\Users\2gdaw05\Desktop\proyecto3\scss" />
     </key>
   </component>
@@ -95,6 +99,7 @@
       <workItem from="1611144444156" duration="2915000" />
       <workItem from="1611214349395" duration="626000" />
       <workItem from="1611308196727" duration="9034000" />
+      <workItem from="1611559748249" duration="12886000" />
     </task>
     <servers />
   </component>

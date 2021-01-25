@@ -1,5 +1,5 @@
 import anime from '../node_modules/animejs/lib/anime.es.js';
-
+import '../node_modules/jquery-ui-dist/jquery-ui.js';
 var timeOut;
 
 class Item {
@@ -154,8 +154,8 @@ class Menu {
 
 var menu = new Menu("#myMenu");
 var item1 = new Item("list");
-var item2 = new Item("torso", "#FF5C5C");
-var item3 = new Item("social-facebook", "#5CD1FF");
+var item2 = new Item("home", "#FF5C5C");
+var item3 = new Item("social-github", "#5CD1FF");
 var item4 = new Item("paypal", "#FFF15C");
 var item5 = new Item("link", "#64F592");
 
