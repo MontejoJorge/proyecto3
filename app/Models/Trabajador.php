@@ -42,4 +42,8 @@ class Trabajador extends Authenticatable
     ];
 
     protected $table = "users";
+
+    public function obra_asignada(){
+        return $this->hasMany(Obra::class, "worker_id");
+    }
 }

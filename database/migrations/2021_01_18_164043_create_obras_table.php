@@ -36,7 +36,7 @@ class CreateObrasTable extends Migration
             $table->date("end_date")->nullable();
 
             //Otros
-            $table->enum("state",["created", "pending", "denied", "authorized"])->default("authorized");
+            $table->enum("state",["created", "pending", "denied", "authorized"])->default("created");
             $table->text("description");
             $table->longText("blueprint")->nullable();
             $table->timestamps();
@@ -54,7 +54,22 @@ class CreateObrasTable extends Migration
             "postal_code" => "09200",
             "city" => "Miranda",
             "province" => "Burgos",
-            "satate" => "created",
+            "state" => "created",
+            "description" => "Quiero hace una terraza nueva",
+        ]);
+
+        Obra::create([
+            "requestor_id" => 2,
+            "building_type" => 1,
+            "construction_type" => 1,
+            "street_name" => "Av Olarizu",
+            "number" => "2",
+            "floor" => "3",
+            "door" => "D",
+            "postal_code" => "09200",
+            "city" => "Miranda",
+            "province" => "Burgos",
+            "state" => "pending",
             "description" => "Quiero hace una terraza nueva",
         ]);
     }

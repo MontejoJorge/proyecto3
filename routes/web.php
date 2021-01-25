@@ -25,11 +25,15 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
 
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::group(['prefix' => 'obra'], function () {
+    Route::group(['prefix' => 'obras'], function () {
         Route::get("/", "ObraController@index")->name("obra.index");
 
         Route::get("/crear","ObraController@create")->name("obra.crear");
         Route::post("/crear","ObraController@store")->name("obra.store");
+
+        Route::get("/ver/{id}", "ObraController@show")->name("obra.show");
+        //Asignar tecnicos
+        Route::post("/ver/{id}", "ObraController@trabajador")->name("obra.trabajador");
     });
 
     //Solo para cordinadores

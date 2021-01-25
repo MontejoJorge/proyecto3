@@ -23,6 +23,18 @@ class CreateTiposEdificiosTable extends Migration
         TipoEdificio::create([
             "name" => "Restaurante",
         ]);
+        TipoEdificio::create([
+            "name" => "Piso",
+        ]);
+        TipoEdificio::create([
+            "name" => "Casa",
+        ]);
+        TipoEdificio::create([
+            "name" => "Local",
+        ]);
+        TipoEdificio::create([
+            "name" => "Garaje",
+        ]);
     }
 
     /**

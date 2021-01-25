@@ -12,14 +12,13 @@ class Obra extends Model
     protected $guarded = [
         "id",
         "updated_at",
-        "worker_id",
         "start_date",
-        "end_date"
+        "end_date",
+        "created_at",
+        "updated_at"
     ];
 
     public function solicitante(){
-        //return "no";
-        //return $this->hasMany(User::class);
         return $this->belongsTo(User::class, "requestor_id");
     }
     public function tipo_edificio(){
@@ -28,10 +27,11 @@ class Obra extends Model
     public function tipo_obra(){
         return $this->belongsTo(TipoObra::class, "construction_type");
     }
-    public function worker(){
-        return $this->hasOneOrZero(Worker::class);
+    //TODO
+    public function trabajador(){
+        return $this->belongsTo(User::class, "worker_id");
     }
-    public function comment(){
-        return $this->hasZeroOrMany(Comment::class);
-    }
+    // public function comment(){
+    //     return $this->hasZeroOrMany(Comment::class);
+    // }
 }

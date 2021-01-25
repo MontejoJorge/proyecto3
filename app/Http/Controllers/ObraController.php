@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Obra;
+use App\Models\Trabajador;
 use App\Models\User;
 
 class ObraController extends Controller
@@ -50,6 +51,7 @@ class ObraController extends Controller
             "requestor_id" => auth()->user()->id,
             "building_type" => $request->tipoEdificio,
             "construction_type"=> $request->tipoObra,
+            "worker_id" => null,
             'postal_code' => $request->postal_code,
             'street_name' => $request->street_name,
             'number' => $request->number,
@@ -72,7 +74,18 @@ class ObraController extends Controller
      */
     public function show($id)
     {
-        //
+        $obra = Obra::find($id);
+
+        $trabajadores = null;
+        if (!isset($obra->worker_id)){
+            //$trabajadores = Trabajador::all();
+            $trabajadores = Trabajador::withCount("obra_asignada")
+            ->orderByRaw('obra_asignada_count ASC')
+            ->get();
+        }
+        //$count = Trabajador::withCount("obra_asignada")->get();
+
+        return view("obra.show", compact("obra","trabajadores"));
     }
 
     /**
@@ -95,7 +108,16 @@ class ObraController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+    }
+    //funcion para asignar un trabajador a una obra
+    public function trabajador(Request $request, $id)
+    {
+        $obra = Obra::find($id);
+        $obra->update([
+            "worker_id" => $request->tecnico,
+        ]);
+        return back()->with("status","Tecnico asignado");
     }
 
     /**
