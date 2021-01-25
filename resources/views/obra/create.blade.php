@@ -11,26 +11,29 @@
                     @endif  
                     <form method="POST" action="{{ route('obra.store') }}">
                         @csrf
-
-                        @forelse ($tiposObras as $i)
-                            <select name="tipoObra">
+                        @empty($tiposObras)
+                        <select name="tipoObra">
+                            @foreach ($tiposObras as $i)
                                 <option value="{{ $i->id }}">{{ $i->name }}</option>
-                            </select>
-                        @empty
-                            <p>No hay tipos de obras, primero crea una 
-                                <a href="{{ route("tipoObra.crear") }}"  target="_blank">Crear</a>
-                            </p>
-                        @endforelse
-                                <br>
-                        @forelse ($tiposEdificios as $i)
-                        <select name="tipoEdificio">
-                            <option value="{{ $i->id }}">{{ $i->name }}</option>
+                            @endforeach
                         </select>
-                        @empty
-                            <p>No hay tipos de edificios, primero crea una 
-                                <a href="{{ route("tipoEdificio.crear") }}" target="_blank">Crear</a>
-                            </p>
-                        @endforelse
+                        @else 
+                            <a href="{{ route("tipoObra.crear") }}">No hay tipos de obras, crear</a>
+                        @endempty
+                                <br>
+
+
+                        @empty($tiposEdificios)
+                        <select name="tipoEdificio">
+                            @foreach ($tiposEdificios as $i)
+                            <option value="{{ $i->id }}">{{ $i->name }}</option>
+                            @endforeach
+                        </select>  
+                        @else 
+                            <a href="{{ route("tipoEdificio.crear") }}">No hay tipos de edificio, crear</a>
+                        @endempty
+                        
+
                             <br>
                         <input type="text" name="postal_code" placeholder="postal_code" value="{{ old("postal_code") }}"><br>
                         <input type="text" name="street_name" placeholder="street_name" value="{{ old("street_name") }}"><br>
