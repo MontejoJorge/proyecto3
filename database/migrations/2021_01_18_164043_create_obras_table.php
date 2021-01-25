@@ -36,6 +36,7 @@ class CreateObrasTable extends Migration
             $table->date("end_date")->nullable();
 
             //Otros
+            $table->enum("state",["created", "pending", "denied", "authorized"])->default("authorized");
             $table->text("description");
             $table->longText("blueprint")->nullable();
             $table->timestamps();
@@ -53,6 +54,7 @@ class CreateObrasTable extends Migration
             "postal_code" => "09200",
             "city" => "Miranda",
             "province" => "Burgos",
+            "satate" => "created",
             "description" => "Quiero hace una terraza nueva",
         ]);
     }
