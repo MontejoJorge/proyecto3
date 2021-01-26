@@ -19,7 +19,7 @@ class ObraController extends Controller
      */
     public function index()
     {  
-        $obras = Obra::query();
+        $obras = Obra::query()->withCount('comentarios');
 
         //Filtro estado
         if (isset($_GET["state"])){

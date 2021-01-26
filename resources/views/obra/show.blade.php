@@ -34,10 +34,10 @@
             <li>{{ $obra->end_date }}</li>
             <li>{{ $obra->state }}</li>
             <li>{{ $obra->description }}</li>
-            <li>{{ $obra->created_at }}</li>
+            <li>{{ $obra->created_at->diffForHumans() }}</li>
             <li>{{ $obra->updated_at }}</li>
         </ul>
-        <form action="/home/obras/ver/{{ $obra->id }}/comentar" method="POST">
+        <form action="{{ route("comentario.store", $obra->id) }}" method="POST">
             @csrf
             <textarea name="text"></textarea>
             <input type="submit" value="Enviar">

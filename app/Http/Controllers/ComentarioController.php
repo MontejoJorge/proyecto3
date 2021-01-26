@@ -41,7 +41,7 @@ class ComentarioController extends Controller
         Comentario::create([
             "text" => $request->text,
             "worker_id" => auth()->user()->id,
-            "obra_id" => $obra->id
+            "obra_id" => $request->id
         ]);
         return back();
     }

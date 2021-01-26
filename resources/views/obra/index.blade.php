@@ -38,6 +38,9 @@
                 <th>Direccion</th>
                 <th>Estado</th>
                 <th>Trabajador asignado</th>
+                <th>Creada</th>
+                <th>Actualizada</th>
+                <th>Comentarios</th>
                 <th>Ver</th>
             </tr>
             @forelse ($obras as $obra)
@@ -53,6 +56,9 @@
                     @else 
                     <td>Sin trabrajador</td>
                     @endisset
+                    <td>{{ $obra->created_at->diffForHumans() }}</td>
+                    <td>{{ $obra->updated_at->diffForHumans() }}</td>
+                    <td>{{ $obra->comentarios_count }}</td>
                     <td><a href="{{ route("obra.show", $obra) }}">Ver obra</a></td>
                 </tr>
             @empty

@@ -76,7 +76,7 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
             //Asignar tecnicos
             Route::post("/ver/{id}", "ObraController@trabajador")->name("obra.trabajador");
             //Comentarios
-            Route::post("/ver/{obra}/comentar", "ComentarioController@store")->name("comentario.store");
+            Route::post("/ver/{id}/comentar", "ComentarioController@store")->name("comentario.store");
         });
     });
 
