@@ -5,6 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\User;
 use App\Models\Trabajador;
+use App\Models\Obra;
 use Illuminate\Support\Facades\Hash;
 
 class CreateUsersTable extends Migration
@@ -27,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string("name");
             $table->string("surname");
             $table->string("dni")->unique();
-            $table->bigInteger("phone")->nullable();            
+            $table->string("phone")->nullable();            
             $table->date("birthdate")->nullable();
 
             //Rol
@@ -35,7 +36,7 @@ class CreateUsersTable extends Migration
 
             //Direccion
             $table->string("place_of_birth")->nullable();
-            $table->integer("postal_code")->nullable();
+            $table->string("postal_code")->nullable();
             $table->string("street_name")->nullable();
             $table->string("number")->nullable();
             $table->string("floor")->nullable();
