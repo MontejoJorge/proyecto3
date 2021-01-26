@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comentario;
+use App\Models\Obra;
 
 class ComentarioController extends Controller
 {
@@ -32,9 +34,16 @@ class ComentarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Obra $obra)
     {
-        //
+        //return $obra->id;
+        //TODO validar lado servidor
+        Comentario::create([
+            "text" => $request->text,
+            "worker_id" => auth()->user()->id,
+            "obra_id" => $obra->id
+        ]);
+        return back();
     }
 
     /**

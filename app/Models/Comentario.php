@@ -9,6 +9,12 @@ class Comentario extends Model
 {
     use HasFactory;
 
+    protected $guarded = [
+        "id",
+        "created_at",
+        "updated_at"
+    ];
+
     public function obra(){
         return $this->belongsTo(Obra::class, "obra_id");
     }

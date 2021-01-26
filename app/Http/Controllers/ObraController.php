@@ -104,7 +104,6 @@ class ObraController extends Controller
     public function show($id)
     {
         $obra = Obra::find($id);
-        //$comentarios = Comentario::find($id);
 
         $trabajadores = null;
         if (!isset($obra->worker_id)){

@@ -37,10 +37,11 @@
             <li>{{ $obra->created_at }}</li>
             <li>{{ $obra->updated_at }}</li>
         </ul>
-        {{-- <form action="{{ route("comentario.store") }}" method="POST">
-            <textarea name="comentario"></textarea>
+        <form action="/home/obras/ver/{{ $obra->id }}/comentar" method="POST">
+            @csrf
+            <textarea name="text"></textarea>
             <input type="submit" value="Enviar">
-        </form> --}}
+        </form>
 
         @foreach ($obra->comentarios as $comentario)
             <div class="card">
