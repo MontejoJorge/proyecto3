@@ -2,7 +2,33 @@
 @section('content')
     <div class="container">
         <p>Ver obras</p>
-        
+        <form action="{{ route("obra.index") }}" method="get">
+            <select name="state">
+                @foreach ($states as $state)
+                    @if ($state == $selState)
+                        <option value="{{ $state }}" selected>{{ ucfirst($state) }}</option>
+                    @else
+                        <option value="{{ $state }}">{{ ucfirst($state) }}</option>
+                    @endif
+                @endforeach
+            </select>
+
+            <label for="orderBy">Order by date:</label>
+            <select name="order" id="orderBy">
+                @foreach ($orderBy as $order)
+                    @if ($order == $selOrder)
+                        <option value="{{ $order }}" selected>{{ ucfirst($order) }}</option>
+                    @else
+                        <option value="{{ $order }}">{{ ucfirst($order) }}</option>
+                    @endif
+                @endforeach
+            </select>
+            <label for="desc">Descent</label>
+            <input type="checkbox" id="desc" name="desc">
+
+            <input type="submit" value="Filtrar">
+        </form>
+        <br>
         <table border="1">
             <tr>
                 <th>Id</th>
@@ -33,5 +59,6 @@
                 <p>No hay obras</p>
             @endforelse
         </table>
+        <p>{{ $obras->links("pagination::bootstrap-4") }}</p>
     </div>
 @endsection

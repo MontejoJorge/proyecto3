@@ -17,11 +17,39 @@ class ObraController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //$obras = DB::table('obras')->get();
-        $obras = Obra::all();
+    {  
+        $obras = Obra::query();
 
-        return view("obra.index", compact("obras"));
+        //Filtro estado
+        if (isset($_GET["state"])){
+            $selState = $_GET["state"];
+        } else {
+            $selState = "created";
+        }
+        $obras->where("state", $selState);
+
+        //Ordenar
+        if (isset($_GET["order"])){
+            $selOrder = $_GET["order"];
+        } else {
+            $selOrder = "created";
+        }
+
+        if (isset($_GET["desc"])){
+            $obras->orderBy($selOrder."_at", "desc");
+        } else {
+            $obras->orderBy($selOrder."_at", "asc");
+        }
+
+
+
+        //Datos de los filtros
+        $states = ["created", "pending", "denied", "authorized"];
+        $orderBy = ["created", "updated"];
+
+        $obras = $obras->orderBy("created_at", "asc")->paginate(15);
+        
+        return view("obra.index", compact("obras","states","selState","orderBy","selOrder"));
     }
 
     /**
@@ -116,6 +144,7 @@ class ObraController extends Controller
         $obra = Obra::find($id);
         $obra->update([
             "worker_id" => $request->tecnico,
+            "state" => "pending"
         ]);
         return back()->with("status","Tecnico asignado");
     }

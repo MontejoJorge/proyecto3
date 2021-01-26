@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+use App\Models\User;
+use App\Models\Obra;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +18,18 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
+    // User::factory()
+    // ->count(40)
+    // ->has(
+    //     Obra::factory()
+    //     ->count(100)
+    //     ->state([
+    //         "building_type" => "1",
+    //         "construction_type" => "1"
+    //     ])
+    //     )
+    // ->create();
+
     return view('welcome');
 });
 
@@ -26,14 +41,8 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::group(['prefix' => 'obras'], function () {
-        Route::get("/", "ObraController@index")->name("obra.index");
-
         Route::get("/crear","ObraController@create")->name("obra.crear");
         Route::post("/crear","ObraController@store")->name("obra.store");
-
-        Route::get("/ver/{id}", "ObraController@show")->name("obra.show");
-        //Asignar tecnicos
-        Route::post("/ver/{id}", "ObraController@trabajador")->name("obra.trabajador");
     });
 
     //Solo para cordinadores
@@ -58,6 +67,14 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
             //Crear
             Route::get("/crear", "TipoObraController@create")->name("tipoObra.crear");
             Route::post("/crear", "TipoObraController@store")->name("tipoObra.store");
+        });
+
+        //Obras
+        Route::group(['prefix' => 'obras'], function () {
+            Route::get("/", "ObraController@index")->name("obra.index");
+            Route::get("/ver/{id}", "ObraController@show")->name("obra.show");
+            //Asignar tecnicos
+            Route::post("/ver/{id}", "ObraController@trabajador")->name("obra.trabajador");
         });
     });
 
