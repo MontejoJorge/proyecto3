@@ -21,17 +21,20 @@ class Obra extends Model
     public function solicitante(){
         return $this->belongsTo(User::class, "requestor_id");
     }
+
     public function tipo_edificio(){
         return $this->belongsTo(TipoEdificio::class, "building_type");
     }
+
     public function tipo_obra(){
         return $this->belongsTo(TipoObra::class, "construction_type");
     }
-    //TODO
+
     public function trabajador(){
         return $this->belongsTo(User::class, "worker_id");
     }
-    // public function comment(){
-    //     return $this->hasZeroOrMany(Comment::class);
-    // }
+
+    public function comentarios(){
+        return $this->hasMany(Comentario::class);
+    }
 }

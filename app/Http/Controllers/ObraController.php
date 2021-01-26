@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Obra;
 use App\Models\Trabajador;
 use App\Models\User;
+use App\Models\Comentario;
 
 class ObraController extends Controller
 {
@@ -103,6 +104,7 @@ class ObraController extends Controller
     public function show($id)
     {
         $obra = Obra::find($id);
+        //$comentarios = Comentario::find($id);
 
         $trabajadores = null;
         if (!isset($obra->worker_id)){

@@ -18,17 +18,17 @@ use App\Models\Obra;
 */
 
 Route::get('/', function () {
-    // User::factory()
-    // ->count(40)
-    // ->has(
-    //     Obra::factory()
-    //     ->count(100)
-    //     ->state([
-    //         "building_type" => "1",
-    //         "construction_type" => "1"
-    //     ])
-    //     )
-    // ->create();
+    User::factory()
+    ->count(40)
+    ->has(
+        Obra::factory()
+        ->count(10)
+        ->state([
+            "building_type" => "1",
+            "construction_type" => "1"
+        ])
+        )
+    ->create();
 
     return view('welcome');
 });
@@ -75,6 +75,8 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
             Route::get("/ver/{id}", "ObraController@show")->name("obra.show");
             //Asignar tecnicos
             Route::post("/ver/{id}", "ObraController@trabajador")->name("obra.trabajador");
+            //Comentarios
+            //Route::post("/ver/{id}", "ComentarioController@store")->name("comentario.store");
         });
     });
 

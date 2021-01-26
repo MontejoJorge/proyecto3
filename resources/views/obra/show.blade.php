@@ -37,5 +37,16 @@
             <li>{{ $obra->created_at }}</li>
             <li>{{ $obra->updated_at }}</li>
         </ul>
+        {{-- <form action="{{ route("comentario.store") }}" method="POST">
+            <textarea name="comentario"></textarea>
+            <input type="submit" value="Enviar">
+        </form> --}}
+
+        @foreach ($obra->comentarios as $comentario)
+            <div class="card">
+                <p>{{ $comentario->text }}</p>
+                <p>{{ $comentario->trabajador->name }}</p>
+            </div>
+        @endforeach
     </div>
 @endsection

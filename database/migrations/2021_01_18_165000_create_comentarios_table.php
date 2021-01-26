@@ -16,8 +16,9 @@ class CreateComentariosTable extends Migration
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
             $table->foreignId("obra_id")->constrained("obras");
+            $table->foreignId("worker_id")->constrained("users");
             $table->text("text");
-            $table->text("photo");
+            $table->text("photo")->nullable();
             $table->timestamps();
         });
     }
