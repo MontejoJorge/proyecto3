@@ -27,7 +27,7 @@ class CreateObrasTable extends Migration
             $table->string("number");
             $table->string("floor");
             $table->string("door");
-            $table->integer("postal_code");
+            $table->string("postal_code");
             $table->string("city");
             $table->string("province");
 
