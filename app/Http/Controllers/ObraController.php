@@ -101,18 +101,14 @@ class ObraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Obra $obra)
     {
-        $obra = Obra::find($id);
-
         $trabajadores = null;
         if (!isset($obra->worker_id)){
-            //$trabajadores = Trabajador::all();
             $trabajadores = Trabajador::withCount("obra_asignada")
             ->orderByRaw('obra_asignada_count ASC')
             ->get();
         }
-        //$count = Trabajador::withCount("obra_asignada")->get();
 
         return view("obra.show", compact("obra","trabajadores"));
     }
@@ -140,9 +136,9 @@ class ObraController extends Controller
 
     }
     //funcion para asignar un trabajador a una obra
-    public function trabajador(Request $request, $id)
+    public function trabajador(Request $request, Obra $obra)
     {
-        $obra = Obra::find($id);
+        //TODO validar que el tecnico existe en la base de datos
         $obra->update([
             "worker_id" => $request->tecnico,
             "state" => "pending"

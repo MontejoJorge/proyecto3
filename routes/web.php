@@ -72,11 +72,11 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
         //Obras
         Route::group(['prefix' => 'obras'], function () {
             Route::get("/", "ObraController@index")->name("obra.index");
-            Route::get("/ver/{id}", "ObraController@show")->name("obra.show");
+            Route::get("/ver/{obra}", "ObraController@show")->name("obra.show");
             //Asignar tecnicos
-            Route::post("/ver/{id}", "ObraController@trabajador")->name("obra.trabajador");
+            Route::post("/ver/{obra}", "ObraController@trabajador")->name("obra.trabajador");
             //Comentarios
-            Route::post("/ver/{id}/comentar", "ComentarioController@store")->name("comentario.store");
+            Route::post("/ver/{obra}/comentar", "ComentarioController@store")->name("comentario.store");
         });
     });
 

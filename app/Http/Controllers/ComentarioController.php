@@ -38,12 +38,12 @@ class ComentarioController extends Controller
      */
     public function store(Request $request, Obra $obra)
     {
-        //return $obra->id;
-        //TODO validar lado servidor
+        $this->validator($request->all())->validate();
+
         Comentario::create([
             "text" => $request->text,
             "worker_id" => auth()->user()->id,
-            "obra_id" => $request->id
+            "obra_id" => $obra->id
         ]);
         return back();
     }
@@ -95,9 +95,7 @@ class ComentarioController extends Controller
 
     protected function validator(array $request){
         return Validator::make($request,[
-            "text" => ["required", "string"],
-            "worker_id" => ["required", "exists:users,id"],
-            "obra_id" => ["required", "exists:obras,id"]
+            "text" => ["required", "string"]
         ]);
     }
 }

@@ -37,7 +37,7 @@
             <li>{{ $obra->created_at->diffForHumans() }}</li>
             <li>{{ $obra->updated_at }}</li>
         </ul>
-        <form action="{{ route("comentario.store", $obra->id) }}" method="POST">
+        <form action="{{ route("comentario.store", $obra) }}" method="POST">
             @csrf
             <textarea name="text"></textarea>
             <input type="submit" value="Enviar">
@@ -46,8 +46,14 @@
         @foreach ($obra->comentarios as $comentario)
             <div class="card">
                 <p>{{ $comentario->text }}</p>
-                <p>{{ $comentario->trabajador->name }}</p>
+                <p>{{ $comentario->trabajador->name. " - " . $comentario->created_at->diffForHumans()}}</p>
             </div>
         @endforeach
+        
+        @if ($errors->any())
+        @foreach ($errors->all() as $e)
+            {{ $e }}
+        @endforeach
+    @endif
     </div>
 @endsection
