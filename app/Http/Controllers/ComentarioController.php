@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage; 
 use App\Models\Comentario;
 use App\Models\Obra;
 
@@ -39,12 +41,15 @@ class ComentarioController extends Controller
     public function store(Request $request, Obra $obra)
     {
         $this->validator($request->all())->validate();
-
+        
+        $path = $request->file('photo')->store('public\imagenes\comentarios');
         Comentario::create([
             "text" => $request->text,
             "worker_id" => auth()->user()->id,
-            "obra_id" => $obra->id
+            "obra_id" => $obra->id,
+            "photo" => basename($path)
         ]);
+
         return back();
     }
 
@@ -95,7 +100,8 @@ class ComentarioController extends Controller
 
     protected function validator(array $request){
         return Validator::make($request,[
-            "text" => ["required", "string"]
+            "text" => ["required", "string"],
+            "photo" => ["image"]
         ]);
     }
 }

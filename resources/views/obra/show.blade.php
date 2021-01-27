@@ -37,15 +37,17 @@
             <li>{{ $obra->created_at->diffForHumans() }}</li>
             <li>{{ $obra->updated_at }}</li>
         </ul>
-        <form action="{{ route("comentario.store", $obra) }}" method="POST">
+        <form action="{{ route("comentario.store", $obra) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <textarea name="text"></textarea>
+            <input type="file" name="photo">
             <input type="submit" value="Enviar">
         </form>
 
         @foreach ($obra->comentarios as $comentario)
             <div class="card">
                 <p>{{ $comentario->text }}</p>
+                <img src="{{ asset('/storage/imagenes/comentarios/'.$comentario->photo)}}">
                 <p>{{ $comentario->trabajador->name. " - " . $comentario->created_at->diffForHumans()}}</p>
             </div>
         @endforeach
