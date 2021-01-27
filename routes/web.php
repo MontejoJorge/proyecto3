@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
     return view('home');
 })->name('home');
 Route::get('/login', function () {
@@ -25,3 +23,12 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 })->name('register');
+Route::get('/crearobra', function (){
+    return view('nuevaObra');
+})->name('crearObra');
+Route::get('/nuevousuario', function(){
+    return view('nuevoUsuario');
+})->name('nuevoUsuario');
+Route::get('/obra', function (){
+    return view('obra');
+})->name('obra');

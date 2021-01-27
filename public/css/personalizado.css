@@ -65,10 +65,13 @@ a.small {
   border-color: #A36DA7;
 }
 
-.selector {
-  padding: 0 !important;
-  height: 50px !important;
-  padding-left: 12px !important;
+.form-select {
+  border-radius: 25px;
+  height: 50px;
+}
+
+#seleccion {
+  padding-bottom: 15px;
 }
 
 .error:before {
@@ -83,15 +86,24 @@ a.small {
   background: #A36DA7 !important;
 }
 
-.loginbg {
-  background-image: url("../img/login.jpg") !important;
-    background-size: cover;
-
+#loginbg {
+  background-image: url("https://locuraviajera.com/wp-content/uploads/2019/09/43087702_101310500867905_778080873101959876_n-1024x628.jpg") !important;
 }
 
-.bgregister {
+#bgregister {
   background-image: url("https://c1.wallpaperflare.com/preview/268/493/288/vitoria-gasteiz-basque-country-euskadi-alava-architecture.jpg") !important;
   background-size: cover;
+}
+
+.ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
+  border-radius: 10px;
+}
+
+form.user .btn-user {
+  font-size: 0.8rem;
+  border-radius: 10rem;
+  margin-top: 20px;
+  padding: 0.75rem 1rem;
 }
 
 [data-theme=dark] body {
@@ -116,14 +128,14 @@ a.small {
 
 [data-theme=dark] .btn-primary {
   color: #fff;
-  background-color: #86448B;
-  border-color: #86448B;
+  background-color: #86448B !important;
+  border-color: #86448B !important;
 }
 
 [data-theme=dark] .btn-primary:hover {
   color: #fff;
-  background-color: #A36DA7;
-  border-color: #A36DA7;
+  background-color: #A36DA7 !important;
+  border-color: #A36DA7 !important;
 }
 
 [data-theme=dark] .fa-search {
@@ -301,5 +313,20 @@ a.small {
   text-shadow: 1px 0 #6C2571 !important;
   color: #FFFFFF !important;
   background: #510F56 !important;
+}
+
+[data-theme=dark] .modal-content {
+  background-color: #373737;
+}
+
+[data-theme=dark] #editor {
+  border: 1px white solid;
+  border-radius: 10px;
+}
+
+[data-theme=dark] .ck-rounded-corners .ck.ck-toolbar, [data-theme=dark] .ck.ck-toolbar.ck-rounded-corners {
+  background-color: #e3e3e3;
+  color: whitesmoke !important;
+  border-radius: 10px;
 }
 

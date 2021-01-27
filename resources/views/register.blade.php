@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div class="col'-'sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user"
                                            id="password" placeholder="Password">
                                 </div>

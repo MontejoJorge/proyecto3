@@ -22,6 +22,18 @@ $color-primary-4: #36013A;
 .text-primary {
   color: $color-primary-1!important;
 }
+.verde{
+  color: #55e705!important;
+}
+.rojo{
+  color: #c81c1c!important;
+}
+.naranja{
+  color: #ffb800!important;
+}
+.gris{
+  color: #696969!important;
+}
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
   background-color: $color-primary-3;
   border-radius: .35rem;
@@ -59,13 +71,15 @@ a.small{
   background-color: $color-primary-1;
   border-color: $color-primary-1;
 }
-.selector{
-    padding: 0!important;
-    height: 50px!important;
-    padding-left: 12px!important;
+.form-select{
+  border-radius: 25px;
+  height: 50px;
+
+
 }
-
-
+#seleccion{
+  padding-bottom: 15px;
+}
 .error:before {
 
   text-shadow: 1px 0 $color-primary-1!important;
@@ -82,9 +96,26 @@ a.small{
 
  }
 
- option:hover{
-background: $color-primary-2;
- }
+#loginbg{
+  background-image: url("https://locuraviajera.com/wp-content/uploads/2019/09/43087702_101310500867905_778080873101959876_n-1024x628.jpg")!important;
+}
+#bgregister{
+  background-image: url("https://c1.wallpaperflare.com/preview/268/493/288/vitoria-gasteiz-basque-country-euskadi-alava-architecture.jpg")!important;
+  background-size: cover;
+}
+.ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
+
+  border-radius: 10px;
+}
+
+
+form.user .btn-user {
+  font-size: .8rem;
+  border-radius: 10rem;
+  margin-top: 20px;
+  padding: .75rem 1rem;
+}
+
 [data-theme="dark"] {
   body{
     color: whitesmoke;
@@ -109,13 +140,13 @@ background: $color-primary-2;
   .btn-primary {
     color: #fff;
 
-    background-color: $color-primary-2;
-    border-color: $color-primary-2;
+    background-color: $color-primary-2!important;
+    border-color: $color-primary-2!important;
   }
   .btn-primary:hover {
     color: #fff;
-    background-color: $color-primary-1;
-    border-color:$color-primary-1;
+    background-color: $color-primary-1!important;
+    border-color:$color-primary-1!important;
   }
   .fa-search{
     color: black;
@@ -123,7 +154,6 @@ background: $color-primary-2;
   #content{
     background-color: #212121;
   }
-
 
   .bg-gradient-primary {
     background-color: $color-primary-4;
@@ -163,18 +193,7 @@ background: $color-primary-2;
     border-color: $color-primary-3;
     background-color: $color-primary-2;
   }
-  .verde:before{
-    color: #55e705;
-  }
-  .rojo:before{
-    color: #c81c1c;
-  }
-  .naranja:before{
-    color: #ffb800;
-  }
-  .gris:before{
-    color: #696969;
-  }
+
   .leaflet-popup-content-wrapper {
     background-color: #222222;
   }
@@ -244,6 +263,7 @@ background: $color-primary-2;
   .previous{
     background-color: $color-primary-2;
   }
+
   .error:before {
 
     text-shadow: 1px 0 $color-primary-0!important;
@@ -259,5 +279,22 @@ background: $color-primary-2;
      background: $color-primary-3!important;
 
    }
+
+  .modal-content{
+  background-color: #373737;
+  }
+
+  #editor{
+    border: 1px white solid;
+    border-radius: 10px;
+  }
+  .ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
+  background-color: #e3e3e3;
+    color: whitesmoke!important;
+    border-radius: 10px;
+  }
+
+
+
 
 }

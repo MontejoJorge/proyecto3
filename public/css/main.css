@@ -7,27 +7,27 @@
 
 @font-face {
   font-family: Montserrat-Regular;
-  src: url(/fonts/Montserrat-Regular.ttf?2a2d37bf7680d86811db09a7b7177b47); 
+  src: url(/fonts/Montserrat-Regular.ttf?2a2d37bf7680d86811db09a7b7177b47);
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url(/fonts/Montserrat-Bold.ttf?0915f0a8c3367a6d05ec1e6bc6ba4abe); 
+  src: url(/fonts/Montserrat-Bold.ttf?0915f0a8c3367a6d05ec1e6bc6ba4abe);
 }
 
 @font-face {
   font-family: Montserrat-Black;
-  src: url(/fonts/Montserrat-Black.ttf?e4ac0e216b528d945a832054f6dd42b7); 
+  src: url(/fonts/Montserrat-Black.ttf?e4ac0e216b528d945a832054f6dd42b7);
 }
 
 @font-face {
   font-family: Montserrat-SemiBold;
-  src: url(/fonts/Montserrat-SemiBold.ttf?2f7a846126c7d5ee91636209cd78214b); 
+  src: url(/fonts/Montserrat-SemiBold.ttf?2f7a846126c7d5ee91636209cd78214b);
 }
 
 @font-face {
   font-family: Montserrat-Medium;
-  src: url(/fonts/Montserrat-Medium.ttf?647f0e61af3a76a138c3b0f6b4981d3b); 
+  src: url(/fonts/Montserrat-Medium.ttf?647f0e61af3a76a138c3b0f6b4981d3b);
 }
 
 
@@ -36,19 +36,17 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -73,7 +71,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -165,7 +162,7 @@ iframe {
 [ Contact ]*/
 
 .container-contact100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +170,7 @@ iframe {
   align-items: center;
   padding: 15px;
   background: #e6e6e6;
-  
+
 }
 
 .wrap-contact100 {
@@ -512,7 +509,6 @@ textarea.input100 {
 .select2-search--dropdown .select2-search__field {
   border: 1px solid #aaa;
   outline: none;
-  font-family: Poppins-Regular;
   font-size: 15px;
   color: #333333;
   line-height: 1.2;
@@ -575,9 +571,9 @@ textarea.input100 {
   border-radius: 50%;
   border: 6px solid transparent;
   background: #00ad5f;
-  -moz-background-clip: padding;     
-  -webkit-background-clip: padding;  
-  background-clip: padding-box; 
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
   left: 0;
   top: 50%;
   transform: translateY(-50%);

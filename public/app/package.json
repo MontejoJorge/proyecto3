@@ -31,17 +31,23 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-sb-admin-2.git"
     },
     "dependencies": {
+        "@editorjs/editorjs": "^2.19.1",
+        "@editorjs/embed": "^2.4.0",
+        "@editorjs/header": "^2.6.1",
         "@fortawesome/fontawesome-free": "5.15.1",
+        "animejs": "^3.2.1",
         "bootstrap": "4.5.3",
         "chart.js": "2.9.4",
         "dark-mode-switch": "^1.0.0",
         "datatables.net-bs4": "1.10.22",
         "jquery": "3.5.1",
+        "jquery-ui-dist": "^1.12.1",
         "jquery.easing": "^1.4.1",
         "leaflet": "^1.7.1",
         "places.js": "^1.19.0"
     },
     "devDependencies": {
+        "@editorjs/list": "^1.6.1",
         "browser-sync": "2.26.13",
         "del": "6.0.0",
         "gulp": "4.0.2",
