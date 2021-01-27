@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scss/obra.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obra.html" beforeDir="false" afterPath="$PROJECT_DIR$/obra.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/personalizado.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,9 @@
       <workItem from="1611214349395" duration="626000" />
       <workItem from="1611308196727" duration="9034000" />
       <workItem from="1611559748249" duration="14582000" />
-      <workItem from="1611646022951" duration="4735000" />
+      <workItem from="1611646022951" duration="5865000" />
+      <workItem from="1611657931604" duration="300000" />
+      <workItem from="1611732511937" duration="636000" />
     </task>
     <servers />
   </component>
@@ -93,10 +99,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="376" key="#Notifications" timestamp="1611650834046">
+    <state x="776" y="376" key="#Notifications" timestamp="1611657911775">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="776" y="376" key="#Notifications/0.0.2048.1112@0.0.2048.1112" timestamp="1611650834046" />
+    <state x="776" y="376" key="#Notifications/0.0.2048.1112@0.0.2048.1112" timestamp="1611657911775" />
     <state x="284" y="358" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610968627867">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -161,10 +167,14 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="20" y="202" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1611132380649" />
-    <state x="329" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611649008140">
+    <state width="498" height="452" key="SwitcherDM" timestamp="1611650859344">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="329" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1611649008140" />
+    <state width="498" height="452" key="SwitcherDM/0.0.2048.1112@0.0.2048.1112" timestamp="1611650859344" />
+    <state x="329" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611650855467">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="329" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1611650855467" />
     <state x="171" y="262" key="run.anything.popup" timestamp="1611313825475">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

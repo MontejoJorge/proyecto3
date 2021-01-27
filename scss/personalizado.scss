@@ -22,6 +22,18 @@ $color-primary-4: #36013A;
 .text-primary {
   color: $color-primary-1!important;
 }
+.verde{
+  color: #55e705!important;
+}
+.rojo{
+  color: #c81c1c!important;
+}
+.naranja{
+  color: #ffb800!important;
+}
+.gris{
+  color: #696969!important;
+}
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
   background-color: $color-primary-3;
   border-radius: .35rem;
@@ -181,18 +193,7 @@ form.user .btn-user {
     border-color: $color-primary-3;
     background-color: $color-primary-2;
   }
-  .verde:before{
-    color: #55e705;
-  }
-  .rojo:before{
-    color: #c81c1c;
-  }
-  .naranja:before{
-    color: #ffb800;
-  }
-  .gris:before{
-    color: #696969;
-  }
+
   .leaflet-popup-content-wrapper {
     background-color: #222222;
   }

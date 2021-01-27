@@ -20,6 +20,22 @@
   color: #A36DA7 !important;
 }
 
+.verde {
+  color: #55e705 !important;
+}
+
+.rojo {
+  color: #c81c1c !important;
+}
+
+.naranja {
+  color: #ffb800 !important;
+}
+
+.gris {
+  color: #696969 !important;
+}
+
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #510F56;
   border-radius: 0.35rem;
@@ -193,22 +209,6 @@ form.user .btn-user {
   color: black;
   border-color: #510F56;
   background-color: #86448B;
-}
-
-[data-theme=dark] .verde:before {
-  color: #55e705;
-}
-
-[data-theme=dark] .rojo:before {
-  color: #c81c1c;
-}
-
-[data-theme=dark] .naranja:before {
-  color: #ffb800;
-}
-
-[data-theme=dark] .gris:before {
-  color: #696969;
 }
 
 [data-theme=dark] .leaflet-popup-content-wrapper {
