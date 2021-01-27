@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 use App\Models\Comentario;
 use App\Models\Obra;
 
@@ -89,5 +91,13 @@ class ComentarioController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    protected function validator(array $request){
+        return Validator::make($request,[
+            "text" => ["required", "string"],
+            "worker_id" => ["required", "exists:users,id"],
+            "obra_id" => ["required", "exists:obras,id"]
+        ]);
     }
 }
