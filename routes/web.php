@@ -32,3 +32,6 @@ Route::get('/nuevousuario', function(){
 Route::get('/obra', function (){
     return view('obra');
 })->name('obra');
+Route::get('/forgot-password', function (){
+   return view('forgot-password') ;
+})->name('forgot-password');

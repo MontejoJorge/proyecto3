@@ -165,17 +165,17 @@
                                 Register Account
                             </a>
                             <hr>
-                            <a href="index.html" class="btn btn-google btn-user btn-block">
+                            <a href="/index" class="btn btn-google btn-user btn-block">
                                 <i class="fab fa-google fa-fw"></i> Register with Google
                             </a>
 
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a class="small" href="forgot-password.html">Forgot Password?</a>
+                            <a class="small" href="/forgot-password">Forgot Password?</a>
                         </div>
                         <div class="text-center">
-                            <a class="small" href="login.html">Already have an account? Login!</a>
+                            <a class="small" href="/login">Already have an account? Login!</a>
                         </div>
                     </div>
                 </div>
@@ -186,17 +186,23 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+<script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="{{asset('node_modules/jquery.easing/jquery.easing.min.js')}}"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-<script src="js/address.js"></script>
-<script src="../../resources/ts/login.js"></script>
+<script src="{{asset('js/sb-admin-2.min.js')}}"></script>
+<script src="{{asset('https://cdn.jsdelivr.net/npm/places.js@1.19.0')}}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{{asset('node_modules/jquery.easing/jquery.easing.min.js')}}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{{asset('js/address.js')}}"></script>
+<script src="{{asset('../../resources/ts/login.js')}}"></script>
 
 </body>
 

@@ -51,23 +51,23 @@
                                                 Me</label>
                                         </div>
                                     </div>
-                                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                    <a href="/" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </a>
                                     <hr>
-                                    <a href="index.html" class="btn btn-google btn-user btn-block">
+                                    <a href="/" class="btn btn-google btn-user btn-block">
                                         <i class="fab fa-google fa-fw"></i> Login with Google
                                     </a>
-                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                    <a href="/" class="btn btn-facebook btn-user btn-block">
                                         <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
                                     </a>
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    <a class="small" href="/forgot-password">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="register.html">Create an Account!</a>
+                                    <a class="small" href="/register">Create an Account!</a>
                                 </div>
                             </div>
                         </div>
@@ -83,15 +83,15 @@
 
 <!-- Bootstrap core JavaScript-->
 
-{{asset('vendor/jquery/jquery.min.js')}}
-{{asset('js/bootstrap.js')}}
+<script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
 
 <!-- Core plugin JavaScript-->
-{{asset('js/jquery.easing.min.js')}}
+<script src="{{asset('node_modules/jquery.easing/jquery.easing.min.js')}}"></script>
 
 <!-- Custom scripts for all pages-->
-{{asset('js/sb-admin-2.min.js')}}
+<script src="{{asset('js/sb-admin-2.min.js')}}"></script>
 </body>
 
 </html>
