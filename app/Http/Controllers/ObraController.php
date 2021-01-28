@@ -177,6 +177,7 @@ class ObraController extends Controller
             'province' => ["required"],
             "description" => ["required"],
             "blueprint" => ["required"],
+            'g-recaptcha-response' => 'required|captcha'
         ]);
     }
 }

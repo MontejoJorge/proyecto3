@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<script src="//www.google.com/recaptcha/api.js"></script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -52,13 +53,9 @@
                             {{ $e }}
                         @endforeach
                     @endif
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
+                        <br>
+                        {!! NoCaptcha::display() !!}
+                        <input type="submit" value="Enviar">
                     </form>
                     <p>{{ Auth::user()->role }}</p>
                 </div>

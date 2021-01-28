@@ -18,17 +18,17 @@ use App\Models\Obra;
 */
 
 Route::get('/', function () {
-    User::factory()
-    ->count(40)
-    ->has(
-        Obra::factory()
-        ->count(10)
-        ->state([
-            "building_type" => "1",
-            "construction_type" => "1"
-        ])
-        )
-    ->create();
+    // User::factory()
+    // ->count(40)
+    // ->has(
+    //     Obra::factory()
+    //     ->count(10)
+    //     ->state([
+    //         "building_type" => "1",
+    //         "construction_type" => "1"
+    //     ])
+    //     )
+    // ->create();
 
     return view('welcome');
 });
