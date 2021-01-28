@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="82547603-783a-4acf-a412-99cc6c13a072" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/validacion.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/personalizado.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/personalizado.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/personalizado.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/personalizado.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/personalizado.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +40,7 @@
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -40,7 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pruebaAjax" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proyecto3app/ts/login.ts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -49,7 +66,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="C:\Users\Usuario\Desktop\proyecto3\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -92,11 +110,30 @@
       <workItem from="1611646022951" duration="5865000" />
       <workItem from="1611657931604" duration="300000" />
       <workItem from="1611732511937" duration="636000" />
+      <workItem from="1611861999720" duration="435000" />
+      <workItem from="1611862440022" duration="1549000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/validacion.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="776" y="376" key="#Notifications" timestamp="1611657911775">
@@ -111,9 +148,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="185" y="335" key="EditFileWatcherDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1611132387301" />
-    <state x="299" y="312" key="FileChooserDialogImpl" timestamp="1611309129428">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="280" y="292" key="FileChooserDialogImpl" timestamp="1611867018631">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="280" y="292" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611867018631" />
     <state x="299" y="312" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1611309129428" />
     <state width="979" height="354" key="GridCell.Tab.0.bottom" timestamp="1611042420016">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -163,9 +201,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="979" height="354" key="GridCell.Tab.2.right/0.0.2048.1112@0.0.2048.1112" timestamp="1611042420016" />
-    <state x="20" y="202" key="SettingsEditor" timestamp="1611132380649">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="19" y="189" key="SettingsEditor" timestamp="1611862636538">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="19" y="189" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611862636538" />
     <state x="20" y="202" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1611132380649" />
     <state width="498" height="452" key="SwitcherDM" timestamp="1611650859344">
       <screen x="0" y="0" width="2048" height="1112" />
