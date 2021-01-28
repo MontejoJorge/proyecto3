@@ -20,6 +20,7 @@
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
     <link rel="icon" type="image/png" href="img/logo%20degradado.png">
+    <script src="{{asset('https://cdn.ckeditor.com/ckeditor5/24.0.0/decoupled-document/ckeditor.js')}}"></script>
 </head>
 
 <body id="page-top">
@@ -242,6 +243,7 @@
     </div>
 </div>
 </div>
+<script src="{{asset('js/editor.js')}}"></script>
 <!-- Bootstrap core JavaScript-->
 
 <script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
@@ -253,7 +255,8 @@
 
 <!-- Custom scripts for all pages-->
 <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
-
+<script src="{{asset('node_modules/places.js/dist/cdn/places.min.js')}}"></script>
+<script src="{{asset('js/address.js')}}"></script>
 
 
 <script src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>

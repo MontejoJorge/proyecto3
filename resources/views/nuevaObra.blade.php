@@ -32,19 +32,34 @@
                        placeholder="Mano">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
-
+                <select class="form-select col-sm-12" name="tipoTrabajador">
+                    <option selected>Edificio</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="supervisor">Supervisor</option>
+                </select>
             </div>
-
-
         </div>
 
         <div class="form-group row">
 
-            <div class="col-sm-12 mb-3 mb-sm-0">
-                    <textarea class="form-control form-control-user" id="desc"
-                              placeholder="Descripcion"></textarea>
-            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <select class="form-select col-sm-12" name="tipoTrabajador">
+                    <option selected>Obra</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="supervisor">Supervisor</option>
+                </select>
 
+            </div>
+        </div>
+            <div class="form-group row">
+
+                <div class="col-sm-12 mb-3 mb-sm-0">
+                    <div id="toolbar-container"></div>
+                    <div id="editor"></div>
+                </div>
+
+
+            </div>
 
 
 

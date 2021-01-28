@@ -27,7 +27,7 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            <h1 class="h4 text-gray-900 mb-4">Crear una cuenta!</h1>
                         </div>
                         <form class="user">
                             <div class="form-group row">
@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control form-control-user" id="email"
-                                           placeholder="Email">
+                                           placeholder="Correo electronico">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -51,13 +51,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col'-'sm-6 mb-3 mb-sm-0">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user"
-                                           id="password" placeholder="Password">
+                                           id="password" placeholder="Contraseña">
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control form-control-user"
-                                           id="password2" placeholder="Repeat Password">
+                                           id="password2" placeholder="Repetir contraseña">
                                 </div>
 
 
@@ -69,7 +69,7 @@
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     Provincia de nacimiento
-                                    <select required name="provincia" id="provincia" aria-label="Escoge una provincia" class="form-control form-control-user selector ">
+                                    <select required name="provincia" id="provincia" aria-label="Escoge una provincia" class="form-select ">
                                         <option value="" disabled selected>Seleccione la provincia</option>
                                         <option value="Álava">Álava</option>
                                         <option value="Albacete">Albacete</option>
@@ -133,7 +133,7 @@
 
                             <div class="form-group ">
 
-                                <input type="search" class="form-control form-control-user" id="form-address"
+                                <input type="search" class="form-control form-control-user" id="address-input"
                                        placeholder="Direccion...">
 
 
@@ -149,7 +149,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <select required name="mano" id="mano" class="form-control form-control-user selector">
+                                    <select required name="mano" id="mano" class="form-select selector">
                                         <option value="" disabled selected>Seleccione una</option>
                                         <option value="Izquierda">Izquierda</option>
                                         <option value="Centro">Centro</option>
@@ -162,20 +162,17 @@
                                 </div>
                             </div>
                             <a href="#" class="btn btn-primary btn-user btn-block" id="registrar">
-                                Register Account
+                                Registrarse
                             </a>
                             <hr>
                             <a href="/index" class="btn btn-google btn-user btn-block">
-                                <i class="fab fa-google fa-fw"></i> Register with Google
+                                <i class="fab fa-google fa-fw"></i> Registrar con Google
                             </a>
 
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a class="small" href="/forgot-password">Forgot Password?</a>
-                        </div>
-                        <div class="text-center">
-                            <a class="small" href="/login">Already have an account? Login!</a>
+                            <a class="small" href="/login">¿Tienes una cuenta? ¡Inicia sesión!</a>
                         </div>
                     </div>
                 </div>
@@ -188,6 +185,7 @@
 <!-- Bootstrap core JavaScript-->
 <script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
 <script src="{{asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('ts/login.js')}}"></script>
 
 
 <!-- Core plugin JavaScript-->
@@ -195,14 +193,15 @@
 
 <!-- Custom scripts for all pages-->
 <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
-<script src="{{asset('https://cdn.jsdelivr.net/npm/places.js@1.19.0')}}"></script>
+<script src="{{asset('node_modules/places.js/dist/cdn/places.min.js')}}"></script>
+<script src="{{asset('js/address.js')}}"></script>
+
 
 <!-- Core plugin JavaScript-->
 <script src="{{asset('node_modules/jquery.easing/jquery.easing.min.js')}}"></script>
 
 <!-- Custom scripts for all pages-->
 <script src="{{asset('js/address.js')}}"></script>
-<script src="{{asset('../../resources/ts/login.js')}}"></script>
 
 </body>
 
