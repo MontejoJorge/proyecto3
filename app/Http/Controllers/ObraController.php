@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Obra;
 use App\Models\Trabajador;
 use App\Models\User;
@@ -75,6 +76,7 @@ class ObraController extends Controller
     public function store(Request $request)
     {
         $this->validator($request->all())->validate();
+        $path = $request->file('blueprint')->store('public\blueprints');
 
         Obra::create ([
             "requestor_id" => auth()->user()->id,
@@ -89,7 +91,7 @@ class ObraController extends Controller
             'city' => $request->city,
             'province' => $request->province,
             "description" => $request->description,
-            "blueprint" => $request->blueprint,
+            "blueprint" =>  basename($path)
         ]);
 
         return back()->with("status", "Obra creada");
@@ -109,6 +111,10 @@ class ObraController extends Controller
             ->orderByRaw('obra_asignada_count ASC')
             ->get();
         }
+
+        "storage/blueprints/".$obra->blueprint;
+    	$headers = ['Content-Type: application/pdf'];
+        $fileName = time().'.pdf';
 
         return view("obra.show", compact("obra","trabajadores"));
     }

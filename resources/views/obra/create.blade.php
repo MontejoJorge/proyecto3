@@ -9,7 +9,7 @@
                     @if (session("status"))
                     <p>{{ session("status") }}</p>
                     @endif  
-                    <form method="POST" action="{{ route('obra.store') }}">
+                    <form method="POST" action="{{ route('obra.store') }}" enctype="multipart/form-data">
                         @csrf
                         @empty($tiposObras)
                         <a href="{{ route("tipoObra.crear") }}">No hay tipos de obras, crear</a>

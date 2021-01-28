@@ -36,6 +36,8 @@
             <li>{{ $obra->description }}</li>
             <li>{{ $obra->created_at->diffForHumans() }}</li>
             <li>{{ $obra->updated_at }}</li>
+            <li><a href="{{ asset("storage/blueprints/".$obra->blueprint) }}" target="_blank" >Ver Plano</a></li>
+            <li><a href="{{ asset("storage/blueprints/".$obra->blueprint) }}" download >Descargar Plano</a></li>
         </ul>
         <form action="{{ route("comentario.store", $obra) }}" method="POST" enctype="multipart/form-data">
             @csrf

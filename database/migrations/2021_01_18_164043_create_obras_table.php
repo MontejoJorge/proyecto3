@@ -38,7 +38,7 @@ class CreateObrasTable extends Migration
             //Otros
             $table->enum("state",["created", "pending", "denied", "authorized"])->default("created");
             $table->text("description");
-            //$table->char("blueprint")->nullable();
+            $table->char("blueprint")->nullable();
             $table->timestamps();
         });
 
