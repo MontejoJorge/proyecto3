@@ -257,6 +257,7 @@
 <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
 <script src="{{asset('node_modules/places.js/dist/cdn/places.min.js')}}"></script>
 <script src="{{asset('js/address.js')}}"></script>
+<script src="{{asset('ts/validacion.js')}}"></script>
 
 
 <script src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>

@@ -50,6 +50,11 @@
                 </select>
 
             </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="plano" class="col-sm-12"><input type="button" class="btn btn-secondary btn-user col-sm-12" style="margin-top:0;" value="Subir plano de la obra"</label>
+                <input type="file" id="plano" name="plano" hidden>
+
+            </div>
         </div>
             <div class="form-group row">
 
