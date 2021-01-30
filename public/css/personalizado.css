@@ -106,6 +106,21 @@ form.user .btn-user {
   margin-top: 20px;
   padding: 0.75rem 1rem;
 }
+ .verde:before {
+  color: #55e705;
+}
+
+ .rojo:before {
+  color: #c81c1c;
+}
+
+ .naranja:before {
+  color: #ffb800;
+}
+
+.gris:before {
+  color: #696969;
+}
 
 [data-theme=dark] body {
   color: whitesmoke;
@@ -204,21 +219,7 @@ form.user .btn-user {
   background-color: #86448B;
 }
 
-[data-theme=dark] .verde:before {
-  color: #55e705;
-}
 
-[data-theme=dark] .rojo:before {
-  color: #c81c1c;
-}
-
-[data-theme=dark] .naranja:before {
-  color: #ffb800;
-}
-
-[data-theme=dark] .gris:before {
-  color: #696969;
-}
 
 [data-theme=dark] .leaflet-popup-content-wrapper {
   background-color: #222222;

@@ -25,7 +25,7 @@ Route::get('/', function () {
     //     ->count(10)
     //     ->state([
     //         "building_type" => "1",
-    //         "construction_type" => "1"
+    //         "construction_type" => "1",
     //     ])
     //     )
     // ->create();

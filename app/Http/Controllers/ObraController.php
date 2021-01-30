@@ -90,6 +90,8 @@ class ObraController extends Controller
             'door' => $request->door,
             'city' => $request->city,
             'province' => $request->province,
+            "latitude" => $request->latitude,
+            "longitude" => $request->longitude,
             "description" => $request->description,
             "blueprint" =>  basename($path)
         ]);
@@ -177,6 +179,8 @@ class ObraController extends Controller
             'province' => ["required"],
             "description" => ["required"],
             "blueprint" => ["required"],
+            "latidude" => ["required"],
+            "longitude" => ["required"],
             'g-recaptcha-response' => 'required|captcha'
         ]);
     }

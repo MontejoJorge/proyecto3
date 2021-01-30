@@ -30,6 +30,8 @@ class CreateObrasTable extends Migration
             $table->string("postal_code");
             $table->string("city");
             $table->string("province");
+            $table->string("latitude");
+            $table->string("longitude");
 
             //Fechas
             $table->date("start_date")->useCurrent()->nullable();
