@@ -197,7 +197,7 @@
                 <div class="center menu" id="flot">
                     <div id="myMenu"></div>
                 </div>
-                @yield('contenido', 'ERROR')
+                @yield('content')
 
             </div>
 
