@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ObraCambioEstado;
 use App\Models\Obra;
 use App\Models\Trabajador;
 use App\Models\User;
@@ -163,14 +164,9 @@ class ObraController extends Controller
             "worker_id" => $request->tecnico,
             "state" => "pending"
         ]);
-        $to_name = auth()->user()->name;
-        $to_email = auth()->user()->email;
-        $data = array("name"=>"Ogbonna Vitalis(sender_name)", "body" => "A test mail");
-        Mail::send("emails.mail", $data, function($message) use ($to_name, $to_email) {
-        $message->to($to_email, $to_name)
-        ->subject("Laravel Test Mail");
-        $message->from("SENDER_EMAIL_ADDRESS","Test Mail");
-        });
+
+        Mail::to($obra->solicitante->email)->send(new ObraCambioEstado($obra));
+
         return back()->with("status","Tecnico asignado");
     }
 
@@ -199,7 +195,7 @@ class ObraController extends Controller
             'province' => ["required"],
             "description" => ["required"],
             "blueprint" => ["required"],
-            "latidude" => ["required"],
+            "latitude" => ["required"],
             "longitude" => ["required"],
             'g-recaptcha-response' => 'required|captcha'
         ]);

@@ -35,17 +35,18 @@
                         @endempty
                         
 
-                            <br>
+                        <br>
                         <input type="text" name="postal_code" placeholder="postal_code" value="{{ old("postal_code") }}"><br>
                         <input type="text" name="street_name" placeholder="street_name" value="{{ old("street_name") }}"><br>
                         <input type="number" name="number" placeholder="number" value="{{ old("number") }}"><br>
                         <input type="text" name="floor" placeholder="floor" value="{{ old("floor") }}"><br>
                         <input type="text" name="door" placeholder="door" value="{{ old("door") }}"><br>
                         <input type="text" name="city" placeholder="city" value="{{ old("city") }}"><br>
+                        <input type="text" name="latitude" placeholder="latidude" value="{{ old("latitude") }}"><br>
+                        <input type="text" name="longitude" placeholder="longitude" value="{{ old("longitude") }}"><br>
                         <input type="text" name="province" placeholder="province" value="{{ old("province") }}"><br>
-                        <textarea name="description" >
-                            {{ old("description") }}
-                        </textarea><br>
+                        <textarea name="description">{{ old("description") }}</textarea>
+                        <br>
                         <input type="file" name="blueprint">
 
                     @if ($errors->any())
