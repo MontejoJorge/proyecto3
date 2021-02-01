@@ -29,6 +29,6 @@ class ObraCambioEstado extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.obraCambioEstado');
+        return $this->view('emails.obraCambioEstado')->with(["obra" => $this->obra]);
     }
 }

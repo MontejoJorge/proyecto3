@@ -22,7 +22,7 @@ Route::get('/', function () {
     // ->count(40)
     // ->has(
     //     Obra::factory()
-    //     ->count(10)
+    //     ->count(3)
     //     ->state([
     //         "building_type" => "1",
     //         "construction_type" => "1",
@@ -83,6 +83,8 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
     Route::middleware("role:tecnico")->group(function (){
         //Obras
         Route::group(['prefix' => 'obras'], function () {
+            //Cambiar el estado
+            Route::post("/ver/{obra}/estado" , "ObraController@update")->name("obra.update");
             //Comentarios
             Route::post("/ver/{obra}/comentar", "ComentarioController@store")->name("comentario.store");
             

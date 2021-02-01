@@ -123,6 +123,7 @@ class ObraController extends Controller
         $trabajadores = null;
         if (!isset($obra->worker_id)){
             $trabajadores = Trabajador::withCount("obra_asignada")
+            ->where("role","=","tecnico")
             ->orderByRaw('obra_asignada_count ASC')
             ->get();
         }
@@ -152,24 +153,35 @@ class ObraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Obra $obra)
     {
+        $this->validateState($request->all())->validate();
+        $obra->update([
+            "state" => $request->state,
+        ]);
 
+        $this->emailCambioEstado($obra);
+
+        return back();
     }
     //funcion para asignar un trabajador a una obra
     public function trabajador(Request $request, Obra $obra)
     {
-        //TODO validar que el tecnico existe en la base de datos
+        $this->validateTecnico($request->all())->validate();
+
         $obra->update([
             "worker_id" => $request->tecnico,
             "state" => "pending"
         ]);
 
-        Mail::to($obra->solicitante->email)->send(new ObraCambioEstado($obra));
+        $this->emailCambioEstado($obra);
 
         return back()->with("status","Tecnico asignado");
     }
 
+    private function emailCambioEstado($obra){
+        Mail::to($obra->solicitante->email)->send(new ObraCambioEstado($obra));
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -198,6 +210,18 @@ class ObraController extends Controller
             "latitude" => ["required"],
             "longitude" => ["required"],
             'g-recaptcha-response' => 'required|captcha'
+        ]);
+    }
+
+    protected function validateState(array $request){
+        return Validator::make($request, [
+            "state" => ["required", "in:authorized,denied"]
+        ]);
+    }
+    
+    protected function validateTecnico(array $request){
+        return Validator::make($request, [
+            "tecnico" => ["required", "exists:users,id"]
         ]);
     }
 }

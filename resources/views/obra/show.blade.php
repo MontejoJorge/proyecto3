@@ -33,6 +33,19 @@
             <li>{{ $obra->start_date }}</li>
             <li>{{ $obra->end_date }}</li>
             <li>{{ $obra->state }}</li>
+            @if ($obra->state == ("pending"))
+                <li>
+                    <form action="{{ route("obra.update", $obra) }}" method="POST">
+                        @csrf
+                        <select name="state">
+                            <option disabled selected>Choose One</option>
+                            <option value="authorized">Authorized</option>
+                            <option value="denied">Denied</option>
+                        </select>
+                        <input type="submit" value="Aceptar">
+                    </form>
+                </li>
+            @endif
             <li>{{ $obra->description }}</li>
             <li>{{ $obra->created_at->diffForHumans() }}</li>
             <li>{{ $obra->updated_at }}</li>
