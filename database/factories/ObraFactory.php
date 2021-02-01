@@ -29,7 +29,10 @@ class ObraFactory extends Factory
             "door" =>  $this->faker->randomElement(["I","D","C","A","B","D"]),
             "city" =>  $this->faker->city,
             "province" => $this->faker->citySuffix,
-            "description" => $this->faker->text
+            "description" => $this->faker->text,
+            "latitude" => $this->faker->latitude($min = 40, $max = 45),
+            "longitude" => $this->faker->longitude($min = 0, $max = -4),
+
         ];
     }
 }

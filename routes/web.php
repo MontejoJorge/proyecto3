@@ -43,6 +43,8 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
     Route::group(['prefix' => 'obras'], function () {
         Route::get("/crear","ObraController@create")->name("obra.crear");
         Route::post("/crear","ObraController@store")->name("obra.store");
+        Route::get("/", "ObraController@index")->name("obra.index");
+        Route::get("/ver/{obra}", "ObraController@show")->name("obra.show");
     });
 
     //Solo para cordinadores
@@ -71,12 +73,19 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
 
         //Obras
         Route::group(['prefix' => 'obras'], function () {
-            Route::get("/", "ObraController@index")->name("obra.index");
-            Route::get("/ver/{obra}", "ObraController@show")->name("obra.show");
             //Asignar tecnicos
             Route::post("/ver/{obra}", "ObraController@trabajador")->name("obra.trabajador");
+            
+        });
+    });
+
+    //Solo para tecnicos
+    Route::middleware("role:tecnico")->group(function (){
+        //Obras
+        Route::group(['prefix' => 'obras'], function () {
             //Comentarios
             Route::post("/ver/{obra}/comentar", "ComentarioController@store")->name("comentario.store");
+            
         });
     });
 

@@ -28,21 +28,21 @@ class HomeController extends Controller
     {
         switch (auth()->user()->role) {
             case "coordinador" || "tecnico": 
+                //SE USARA AJAX
+                // $createdCount=DB::table('obras')
+                //     ->where('state', "=", "created")
+                //     ->count();
+                // $pendingCount=DB::table('obras')
+                //     ->where('state', "=", "pending")
+                //     ->count();
+                // $aceptedCount=DB::table('obras')
+                //     ->where('state', "=", "acepted")
+                //     ->count();
+                // $deniedCount=DB::table('obras')
+                //     ->where('state', "=", "denied")
+                //     ->count();
 
-                $createdCount=DB::table('obras')
-                    ->where('state', "=", "created")
-                    ->count();
-                $pendingCount=DB::table('obras')
-                    ->where('state', "=", "pending")
-                    ->count();
-                $aceptedCount=DB::table('obras')
-                    ->where('state', "=", "acepted")
-                    ->count();
-                $deniedCount=DB::table('obras')
-                    ->where('state', "=", "denied")
-                    ->count();
-
-                return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount"));
+                // return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount"));
                 break;
             case "solicitante":
                 return view("homes.solicitante");

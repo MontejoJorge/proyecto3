@@ -30,8 +30,8 @@ class CreateObrasTable extends Migration
             $table->string("postal_code");
             $table->string("city");
             $table->string("province");
-            $table->string("latitude");
-            $table->string("longitude");
+            $table->decimal("latitude",15,10);
+            $table->decimal("longitude",15,10);
 
             //Fechas
             $table->date("start_date")->useCurrent()->nullable();
@@ -56,6 +56,8 @@ class CreateObrasTable extends Migration
             "postal_code" => "09200",
             "city" => "Miranda",
             "province" => "Burgos",
+            "latitude" => "42.846667",
+            "longitude" => "-2.673056",
             "state" => "created",
             "description" => "Quiero hace una terraza nueva",
         ]);
@@ -71,6 +73,8 @@ class CreateObrasTable extends Migration
             "postal_code" => "09200",
             "city" => "Miranda",
             "province" => "Burgos",
+            "latitude" => "42.683333",
+            "longitude" => "-2.933333",
             "state" => "pending",
             "description" => "Quiero hace una terraza nueva",
         ]);

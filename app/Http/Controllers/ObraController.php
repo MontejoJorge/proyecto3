@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Mail\Mailable;
 use App\Models\Obra;
 use App\Models\Trabajador;
 use App\Models\User;
@@ -20,15 +21,28 @@ class ObraController extends Controller
      */
     public function index()
     {  
-        $obras = Obra::query()->withCount('comentarios');
+        switch (auth()->user()->role) {
+            case 'coordinador':
+                $obras = Obra::query()->withCount('comentarios');
+                break;
+            case 'tecnico':
+                $obras = Obra::query()->where("worker_id","=",auth()->user()->id)->withCount('comentarios');
+                break;
+            case 'solicitante':
+                $obras = Obra::query()->where("requestor_id","=",auth()->user()->id)->withCount('comentarios');
+                break;
+        }
 
         //Filtro estado
+        $selState = null;
         if (isset($_GET["state"])){
             $selState = $_GET["state"];
-        } else {
-            $selState = "created";
-        }
-        $obras->where("state", $selState);
+            $obras->where("state", $selState);
+        } 
+        // else {
+        //     $selState = "created";
+        // }
+        // $obras->where("state", $selState);
 
         //Ordenar
         if (isset($_GET["order"])){
@@ -43,10 +57,8 @@ class ObraController extends Controller
             $obras->orderBy($selOrder."_at", "asc");
         }
 
-
-
         //Datos de los filtros
-        $states = ["created", "pending", "denied", "authorized"];
+        $states = ["all", "created", "pending", "denied", "authorized"];
         $orderBy = ["created", "updated"];
 
         $obras = $obras->orderBy("created_at", "asc")->paginate(15);
@@ -151,6 +163,14 @@ class ObraController extends Controller
             "worker_id" => $request->tecnico,
             "state" => "pending"
         ]);
+        $to_name = auth()->user()->name;
+        $to_email = auth()->user()->email;
+        $data = array("name"=>"Ogbonna Vitalis(sender_name)", "body" => "A test mail");
+        Mail::send("emails.mail", $data, function($message) use ($to_name, $to_email) {
+        $message->to($to_email, $to_name)
+        ->subject("Laravel Test Mail");
+        $message->from("SENDER_EMAIL_ADDRESS","Test Mail");
+        });
         return back()->with("status","Tecnico asignado");
     }
 
