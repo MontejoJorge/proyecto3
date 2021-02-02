@@ -1,67 +1,94 @@
-@extends('layouts.app')
+@extends('layouts.layout')
+@section('titulo', 'Nueva Obra')
 @section('content')
-<script src="//www.google.com/recaptcha/api.js"></script>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Crear una obra') }}</div>
-                <div class="card-body">
-                    @if (session("status"))
-                    <p>{{ session("status") }}</p>
-                    @endif  
-                    <form method="POST" action="{{ route('obra.store') }}" enctype="multipart/form-data">
-                        @csrf
-                        @empty($tiposObras)
-                        <a href="{{ route("tipoObra.crear") }}">No hay tipos de obras, crear</a>
-                        @else 
-                        <select name="tipoObra">
-                            @foreach ($tiposObras as $i)
-                                <option value="{{ $i->id }}">{{ $i->name }}</option>
-                            @endforeach
-                        </select>
-                        @endempty
-                                <br>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
 
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Formulario de nueva obra</h1>
 
-                        @empty($tiposEdificios)
-                        <a href="{{ route("tipoEdificio.crear") }}">No hay tipos de edificio, crear</a>
-                        @else 
-                        <select name="tipoEdificio">
-                            @foreach ($tiposEdificios as $i)
-                            <option value="{{ $i->id }}">{{ $i->name }}</option>
-                            @endforeach
-                        </select>  
-                        @endempty
-                        
-
-                        <br>
-                        <input type="text" name="postal_code" placeholder="postal_code" value="{{ old("postal_code") }}"><br>
-                        <input type="text" name="street_name" placeholder="street_name" value="{{ old("street_name") }}"><br>
-                        <input type="number" name="number" placeholder="number" value="{{ old("number") }}"><br>
-                        <input type="text" name="floor" placeholder="floor" value="{{ old("floor") }}"><br>
-                        <input type="text" name="door" placeholder="door" value="{{ old("door") }}"><br>
-                        <input type="text" name="city" placeholder="city" value="{{ old("city") }}"><br>
-                        <input type="text" name="latitude" placeholder="latidude" value="{{ old("latitude") }}"><br>
-                        <input type="text" name="longitude" placeholder="longitude" value="{{ old("longitude") }}"><br>
-                        <input type="text" name="province" placeholder="province" value="{{ old("province") }}"><br>
-                        <textarea name="description">{{ old("description") }}</textarea>
-                        <br>
-                        <input type="file" name="blueprint">
-
-                    @if ($errors->any())
-                        @foreach ($errors->all() as $e)
-                            {{ $e }}
-                        @endforeach
-                    @endif
-                        <br>
-                        {!! NoCaptcha::display() !!}
-                        <input type="submit" value="Enviar">
-                    </form>
-                    <p>{{ Auth::user()->role }}</p>
-                </div>
+    </div>
+    <!-- /.container-fluid -->
+    @if (session("status"))
+    <p>{{ session("status") }}</p>
+    @endif  
+    <form class="user p-3" method="POST" action="{{ route('obra.store') }}" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group ">
+            <input type="search" class="form-control form-control-user" id="address-input" name="algolia"
+                   placeholder="Direccion..." value="{{ old("algolia") }}">
+            <input type="text" id="city" name="city" value="{{ old("city") }}" placeholder="city" hidden>
+            <input type="text" id="province" name="province" value="{{ old("province") }}" placeholder="province" hidden>
+            <input type="text" id="postal_code" name="postal_code" value="{{ old("postal_code") }}" placeholder="postal_code" hidden>
+            <input type="text" id="street_name" name="street_name" value="{{ old("street_name") }}" placeholder="street_name" hidden>
+            <input type="text" id="latitude" name="latitude" value="{{ old("latitude") }}" placeholder="latitude" hidden>
+            <input type="text" id="longitude" name="longitude" value="{{ old("longitude") }}" placeholder="longitude" hidden>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" id="num"
+                       placeholder="Numero" name="number" value="{{ old("number") }}">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control form-control-user" id="piso"
+                       placeholder="Piso" name="floor" value="{{old("floor")}}">
             </div>
         </div>
-    </div>
-</div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" id="mano"
+                       placeholder="Mano" name="door" value="{{old("door")}}">
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                @empty($tiposEdificios)
+                @else 
+                <select name="tipoEdificio">
+                    <option selected disabled>Selecciona un tipo de edificio</option>
+                    @foreach ($tiposEdificios as $i)
+                    <option value="{{ $i->id }}">{{ $i->name }}</option>
+                    @endforeach
+                </select>  
+                @endempty
+            </div>
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                @empty($tiposObras)
+                @else 
+                <select name="tipoObra">
+                    <option selected disabled>Selecciona un tipo de obra</option>
+                    @foreach ($tiposObras as $i)
+                        <option value="{{ $i->id }}">{{ $i->name }}</option>
+                    @endforeach
+                </select>
+                @endempty
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <label for="plano" class="btn btn-secondary btn-user col-sm-12">Subir plano</label>
+                <input type="file" id="plano" name="blueprint" hidden>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 mb-3 mb-sm-0">
+                <textarea class="form-control" rows="5" style="resize: none;" name="description">{{old("description")}}</textarea>
+            </div>
+        </div>
+        @if ($errors->any())
+            @foreach ($errors->all() as $e)
+                {{ $e }}
+            @endforeach
+        @endif
+
+        <button type="submit" class="btn btn-primary btn-user btn-block" id="registrar">
+            {{ __('Send construction') }}
+        </button>
+
+        <hr>
+
+        </div>
+    </form>
+
 @endsection

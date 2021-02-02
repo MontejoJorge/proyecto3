@@ -36,7 +36,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
             <div class="sidebar-brand-icon ">
-                <img src="img/logo%20blanco.png" width="75%">
+                <img src="{{ asset("img/logo%20blanco.png") }}" width="75%">
             </div>
             <div class="sidebar-brand-text mx-3">Vitoria <sup>Gasteiz</sup></div>
         </a>
@@ -60,21 +60,23 @@
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
+        @if (auth()->user()->role == "coordinador")
         <li class="nav-item">
-            <a class="nav-link" href="/nuevousuario">
+            <a class="nav-link" href="{{ route("register.trabajadores") }}">
                 <i class="fas fa-user-plus"></i>
                 <span>Añadir trabajadores
                     </span></a>
         </li>
+        @endif
         <li class="nav-item">
-            <a class="nav-link" href="/crearobra">
+            <a class="nav-link" href="{{ route("obra.crear") }}">
                 <i class="far fa-building"></i>
                 <span>Añadir obra
                     </span></a>
         </li>
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="/obra">
+            <a class="nav-link" href="{{ route("obra.index") }}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Obras</span></a>
         </li>
@@ -162,7 +164,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Alejandro Pérez</span>
                             <img class="img-profile rounded-circle"
-                                 src="img/EXE6LjSX0AAQUwA.jfif">
+                                 src="{{ asset("img/EXE6LjSX0AAQUwA.jfif") }}">
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -197,7 +199,7 @@
                 <div class="center menu" id="flot">
                     <div id="myMenu"></div>
                 </div>
-                @yield('contenido', 'ERROR')
+                @yield('content')
 
             </div>
 
@@ -272,6 +274,8 @@
 <script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
 <script src="{{asset('js/demo/chart-bar-demo.js')}}"></script>
 <script type="module" src="{{asset('js/boton.js')}}"></script>
+<script type="module" src="{{ asset('js/punto.js') }}"></script>
+
 
 </body>
 

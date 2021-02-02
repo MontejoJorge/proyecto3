@@ -1,43 +1,60 @@
-@extends('layouts.app')
-
+@extends('layouts.layout')
+@section('titulo', 'Nuevo trabajador')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register Trabajadores') }}</div>
+    <div class="container-fluid">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register.trabajadores') }}">
-                        @csrf
-                        <input type="text" name="email" placeholder="email" value="{{ old("email") }}"><br>
-                        <input type="password" name="password" placeholder="password"><br>
-                        <input type="password" name="password_confirmation" placeholder="Repeat the password"><br>
-                        <input type="text" name="name" placeholder="name" value="{{ old("name") }}"><br>
-                        <input type="text" name="surname" placeholder="surname" value="{{ old("surname") }}"><br>
-                        <input type="text" name="dni" placeholder="dni" value="{{ old("dni") }}"><br>
-                        <select name="role">
-                            <option value="coordinador">Coordinador</option>
-                            <option value="tecnico">Tecnico</option>
-                        </select>
+        <h1 class="h3 mb-2 text-gray-800">Registro de nuevos trabajadores</h1>
 
-                    @if ($errors->any())
-                        @foreach ($errors->all() as $e)
-                            {{ $e }}
-                        @endforeach
-                    @endif
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <p>{{ Auth::user()->role }}</p>
-                </div>
+
+
+    </div>
+    <form class="user  p-3" method="POST" action="{{ route('register.trabajadores') }}">
+        @csrf
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" name="name" id="nombre"
+                       placeholder="Nombre..." value="{{old("name")}}">
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control form-control-user" id="apellido" name="surname"
+                       placeholder="Apellido..." value="{{old("surname")}}">
             </div>
         </div>
-    </div>
-</div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" class="form-control form-control-user" id="dni" name="dni"
+                       placeholder="DNI..." value="{{old("dni")}}">
+            </div>
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="password" class="form-control form-control-user" id="password" name="password"
+                       placeholder="Contraseña..." value="{{old("password")}}">
+            </div>
+
+
+        </div>
+
+        <div class="form-group row">
+
+            <div class="col-sm-6 mb-3 mb-sm-0 " id="seleccion">
+                <select class="form-select col-sm-12" name="role" id="tipoUsuario">
+                    <option disabled selected>Selecciona una opción...</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="coordinador">Supervisor</option>
+
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-user btn-block" id="registrar">
+                {{ __('Add worker') }}
+            </button>
+            @if ($errors->any())
+                @foreach ($errors->all() as $e)
+                    {{ $e }}
+                @endforeach
+            @endif
+
+            <hr>
+
+        </div>
+    </form>
+
 @endsection
