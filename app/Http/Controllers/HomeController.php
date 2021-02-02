@@ -42,7 +42,7 @@ class HomeController extends Controller
                 //     ->where('state', "=", "denied")
                 //     ->count();
 
-                // return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount"));
+                //return view("homes.trabajador");
                 break;
             case "solicitante":
                 return view("homes.solicitante");

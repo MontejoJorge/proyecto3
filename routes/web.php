@@ -47,6 +47,9 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
         Route::get("/ver/{obra}", "ObraController@show")->name("obra.show");
     });
 
+    Route::get("/user/{user}","UserController@show")->name("user.show");
+    Route::get("/user/{user}/edit","UserController@edit")->name("user.edit");
+
     //Solo para cordinadores
     Route::middleware("role:coordinador")->group(function (){
         //Registro de trabajadores

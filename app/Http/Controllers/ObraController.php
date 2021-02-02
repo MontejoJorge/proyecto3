@@ -118,6 +118,19 @@ class ObraController extends Controller
      */
     public function show(Obra $obra)
     {
+        switch (auth()->user()->role) {
+            case 'tecnico':
+                if (auth()->user()->id!=$obra->worker_id){
+                    abort(403);
+                }
+                break;
+            case "solicitante": 
+                if (auth()->user()->id!=$obra->requestor_id){
+                    abort(403);
+                }
+            break;
+        }
+
         $trabajadores = [];
         if (!isset($obra->worker_id)){
             $trabajadores = Trabajador::withCount("obra_asignada")
