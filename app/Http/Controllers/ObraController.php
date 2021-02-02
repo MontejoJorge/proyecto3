@@ -38,12 +38,10 @@ class ObraController extends Controller
         $selState = null;
         if (isset($_GET["state"])){
             $selState = $_GET["state"];
-            $obras->where("state", $selState);
-        } 
-        // else {
-        //     $selState = "created";
-        // }
-        // $obras->where("state", $selState);
+                if ($selState!="all"){
+                    $obras->where("state", $selState);
+                }
+        }
 
         //Ordenar
         if (isset($_GET["order"])){
@@ -120,7 +118,7 @@ class ObraController extends Controller
      */
     public function show(Obra $obra)
     {
-        $trabajadores = null;
+        $trabajadores = [];
         if (!isset($obra->worker_id)){
             $trabajadores = Trabajador::withCount("obra_asignada")
             ->where("role","=","tecnico")
@@ -128,6 +126,7 @@ class ObraController extends Controller
             ->get();
         }
 
+        //TODO QUE ES ESTO?
         "storage/blueprints/".$obra->blueprint;
     	$headers = ['Content-Type: application/pdf'];
         $fileName = time().'.pdf';
@@ -209,7 +208,6 @@ class ObraController extends Controller
             "blueprint" => ["required"],
             "latitude" => ["required"],
             "longitude" => ["required"],
-            'g-recaptcha-response' => 'required|captcha'
         ]);
     }
 
