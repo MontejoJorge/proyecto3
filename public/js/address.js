@@ -1,4 +1,3 @@
-
 (function() {
     var placesAutocomplete = places({
         appId: 'plPUIUV501P5',
@@ -11,8 +10,11 @@
         document.querySelector('#postal_code').value = e.suggestion.postcode || '';
         document.querySelector('#province').value = e.suggestion.administrative || '';
         document.querySelector('#city').value = e.suggestion.city || '';
+        document.querySelector('#latitude').value = e.suggestion.latlng.lat || '';
+        document.querySelector('#longitude').value = e.suggestion.latlng.lng || '';
 
-      });
+
+    });
     placesAutocomplete.on('clear', function() {
         $address.textContent = 'none';
     });
