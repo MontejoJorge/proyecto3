@@ -7,5 +7,8 @@
 </head>
 <body>
     Hey! su obra ha cambiado de estado a {{ $obra->state }}
+    @if ($obra->state == "authorized")
+        Ahora puedes seleccionar una fecha
+    @endif
 </body>
 </html>
