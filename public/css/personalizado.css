@@ -70,6 +70,16 @@ a.small {
     padding-left: 15px;
     padding-top: 8px;
 }
+#mensaje{
+    background: lightgreen;
+    padding: 10px 10px 10px 18px;
+    margin: 15px;
+    border: 2px solid green;
+    color: black;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bolder;
+}
 .form-select {
     border-radius: 25px;
     height: 50px;

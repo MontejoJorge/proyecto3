@@ -9,8 +9,9 @@
 
     </div>
     <!-- /.container-fluid -->
+
     @if (session("status"))
-    <p>{{ session("status") }}</p>
+    <p id="mensaje">{{ session("status") }}</p>
     @endif
     <form class="user p-3" method="POST" action="{{ route('obra.store') }}" enctype="multipart/form-data">
         @csrf
