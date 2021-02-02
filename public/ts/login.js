@@ -45,7 +45,7 @@ $(document).ready(function () {
             $("#password").css("border-color", "red");
         }
         else {
-            validarContraseña(password);
+            validarContrasena(password);
         }
     });
     $("#password2")
@@ -148,9 +148,9 @@ function validarDNI(dni) {
         return true;
     }
 }
-function validarContraseña(contraseña) {
+function validarContrasena(contrasena) {
     var regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&?¿!¡._-]).{8,64}$");
-    if (regex.test(contraseña)) {
+    if (regex.test(contrasena)) {
         $("#password").css("border-color", "green");
         return true;
     }
@@ -224,7 +224,7 @@ function validarForm() {
         validarEmail(email);
         validarNombre(nombre);
         validarApellido(apellido);
-        validarContraseña(password1, password2);
+        validarRepetirContrasena(password1, password2);
         validarPortal(portal);
         validarPiso(piso);
         return true;

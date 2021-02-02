@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //validacion trabajadores
     $("#dni")
         .focusout(function () {
         var dni = $("#dni").val().toString();
@@ -53,8 +54,59 @@ $(document).ready(function () {
             $("#tipoUsuario").css("border-color", "green");
         }
     });
+    //validaciones obra
+    $("#address-input")
+        .focusout(function () {
+        var direccion = $("#address-input").val().toString();
+        if (direccion == "") {
+            $("#address-input").css("border-color", "red");
+        }
+        else {
+            $("#address-input").css("border-color", "green");
+        }
+    });
+    $("#num")
+        .focusout(function () {
+        var portal = $("#num").val().toString();
+        validarPortal(portal);
+    });
+    $("#piso")
+        .focusout(function () {
+        var piso = $("#piso").val().toString();
+        validarPiso(piso);
+    });
+    $("#mano")
+        .focusout(function () {
+        var mano = $("#mano").val().toString();
+        if (mano == null) {
+            $("#mano").css("border-color", "red");
+        }
+        else {
+            $("#mano").css("border-color", "green");
+        }
+    });
+    $("#tipoEdificio")
+        .focusout(function () {
+        var tipoEdificio = $("#tipoEdificio").val().toString();
+        if (tipoEdificio == null) {
+            $("#tipoEdificio").css("border-color", "red");
+        }
+        else {
+            $("#tipoEdificio").css("border-color", "green");
+        }
+    });
+    $("#tipoObra")
+        .focusout(function () {
+        var tipoObra = $("#tipoObra").val().toString();
+        if (tipoObra == null) {
+            $("#tipoObra").css("border-color", "red");
+        }
+        else {
+            $("#tipoObra").css("border-color", "green");
+        }
+    });
 });
-// Validaciones
+// Validaciones Regex
 function validarNombre(nombre) {
     var regex = new RegExp("^(([a-zA-Z ])?[a-zA-Z]*){1,3}$");
     if (!regex.test(nombre)) {
@@ -104,31 +156,31 @@ function validarContraseña(contraseña) {
         $("#password").css("border-color", "red");
     }
 }
+function validarPortal(texto) {
+    var regex = new RegExp("^(([0-9]){1,2}[a-zA-Z]?)$");
+    if (!regex.test(texto)) {
+        $("#num").css("border-color", "red");
+    }
+    else {
+        $("#num").css("border-color", "green");
+        return true;
+    }
+}
+function validarPiso(texto) {
+    var regex = new RegExp("^([0-9]){1,3}$");
+    if (!regex.test(texto)) {
+        $("#piso").css("border-color", "red");
+    }
+    else {
+        $("#piso").css("border-color", "green");
+        return true;
+    }
+}
 function validarNoBlanco(texto) {
     if (/^\s+|\s+$/.test(texto)) {
         return true;
     }
     else {
-        return false;
-    }
-}
-//Registrarse
-function validarForm() {
-    try {
-        //Recogemos los datos introducidos por el usuario
-        var nombre = $("#nombre").val().toString();
-        var apellido = $("#apellido").val().toString();
-        var dni = $("#dni").val().toString();
-        var password = $("#password").val().toString();
-        //llamamos a los metodos que validan los campos
-        validarDNI(dni);
-        validarNombre(nombre);
-        validarApellido(apellido);
-        validarContraseña(password);
-        return true;
-    }
-    catch (error) {
-        alert(error);
         return false;
     }
 }

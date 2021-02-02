@@ -64,10 +64,20 @@ a.small {
   background-color: #A36DA7;
   border-color: #A36DA7;
 }
-
+#plano{
+    height: 100%;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-top: 8px;
+}
 .form-select {
-  border-radius: 25px;
-  height: 50px;
+    border-radius: 25px;
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid #d1d3e2 ;
+    color: #6e707e;
+    font-size: 0.8rem;
 }
 
 #seleccion {

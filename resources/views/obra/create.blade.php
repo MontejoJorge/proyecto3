@@ -11,7 +11,7 @@
     <!-- /.container-fluid -->
     @if (session("status"))
     <p>{{ session("status") }}</p>
-    @endif  
+    @endif
     <form class="user p-3" method="POST" action="{{ route('obra.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group ">
@@ -36,28 +36,37 @@
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <input type="text" class="form-control form-control-user" id="mano"
-                       placeholder="Mano" name="door" value="{{old("door")}}">
+                <select required id="mano" class="form-select selector" name="door">
+                    <option disabled selected>Seleccione una</option>
+                    <option value="Izquierda">Izquierda</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Derecha">Derecha</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="null">Ninguna de las anteriores</option>
+                </select>
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 @empty($tiposEdificios)
-                @else 
-                <select name="tipoEdificio">
+                @else
+                <select name="tipoEdificio" id="tipoEdificio" class="form-select selector">
                     <option selected disabled>Selecciona un tipo de edificio</option>
                     @foreach ($tiposEdificios as $i)
                     <option value="{{ $i->id }}">{{ $i->name }}</option>
                     @endforeach
-                </select>  
+                </select>
                 @endempty
             </div>
         </div>
 
         <div class="form-group row">
 
-            <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="col-sm-6 mb-3 mb-sm-0" class="form-select selector">
                 @empty($tiposObras)
-                @else 
-                <select name="tipoObra">
+                @else
+                <select name="tipoObra" id="tipoObra" class="form-select selector">
                     <option selected disabled>Selecciona un tipo de obra</option>
                     @foreach ($tiposObras as $i)
                         <option value="{{ $i->id }}">{{ $i->name }}</option>
@@ -66,8 +75,7 @@
                 @endempty
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <label for="plano" class="btn btn-secondary btn-user col-sm-12">Subir plano</label>
-                <input type="file" id="plano" name="blueprint" hidden>
+                <input type="file" id="plano" name="blueprint" >
 
             </div>
         </div>
