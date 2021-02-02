@@ -176,6 +176,7 @@ class ObraController extends Controller
 
         return back();
     }
+
     //funcion para asignar un trabajador a una obra
     public function trabajador(Request $request, Obra $obra)
     {
@@ -189,6 +190,17 @@ class ObraController extends Controller
         $this->emailCambioEstado($obra);
 
         return back()->with("status","Tecnico asignado");
+    }
+
+    public function updateDates(Request $request, Obra $obra){
+        
+        //TODO validat datos?
+        $obra->start_date = $request->start_date;
+        $obra->end_date = $request->end_date;
+
+        $obra->save();
+
+        return back()->with("status","Fechas establecidas");
     }
 
     private function emailCambioEstado($obra){
