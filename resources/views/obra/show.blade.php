@@ -27,7 +27,9 @@
                 <tr>
                     <th scope="row">Técnico:</th>
                     <td>
-
+                        @isset($obra->worker_id)
+                        {{ $obra->worker_id }}
+                        @else
                         <form action="{{ route("obra.trabajador", $obra) }}" method="post">
                             @csrf
                             <select name="tecnico">
@@ -40,6 +42,7 @@
                             </select>
                             <input type="submit" value="Aceptar">
                         </form>
+                        @endisset
                     </td>
 
                 </tr>
@@ -78,18 +81,54 @@
 
                 </tr>
                 <tr>
+                    @if ($obra->state=="authorized" && !isset($obra->start_date))
                     <th scope="row">Fecha inicio:</th>
-                    <td>{{ $obra->start_date }}</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">Fecha fin:</th>
-                    <td>{{ $obra->end_date }}</td>
+                        <td>
+                            <form action="{{ route("obraFechas.update", $obra) }}" method="POST">
+                                @csrf
+                                <input type="date" name="start_date" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fecha fin:</th>
+                        <td>
+                            <input type="date" name="end_date" required>
+                            <input type="submit" value="Aceptar">
+                            </form>
+                        </td>
+                    </tr>
+                    @else 
+                    <tr>
+                        <th scope="row">Fecha inicio:</th>
+                        <td>{{ $obra->start_date }}</td>
+    
+                    </tr>
+                    <tr>
+                        <th scope="row">Fecha fin:</th>
+                        <td>{{ $obra->end_date }}</td>
+    
+                    </tr>
+                    @endif
+                    
 
                 </tr>
                 <tr>
                     <th scope="row">Estado</th>
+                    @if ($obra->state == ("pending"))
+                    <td>
+                        <form action="{{ route("obra.update", $obra) }}" method="POST">
+                            @csrf
+                            <select name="state" required>
+                                <option selected disabled>Choose One</option>
+                                <option value="authorized">Authorized</option>
+                                <option value="denied">Denied</option>
+                            </select>
+                            <input type="submit" value="Aceptar">
+                        </form>
+                    </td>
+                    @else 
                     <td>{{ $obra->state }}</td>
+                    @endif
                 </tr>
                 <tr>
                     <th>Creada hace</th>
@@ -119,97 +158,33 @@
                     <th scope="row">Descargar plano:</th>
                     <td><a href="{{ asset("storage/blueprints/".$obra->blueprint) }}" download >Descargar Plano</a></td>
                 </tr>
-                
-                
-            
                 </tr>
             </tbody>
         </table>
         <hr><br>
-        <form action="#" method="post">
-            <p class="h2">Añadir comentario</p>
-            <label for="areaComentario">Escribe aqui tu comentario </label>
-            <textarea class="form-control" id="areaComentario" rows="3"></textarea><br>
-            <button type="submit" class="btn btn-secondary">Enviar</button>
-
-
-        </form>
-                <p id="lat">42.864512</p>
-                <p id="lng"> -2.681335</p>
-        <hr>
-        <br>
-        <div class="comentario">
-            <p class="h2">Titulo comentario</p>
-            <p class="h5">11/09/2001</p>
-            La verdad que ha sido un buen dia
-            La verdad que ha sido un buen dia
-            La verdad que ha sido un buen dia
-            La verdad que ha sido un buen dia
-        </div>
-        <hr><br>
-
-
-
-
-    </div>
-    {{-- <div class="container">
-        <p>{{ $obra->id }}</p>
-        <ul>
-            <li>{{ $obra->solicitante->name }}</li>
-            <li>{{ $obra->tipo_edificio->name }}</li>
-            <li>{{ $obra->tipo_obra->name }}</li>
-            @isset($obra->worker_id)
-            <li>{{ $obra->trabajador->name }}</li>
-            @else 
-            <li>
-                <form action="{{ route("obra.trabajador", $obra) }}" method="post">
-                    @csrf
-                    <select name="tecnico">
-                        <option value="null" selected disabled>Selecciona un tecnico</option>
-                    @foreach ($trabajadores as $trabajador)
-                        <option value="{{ $trabajador->id }}">
-                            {{ $trabajador->name ." | ". $trabajador->obra_asignada_count . " obras"}}
-                        </option>
-                    @endforeach
-                    </select>
-                    <input type="submit" value="Aceptar">
-                </form>
-            </li>
-            @endisset
-            <li>{{ $obra->street_name }}</li>
-            <li>{{ $obra->number }}</li>
-            <li>{{ $obra->floor }}</li>
-            <li>{{ $obra->door }}</li>
-            <li>{{ $obra->postal_code }}</li>
-            <li>{{ $obra->city }}</li>
-            <li>{{ $obra->start_date }}</li>
-            <li>{{ $obra->end_date }}</li>
-            <li>{{ $obra->state }}</li>
-            <li>{{ $obra->description }}</li>
-            <li>{{ $obra->created_at->diffForHumans() }}</li>
-            <li>{{ $obra->updated_at }}</li>
-            <li><a href="{{ asset("storage/blueprints/".$obra->blueprint) }}" target="_blank" >Ver Plano</a></li>
-            <li><a href="{{ asset("storage/blueprints/".$obra->blueprint) }}" download >Descargar Plano</a></li>
-        </ul>
+        @if (auth()->user()->role=="tecnico")
         <form action="{{ route("comentario.store", $obra) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <textarea name="text"></textarea>
-            <input type="file" name="photo">
-            <input type="submit" value="Enviar">
+            <label>Escribe aqui tu comentario </label>
+            <textarea name="text" class="form-control" rows="3"></textarea><br>
+            <input type="file" name="photo"><br><br>
+            <button type="submit" class="btn btn-secondary">Enviar</button>
         </form>
+        @endif
 
+            <p id="lat">42.864512</p>
+            <p id="lng"> -2.681335</p>
+        <hr>
+        <h4>Comentarios</h4>
         @foreach ($obra->comentarios as $comentario)
-            <div class="card">
-                <p>{{ $comentario->text }}</p>
+        <div class="card">
+            <p>{{ $comentario->text }}</p>
+            @isset($comentario->photo)
                 <img src="{{ asset('/storage/imagenes/comentarios/'.$comentario->photo)}}">
-                <p>{{ $comentario->trabajador->name. " - " . $comentario->created_at->diffForHumans()}}</p>
-            </div>
+            @endisset
+            <p>{{ $comentario->trabajador->name. " - " . $comentario->created_at->diffForHumans()}}</p>
+        </div>
         @endforeach
-        
-        @if ($errors->any())
-        @foreach ($errors->all() as $e)
-            {{ $e }}
-        @endforeach
-    @endif
-    </div> --}}
+
+    </div>
 @endsection

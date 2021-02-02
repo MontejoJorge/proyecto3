@@ -12,25 +12,6 @@ use App\Models\Obra;
 
 class ComentarioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -41,61 +22,21 @@ class ComentarioController extends Controller
     public function store(Request $request, Obra $obra)
     {
         $this->validator($request->all())->validate();
-        
-        $path = $request->file('photo')->store('public\imagenes\comentarios');
-        Comentario::create([
+
+        $comentario = Comentario::create([
             "text" => $request->text,
             "worker_id" => auth()->user()->id,
-            "obra_id" => $obra->id,
-            "photo" => basename($path)
+            "obra_id" => $obra->id
         ]);
 
+        if ($request->file("photo")){
+            $path = $request->file('photo')->store('public\imagenes\comentarios');
+            $comentario->update([
+                "photo" => basename($path)
+            ]);            
+        }
+        
         return back();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 
     protected function validator(array $request){

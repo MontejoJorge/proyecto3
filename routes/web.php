@@ -94,5 +94,10 @@ Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
         });
     });
 
+    //Solo para solicitantes
+    Route::middleware("role:solicitante")->group((function (){
+        Route::post("/obras/ver/{obra}/fechas", "ObraController@updateDates")->name("obraFechas.update");
+    }));
+
 
 });
