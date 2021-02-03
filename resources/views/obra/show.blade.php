@@ -172,8 +172,8 @@
         </form>
         @endif
 
-            <p id="lat">42.864512</p>
-            <p id="lng"> -2.681335</p>
+            <p id="lat" hidden>{{ $obra->latitude  }}</p>
+            <p id="lng" hidden> {{ $obra->longitude  }}</p>
         <hr>
         <h4>Comentarios</h4>
         @foreach ($obra->comentarios as $comentario)

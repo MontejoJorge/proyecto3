@@ -248,13 +248,19 @@
 <!-- Dark Mode-->
 <script src="{{asset('node_modules/dark-mode-switch/dark-mode-switch.min.js')}}"></script>
 <!-- Mapa -->
-<script src="{{asset('js/mapa.js')}}"></script>
+@if (request()->routeIs("home"))
+    <script src="{{asset('js/mapa.js')}}"></script>
+@endif
+
 <!-- Page level custom scripts -->
 <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
 <script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
 <script src="{{asset('js/demo/chart-bar-demo.js')}}"></script>
 <script type="module" src="{{asset('js/boton.js')}}"></script>
+@if (request()->routeIs("obra.show"))
 <script type="module" src="{{ asset('js/punto.js') }}"></script>
+@endif
+
 
 
 </body>

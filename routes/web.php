@@ -19,18 +19,33 @@ use App\Models\Obra;
 
 Route::get('/', function () {
     // User::factory()
-    // ->count(40)
+    // ->count(4)
+    // ->state([
+    //     "role" => "coordinador"
+    // ])
+    // ->create();
+
+    // User::factory()
+    // ->count(9)
+    // ->state([
+    //     "role" => "tecnico"
+    // ])
+    // ->create();
+
+    // User::factory()
+    // ->count(15)
+    // ->state([
+    //     "role" => "solicitante"
+    // ])
     // ->has(
     //     Obra::factory()
     //     ->count(3)
-    //     ->state([
-    //         "building_type" => "1",
-    //         "construction_type" => "1",
-    //     ])
     //     )
     // ->create();
 
-    return view('welcome');
+
+
+    return redirect()->route('home');
 });
 
 Auth::routes();

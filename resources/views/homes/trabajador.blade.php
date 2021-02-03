@@ -2,7 +2,7 @@
 
 @section('titulo', 'Home')
 
-@section('contenido')
+@section('content')
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Inicio</h1>
@@ -13,35 +13,39 @@
     <div class="row">
 
         <!-- Earnings (Monthly) Card Example -->
+        @if (auth()->user()->role=="coordinador")
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card border-left-secondary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Nº Solicitudes (mensual): </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">132</div>
+                                Solicitudes creadas: </div>
+                            <div id="countCreadas" class="h5 mb-0 font-weight-bold text-gray-800">{{ $createdCount }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-hammer fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @else 
+        <div id="countCreadas" class="h5 mb-0 font-weight-bold text-gray-800 d-none">{{ $createdCount }}</div>
+        @endif
 
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Ganancias (Anual): </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$1,200,000</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Solicitudes pendientes: </div>
+                            <div id="countPendientes" class="h5 mb-0 font-weight-bold text-gray-800">{{ $pendingCount }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fas fa-clock fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -52,16 +56,34 @@
 
         <!-- Pending Requests Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Solicitudes pendientes</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"> {{ $pendingCount }}</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Solicitudes aceptadas</div>
+                            <div id="countAceptadas" class="h5 mb-0 font-weight-bold text-gray-800"> {{ $aceptedCount }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            <i class="fas fa-check fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Solicitudes denegadas</div>
+                            <div id="countDenegadas" class="h5 mb-0 font-weight-bold text-gray-800"> {{ $deniedCount }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-times fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -156,4 +178,5 @@
             </div>
         </div>
     </div>
+    <p id="cordenadas" hidden>{{ $cordenadas }}</p>
 @endsection

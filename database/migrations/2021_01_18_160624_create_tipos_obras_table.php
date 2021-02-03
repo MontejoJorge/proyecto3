@@ -23,6 +23,12 @@ class CreateTiposObrasTable extends Migration
         TipoObra::create([
             "name" => "Demolicion",
         ]);
+        TipoObra::create([
+            "name" => "Reforma",
+        ]);
+        TipoObra::create([
+            "name" => "Construccion",
+        ]);
     }
 
     /**

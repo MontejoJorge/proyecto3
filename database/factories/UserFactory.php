@@ -29,7 +29,6 @@ class UserFactory extends Factory
             'dni' => $this->faker->unique()->dni,
             'phone' => $this->faker->tollFreeNumber,
             "birthdate" => $this->faker->date,
-            "role" => $this->faker->randomElement(['solicitante','coordinador','tecnico']),
             "place_of_birth" =>  $this->faker->city,
             "postal_code" =>  $this->faker->postcode,
             "street_name" =>  $this->faker->streetName,

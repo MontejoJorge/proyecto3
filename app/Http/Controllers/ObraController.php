@@ -206,16 +206,6 @@ class ObraController extends Controller
     private function emailCambioEstado($obra){
         Mail::to($obra->solicitante->email)->send(new ObraCambioEstado($obra));
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
     protected function validator(array $request)
     {

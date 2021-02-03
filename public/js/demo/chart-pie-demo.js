@@ -4,12 +4,18 @@ Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
+var creadas = $("#countCreadas")[0].outerText;
+var aceptadas = $("#countAceptadas")[0].outerText;
+var denegadas = $("#countDenegadas")[0].outerText;
+var pendientes = $("#countPendientes")[0].outerText;
+
+
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Aceptado", "Rechazado", "En espera","Creada"],
+    labels: ["Aceptado", "Denegado", "En espera","Creada"],
     datasets: [{
-      data: [50, 30, 15, 5],
+      data: [aceptadas, denegadas, pendientes , creadas],
       backgroundColor: ['#55e705', '#c81c1c', '#ffb800','#696969'],
       hoverBackgroundColor: ['#297304', '#751212', '#8d6700','#393939'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",

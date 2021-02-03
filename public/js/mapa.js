@@ -11,75 +11,15 @@ $( document ).ready(function() {
             layer.bindPopup(feature.properties.popupContent);
         }
     }
-
-
-    $.ajax({
-        data: {"nombre":"arriaga"},
-        //Cambiar a type: POST si necesario
-        type: "POST",
-        // Formato de datos que se espera en la respuesta
-        dataType:"JSON",
-        // URL a la que se enviará la solicitud Ajax
-        url: "../php/getData.php",
-    })
-        .done(function( resultado ) {
-            if ( console && console.log ) {
-                console.log( "La solicitud se ha completado correctamente." );
-                alert(resultado);
-                for (x=0;x < resultado.length; x++){
-                    L.marker([resultado[x].latitud, resultado[x].longitud]).addTo(map)
-                        .bindPopup('Estoy hasta los mismisimos de ajax'+x)
+    var puntos = $("#cordenadas")[0].outerText;
+    var puntosJSON = JSON.parse(puntos);
+                for (x=0;x < puntosJSON.length; x++){
+                    L.marker([puntosJSON[x].latitude, puntosJSON[x].longitude]).addTo(map)
+                        .bindPopup(puntosJSON[x].description)
                         .openPopup();
                 }
-            }
-        })
-        .fail(function( jqXHR, textStatus, errorThrown ) {
-            if ( console && console.log ) {
-                console.log( "La solicitud a fallado: " +  textStatus);
-            }
-        });
-    /*
-        var obras =  [{
-            "type": "Feature",
-            "properties": {
-                "name": " Betoño",
+            });
 
-                "popupContent": "Esto es betoño!",
-                "show_on_map": true
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-2.659505, 42.863061]
-            }
-        }, {
-            "type": "Feature",
-            "properties": {
-                "name": "Unis",
-                "popupContent": "Esto son las universidades!",
-                "show_on_map": true
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-2.671453 ,42.839538 ]
-            }
-        },{
-            "type": "Feature",
-            "properties": {
-                "name": "Salburua",
-                "popupContent": "Esto es salburua!",
-                "show_on_map": true
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-2.648735,42.847586  ]
-            }
-        }];
 
-        L.geoJSON(obras, {
-            onEachFeature: onEachFeature
-        }).addTo(map);
-    */
-
-});
 
 

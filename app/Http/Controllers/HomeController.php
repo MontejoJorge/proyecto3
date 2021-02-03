@@ -27,28 +27,47 @@ class HomeController extends Controller
     public function index()
     {
         switch (auth()->user()->role) {
-            case "coordinador" || "tecnico": 
-                //SE USARA AJAX
-                // $createdCount=DB::table('obras')
-                //     ->where('state', "=", "created")
-                //     ->count();
-                // $pendingCount=DB::table('obras')
-                //     ->where('state', "=", "pending")
-                //     ->count();
-                // $aceptedCount=DB::table('obras')
-                //     ->where('state', "=", "acepted")
-                //     ->count();
-                // $deniedCount=DB::table('obras')
-                //     ->where('state', "=", "denied")
-                //     ->count();
+            case "coordinador":
+                $createdCount = DB::table('obras')
+                    ->where('state', "=", "created")
+                    ->count();
+                $pendingCount = DB::table('obras')
+                    ->where('state', "=", "pending")
+                    ->count();
+                $aceptedCount = DB::table('obras')
+                    ->where('state', "=", "acepted")
+                    ->count();
+                $deniedCount = DB::table('obras')
+                    ->where('state', "=", "denied")
+                    ->count();
+                $cordenadas = DB::table('obras')->select("latitude","longitude","description")->get();
 
-                //return view("homes.trabajador");
+                return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount","cordenadas"));
+                break;
+            case "tecnico";
+                $createdCount = DB::table('obras')
+                    ->where('state', "=", "created")
+                    ->where("worker_id","=",auth()->user()->id)
+                    ->count();
+                $pendingCount = DB::table('obras')
+                    ->where('state', "=", "pending")
+                    ->where("worker_id","=",auth()->user()->id)
+                    ->count();
+                $aceptedCount = DB::table('obras')
+                    ->where('state', "=", "acepted")
+                    ->where("worker_id","=",auth()->user()->id)
+                    ->count();
+                $deniedCount = DB::table('obras')
+                    ->where('state', "=", "denied")
+                    ->where("worker_id","=",auth()->user()->id)
+                    ->count();
+                    return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount"));
                 break;
             case "solicitante":
-                return view("homes.solicitante");
+                return redirect()->route("obra.index");
                 break;
             default:
-                return route("login");
+                return redirect()->route("login");
         }
 
         return view('home');

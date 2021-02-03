@@ -25,8 +25,8 @@
                     @endif
                 @endforeach
             </select>
-            <label for="desc">Descent</label>
-            <input type="checkbox" id="desc" name="desc">
+            <label for="des">Descent</label>
+            <input type="checkbox" id="des" name="desc">
 
             <input type="submit" value="Filtrar">
         </form>

@@ -27,23 +27,13 @@ class ObraFactory extends Factory
             "number" =>  $this->faker->numberBetween(1,50),
             "floor" =>  $this->faker->numberBetween(0,13),
             "door" =>  $this->faker->randomElement(["I","D","C","A","B","D"]),
+            "building_type" => $this->faker->randomElement(["1","2","3","4","5"]),
+            "construction_type" => $this->faker->randomElement(["1","2","3"]),
             "city" =>  $this->faker->city,
             "province" => $this->faker->citySuffix,
             "description" => $this->faker->text,
-            "latitude" => $this->faker->latitude($min = 40, $max = 45),
-            "longitude" => $this->faker->longitude($min = 0, $max = -4),
-
+            "latitude" => $this->faker->latitude($min = 42.821155, $max = 42.880222),
+            "longitude" => $this->faker->longitude($min = -2.764693, $max =  -2.627954),
         ];
     }
 }
-// `worker_id` bigint unsigned DEFAULT NULL,
-// `number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-// `floor` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-// `door` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-// `start_date` date DEFAULT NULL,
-// `end_date` date DEFAULT NULL,
-// `state` enum('created','pending','denied','authorized') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'created',
-// `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-// `blueprint` longtext COLLATE utf8mb4_unicode_ci,
-// `created_at` timestamp NULL DEFAULT NULL,
-// `updated_at` timestamp NULL DEFAULT NULL,
