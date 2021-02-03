@@ -21,6 +21,7 @@
             crossorigin=""></script>
     <link rel="icon" type="image/png" href="img/logo%20degradado.png">
     <script src="{{asset('https://cdn.ckeditor.com/ckeditor5/24.0.0/decoupled-document/ckeditor.js')}}"></script>
+    <script src="{{ asset('/js/botonWebComponent.js') }}"></script>
 </head>
 
 <body id="page-top">
@@ -147,7 +148,7 @@
                             </form>
                         </div>
                     </li>
-
+                    <fecha-actual></fecha-actual>
                     <div class="custom-control custom-switch" style="margin-top: 25px">
                         <input type="checkbox" class="custom-control-input" id="darkSwitch" />
                         <label class="custom-control-label" for="darkSwitch"><i class="fas fa-moon"></i></label>
@@ -163,23 +164,12 @@
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name ." ". auth()->user()->surname }}</span>
+                            <i class="fas fa-user"></i>
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                              aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Perfil
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Ajustes
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Actividad
-                            </a>
-                            <div class="dropdown-divider"></div>
+                            
                             <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Cerrar sesión
@@ -225,18 +215,17 @@
     </a>
 
 
-<script src="{{asset('js/editor.js')}}"></script>
 <!-- Bootstrap core JavaScript-->
-
 <script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
 <script src="{{asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/sb-admin-2.min.js')}}"></script>
 
 
 <!-- Core plugin JavaScript-->
 <script src="{{asset('node_modules/jquery.easing/jquery.easing.min.js')}}"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{{asset('js/sb-admin-2.min.js')}}"></script>
+
 <script src="{{asset('node_modules/places.js/dist/cdn/places.min.js')}}"></script>
 <script src="{{asset('js/address.js')}}"></script>
 <script src="{{asset('ts/validacion.js')}}"></script>
@@ -244,7 +233,6 @@
 
 <script src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>
 <script src="{{asset('node_modules/jquery.easing/jquery.easing.min.js')}}"></script>
-<script src="{{asset('js/sb-admin-2.min.js')}}"></script>
 <!-- Dark Mode-->
 <script src="{{asset('node_modules/dark-mode-switch/dark-mode-switch.min.js')}}"></script>
 <!-- Mapa -->

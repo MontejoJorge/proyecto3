@@ -141,6 +141,22 @@ form.user .btn-user {
 .gris:before {
   color: #696969;
 }
+.comentario{
+margin: 7px;
+margin-bottom: 11px;
+-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+.card img{
+  width: 30%;
+}
+.card p{
+  padding: 7px;
+}
+.creator{
+  font-weight: bold;
+}
 
 [data-theme=dark] body {
   color: whitesmoke;

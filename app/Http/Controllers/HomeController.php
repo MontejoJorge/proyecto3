@@ -61,7 +61,11 @@ class HomeController extends Controller
                     ->where('state', "=", "denied")
                     ->where("worker_id","=",auth()->user()->id)
                     ->count();
-                    return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount"));
+                $cordenadas = DB::table('obras')
+                    ->select("latitude","longitude","description")
+                    ->where("worker_id","=",auth()->user()->id)
+                    ->get();
+                    return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount", "cordenadas"));
                 break;
             case "solicitante":
                 return redirect()->route("obra.index");

@@ -28,23 +28,25 @@
                     <th scope="row">Técnico:</th>
                     <td>
                         @isset($obra->worker_id)
-                        {{ $obra->worker_id }}
+                        {{ $obra->trabajador->name }}
                         @else
-                        <form action="{{ route("obra.trabajador", $obra) }}" method="post">
-                            @csrf
-                            <select name="tecnico">
-                                <option selected disabled>Selecciona un tecnico</option>
-                            @foreach ($trabajadores as $trabajador)
-                                <option value="{{ $trabajador->id }}">
-                                    {{ $trabajador->name ." | ". $trabajador->obra_asignada_count . " obras"}}
-                                </option>
-                            @endforeach
-                            </select>
-                            <input type="submit" value="Aceptar">
-                        </form>
+                            @if (auth()->user()->role == "coordinador")
+                            <form action="{{ route("obra.trabajador", $obra) }}" method="post">
+                                @csrf
+                                <select name="tecnico">
+                                    <option selected disabled>Selecciona un tecnico</option>
+                                @foreach ($trabajadores as $trabajador)
+                                    <option value="{{ $trabajador->id }}">
+                                        {{ $trabajador->name ." | ". $trabajador->obra_asignada_count . " obras"}}
+                                    </option>
+                                @endforeach
+                                </select>
+                                <input type="submit" value="Aceptar">
+                            </form>
+                            @endif
+                            No hay técnico
                         @endisset
                     </td>
-
                 </tr>
                 <tr>
                     <th scope="row">Calle:</th>
@@ -114,7 +116,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Estado</th>
-                    @if ($obra->state == ("pending"))
+                    @if (($obra->state == ("pending")) && auth()->user()->role=="tecnico")
                     <td>
                         <form action="{{ route("obra.update", $obra) }}" method="POST">
                             @csrf
@@ -136,12 +138,7 @@
                 </tr>
                 <tr>
                     <th scope="row">Fecha actualizacion:</th>
-                    <td>{{ $obra->updated_at }}</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">Fecha creacion:</th>
-                    <td>{{ $obra->created_at }}</td>
+                    <td>{{ $obra->updated_at->diffForHumans() }}</td>
 
                 </tr>
                 <tr>
@@ -176,15 +173,17 @@
             <p id="lng" hidden> {{ $obra->longitude  }}</p>
         <hr>
         <h4>Comentarios</h4>
-        @foreach ($obra->comentarios as $comentario)
-        <div class="card">
+        @forelse ($obra->comentarios as $comentario)
+        <div class="card comentario">
             <p>{{ $comentario->text }}</p>
             @isset($comentario->photo)
                 <img src="{{ asset('/storage/imagenes/comentarios/'.$comentario->photo)}}">
             @endisset
-            <p>{{ $comentario->trabajador->name. " - " . $comentario->created_at->diffForHumans()}}</p>
+            <p class="creator">{{ $comentario->trabajador->name. " - " . $comentario->created_at->diffForHumans()}}</p>
         </div>
-        @endforeach
+        @empty
+            <p>No hay comentarios</p>
+        @endforelse
 
     </div>
 @endsection
