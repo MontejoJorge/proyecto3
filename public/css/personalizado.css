@@ -89,7 +89,11 @@ a.small {
     color: #6e707e;
     font-size: 0.8rem;
 }
+small{
+    color: red!important;
+    padding-left: 10px;
 
+}
 #seleccion {
   padding-bottom: 15px;
 }

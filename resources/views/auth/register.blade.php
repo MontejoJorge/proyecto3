@@ -35,30 +35,39 @@
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user" id="dni"
                                            placeholder="DNI" name="dni" value="{{ old("dni") }}">
+                                    {!!   $errors->first('dni','<small>:message</small>') !!}
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control form-control-user" id="email"
                                            placeholder="Correo electronico" name="email" value="{{ old("email") }}">
+                                    {!!   $errors->first('email','<small>:message</small>')!!}
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user" id="nombre"
                                            placeholder="Nombre" name="name" value="{{ old("name") }}">
+                                    {!!   $errors->first('name','<small>:message</small>')!!}
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control form-control-user" id="apellido"
                                            placeholder="Apellido" name="surname" value="{{ old("surname") }}">
+                                    {!!   $errors->first('surname','<small>:message</small>')!!}
+
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user"
                                            id="password" placeholder="Contraseña" name="password">
+                                    {!!   $errors->first('password','<small>:message</small>')!!}
+
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control form-control-user"
                                            id="password2" placeholder="Repetir contraseña" name="password_confirmation">
+                                    {!!   $errors->first('password_confirmation','<small>:message</small>')!!}
+
                                 </div>
 
 
@@ -125,31 +134,39 @@
                                         <option value="Zamora">Zamora</option>
                                         <option value="Zaragoza">Zaragoza</option>
                                     </select>
+                                    {!!   $errors->first('place_of_birth','<small>:message</small>')!!}
 
                                 </div>
                                 <div class="col-sm-6">
                                     Fecha de nacimiento:<input type="date" class="form-control form-control-user" id="fecha_nac" name="birthdate">
+                                    {!!   $errors->first('birthdate','<small>:message</small>')!!}
+
                                 </div>
                             </div>
 
                             <div class="form-group ">
 
-                                <input type="search" class="form-control form-control-user" id="address-input"
+                                <input type="search" class="form-control form-control-user" id="address-input" name="direccion"
                                        placeholder="Direccion...">
+                                {!!   $errors->first('direccion','<small>:message</small>')!!}
 
-                                    <input type="text" id="city" name="city" placeholder="city" hidden>
+                                <input type="text" id="city" name="city" placeholder="city" hidden>
                                     <input type="text" id="province" name="province" placeholder="province" hidden>
                                     <input type="text" id="postal_code" name="postal_code" placeholder="postal_code" hidden>
                                     <input type="text" id="street_name" name="street_name" placeholder="street_name" hidden>
-            
-               
+
+
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input placeholder="Portal" type="text" class="form-control form-control-user" id="portal" name="number" value="{{ old("number") }}">
+                                    {!!   $errors->first('number','<small>:message</small>')!!}
+
                                 </div>
                                 <div class="col-sm-6">
                                     <input placeholder="Piso" type="text" class="form-control form-control-user" id="piso" name="floor" value="{{ old("floor") }}">
+                                    {!!   $errors->first('floor','<small>:message</small>')!!}
+
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -164,21 +181,23 @@
                                         <option value="C">C</option>
                                         <option value="D">D</option>
                                         <option value="null">Ninguna de las anteriores</option>
+
                                     </select>
+                                    {!!   $errors->first('door','<small>:message</small>')!!}
+
                                 </div>
 
                                 <div class="col-sm-6">
                                     <input type="number" placeholder="Telefono" class="form-control form-control-user" id="ntel" name="phone" value="{{ old("phone") }}">
+                                    {!!   $errors->first('phone','<small>:message</small>')!!}
+
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block" id="registrar">
-                                {{ __('Register') }}
+                                Registrarse
                             </button>
-                            @if ($errors->any())
-                                @foreach ($errors->all() as $e)
-                                    {{ $e }}
-                                @endforeach
-                            @endif
+
+
                             <hr>
                             <a href="/index" class="btn btn-google btn-user btn-block">
                                 <i class="fab fa-google fa-fw"></i> Registrar con Google
