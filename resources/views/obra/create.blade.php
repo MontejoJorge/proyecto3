@@ -19,20 +19,34 @@
             <input type="search" class="form-control form-control-user" id="address-input" name="algolia"
                    placeholder="Direccion..." value="{{ old("algolia") }}">
             <input type="text" id="city" name="city" value="{{ old("city") }}" placeholder="city" hidden>
+            {!!   $errors->first('city','<small>:message</small>')!!}
+
             <input type="text" id="province" name="province" value="{{ old("province") }}" placeholder="province" hidden>
+            {!!   $errors->first('province','<small>:message</small>')!!}
+
             <input type="text" id="postal_code" name="postal_code" value="{{ old("postal_code") }}" placeholder="postal_code" hidden>
+            {!!   $errors->first('postal_code','<small>:message</small>')!!}
+
             <input type="text" id="street_name" name="street_name" value="{{ old("street_name") }}" placeholder="street_name" hidden>
+            {!!   $errors->first('street_name','<small>:message</small>')!!}
+
             <input type="text" id="latitude" name="latitude" value="{{ old("latitude") }}" placeholder="latitude" hidden>
+            {!!   $errors->first('latitude','<small>:message</small>')!!}
+
             <input type="text" id="longitude" name="longitude" value="{{ old("longitude") }}" placeholder="longitude" hidden>
+            {!!   $errors->first('longitude','<small>:message</small>')!!}
+
         </div>
         <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="num"
                        placeholder="Numero" name="number" value="{{ old("number") }}">
+                {!!   $errors->first('number','<small>:message</small>')!!}
             </div>
             <div class="col-sm-6">
                 <input type="text" class="form-control form-control-user" id="piso"
                        placeholder="Piso" name="floor" value="{{old("floor")}}">
+                {!!   $errors->first('floor','<small>:message</small>')!!}
             </div>
         </div>
         <div class="form-group row">
@@ -48,6 +62,7 @@
                     <option value="D">D</option>
                     <option value="null">Ninguna de las anteriores</option>
                 </select>
+                {!!   $errors->first('door','<small>:message</small>')!!}
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 @empty($tiposEdificios)
@@ -59,6 +74,7 @@
                     @endforeach
                 </select>
                 @endempty
+                    {!!   $errors->first('tipoEdificio','<small>:message</small>')!!}
             </div>
         </div>
 
@@ -74,25 +90,25 @@
                     @endforeach
                 </select>
                 @endempty
+                    {!!   $errors->first('tipoObra','<small>:message</small>')!!}
+
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="file" id="plano" name="blueprint" >
-
+                {!!   $errors->first('blueprint','<small>:message</small>')!!}
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-12 mb-3 mb-sm-0">
                 <textarea class="form-control" rows="5" style="resize: none;" name="description">{{old("description")}}</textarea>
+                {!!   $errors->first('description','<small>:message</small>')!!}
+
             </div>
         </div>
-        @if ($errors->any())
-            @foreach ($errors->all() as $e)
-                {{ $e }}
-            @endforeach
-        @endif
+
 
         <button type="submit" class="btn btn-primary btn-user btn-block" id="registrar">
-            {{ __('Send construction') }}
+            Enviar obra
         </button>
 
         <hr>
