@@ -26,19 +26,22 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   }
   return s.join(dec);
 }
+var construccion = $("#construccion")[0].outerText;
+var reforma = $("#reforma")[0].outerText;
+var demolicion = $("#demolicion")[0].outerText;
 
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+    labels: ["Demolicion", "Reforma", "Construccion"],
     datasets: [{
       label: "Revenue",
       backgroundColor: "#86448B",
       hoverBackgroundColor: "#510F56",
       borderColor: "#510F56",
-      data: [35,33,34,35,36,37,32,21,12,3,12,15],
+      data: [demolicion,reforma,construccion],
     }],
   },
   options: {
@@ -68,7 +71,7 @@ var myBarChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 100,
+          max: 40,
           maxTicksLimit: 4,
           padding: 10,
           // Include a dollar sign in the ticks
@@ -103,7 +106,7 @@ var myBarChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return 'Nº Solicitudes: ' + number_format(tooltipItem.yLabel);
+          return 'Obras por tipo: ' + number_format(tooltipItem.yLabel);
         }
       }
     },

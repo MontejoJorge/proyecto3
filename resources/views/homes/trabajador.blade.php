@@ -31,7 +31,7 @@
             </div>
         </div>
         @else 
-        <div id="countCreadas" class="h5 mb-0 font-weight-bold text-gray-800 d-none">{{ $createdCount }}</div>
+        <div id="countCreadas" class="h5 mb-0 font-weight-bold text-gray-800 " hidden>{{ $createdCount }}</div>
         @endif
 
         <!-- Earnings (Monthly) Card Example -->
@@ -145,12 +145,16 @@
 
         <div  class="card shadow mb-4 col-xl-6 col-lg-6 no_padding">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Obras por tipo de construcción</h6>
             </div>
             <div class="card-body">
                 <div class="chart-bar">
                     <canvas id="myBarChart"></canvas>
                 </div>
+                <p  id="demolicion">{{ $demolicion }}</p>
+                <p  id="reforma">{{ $reforma }}</p>
+                <p  id="construccion">{{ $construccion }}</p>
+
 
             </div>
         </div>

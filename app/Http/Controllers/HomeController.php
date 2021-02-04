@@ -35,14 +35,17 @@ class HomeController extends Controller
                     ->where('state', "=", "pending")
                     ->count();
                 $aceptedCount = DB::table('obras')
-                    ->where('state', "=", "acepted")
+                    ->where('state', "=", "authorized")
                     ->count();
                 $deniedCount = DB::table('obras')
                     ->where('state', "=", "denied")
                     ->count();
                 $cordenadas = DB::table('obras')->select("latitude","longitude","description")->get();
+                $demolicion = Obra::all()->where('construction_type',"=",'1')->count("construcion_type");
+                $reforma = Obra::all()->where('construction_type',"=",'2')->count("construcion_type");
+                $construccion = Obra::all()->where('construction_type',"=",'3')->count("construcion_type");
 
-                return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount","cordenadas"));
+                return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount","cordenadas","demolicion","reforma","construccion"));
                 break;
             case "tecnico";
                 $createdCount = DB::table('obras')
@@ -54,7 +57,7 @@ class HomeController extends Controller
                     ->where("worker_id","=",auth()->user()->id)
                     ->count();
                 $aceptedCount = DB::table('obras')
-                    ->where('state', "=", "acepted")
+                    ->where('state', "=", "authorized")
                     ->where("worker_id","=",auth()->user()->id)
                     ->count();
                 $deniedCount = DB::table('obras')
@@ -65,7 +68,10 @@ class HomeController extends Controller
                     ->select("latitude","longitude","description")
                     ->where("worker_id","=",auth()->user()->id)
                     ->get();
-                    return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount", "cordenadas"));
+                $demolicion = Obra::all()->where('construction_type',"=",'1')->where("worker_id","=",auth()->user()->id)->count("construcion_type");
+                $reforma = Obra::all()->where('construction_type',"=",'2')->where("worker_id","=",auth()->user()->id)->count("construcion_type");
+                $construccion = Obra::all()->where('construction_type',"=",'3')->where("worker_id","=",auth()->user()->id)->count("construcion_type");
+                    return view("homes.trabajador", compact("createdCount", "pendingCount", "aceptedCount", "deniedCount", "cordenadas","demolicion","reforma","construccion"));
                 break;
             case "solicitante":
                 return redirect()->route("obra.index");
