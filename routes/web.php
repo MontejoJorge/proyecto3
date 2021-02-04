@@ -50,6 +50,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 //Grupo home
 Route::group(['prefix' => 'home',"middleware" => "auth"], function () {
 
