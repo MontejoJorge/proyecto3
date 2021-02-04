@@ -90,12 +90,17 @@ a.small {
   background-image: url("/img/login.jpg") !important;
   background-size: cover;
 }
-
+#reset{
+  margin-top: 70px;
+}
 #bgregister {
   background-image: url("https://c1.wallpaperflare.com/preview/268/493/288/vitoria-gasteiz-basque-country-euskadi-alava-architecture.jpg") !important;
   background-size: cover;
 }
-
+#bgemail{
+  background-image: url("/img/email.jpg") !important;
+  background-size: cover;
+}
 .ck-rounded-corners .ck.ck-toolbar, .ck.ck-toolbar.ck-rounded-corners {
   border-radius: 10px;
 }
