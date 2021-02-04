@@ -50,7 +50,7 @@
                 <select class="form-select col-sm-12" name="role" id="tipoUsuario">
                     <option disabled selected>Selecciona una opción...</option>
                     <option value="tecnico">Técnico</option>
-                    <option value="coordinador">Supervisor</option>
+                    <option value="coordinador">Coordinador</option>
 
                 </select>
                

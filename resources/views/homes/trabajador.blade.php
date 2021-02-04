@@ -151,9 +151,9 @@
                 <div class="chart-bar">
                     <canvas id="myBarChart"></canvas>
                 </div>
-                <p  id="demolicion">{{ $demolicion }}</p>
-                <p  id="reforma">{{ $reforma }}</p>
-                <p  id="construccion">{{ $construccion }}</p>
+                <p hidden id="demolicion">{{ $demolicion }}</p>
+                <p hidden id="reforma">{{ $reforma }}</p>
+                <p hidden id="construccion">{{ $construccion }}</p>
 
 
             </div>
