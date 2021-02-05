@@ -3,9 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-use App\Models\User;
-use App\Models\Obra;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,33 +15,6 @@ use App\Models\Obra;
 */
 
 Route::get('/', function () {
-    // User::factory()
-    // ->count(4)
-    // ->state([
-    //     "role" => "coordinador"
-    // ])
-    // ->create();
-
-    // User::factory()
-    // ->count(9)
-    // ->state([
-    //     "role" => "tecnico"
-    // ])
-    // ->create();
-
-    // User::factory()
-    // ->count(15)
-    // ->state([
-    //     "role" => "solicitante"
-    // ])
-    // ->has(
-    //     Obra::factory()
-    //     ->count(3)
-    //     )
-    // ->create();
-
-
-
     return redirect()->route('home');
 });
 
