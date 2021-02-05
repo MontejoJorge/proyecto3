@@ -73,12 +73,12 @@
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="btn btn-link small" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                    <a class="ml-4 text-sm text-gray-700 underline small" href="{{ route('password.request') }}">
+                                       ¿Has olvidado la contraseña?
                                     </a>
                                 </div>
                                 <div class="text-center">
-                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline small">Register</a>
+                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline small">Registrarse</a>
                                 </div>
                             </div>
                         </div>
