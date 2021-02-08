@@ -16,7 +16,7 @@
                 @endforeach
             </select>
             <br><br>
-            <label for="orderBy"><p class="h5">Order by date:</p></label>
+            <label for="orderBy"><p class="h5">Ordenar por fecha de:</p></label>
             <select class="custom-select" name="order" id="orderBy">
                 @foreach ($orderBy as $order)
                     @if ($order == $selOrder)
